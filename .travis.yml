@@ -5,7 +5,7 @@ rvm:
 
 install: 
   - gem install jekyll 
-  - gem install html-proofer -v 2.6.1
+  - gem install html-proofer
 
 script:
 - bundle install
