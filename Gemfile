@@ -23,7 +23,7 @@ group :jekyll_plugins do
    gem "jekyll-feed", "~> 0.6"
    gem "rake"
    gem 'wdm', '>= 0.1.0' if Gem.win_platform?
-   #gem 'html-proofer'
+   gem 'html-proofer'
 end
 
-gem 'html-proofer'
+#gem 'html-proofer'
