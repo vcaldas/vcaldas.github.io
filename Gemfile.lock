@@ -41,6 +41,7 @@ GEM
     rouge (1.11.1)
     safe_yaml (1.0.4)
     sass (3.4.23)
+    wdm (0.1.1)
 
 PLATFORMS
   x86-mingw32
@@ -50,6 +51,7 @@ DEPENDENCIES
   jekyll-feed (~> 0.6)
   minima (~> 2.0)
   rake
+  wdm (>= 0.1.0)
 
 RUBY VERSION
    ruby 2.3.0p0
