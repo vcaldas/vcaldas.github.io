@@ -10,7 +10,7 @@ ruby 2.2
 # This will help ensure the proper Jekyll version is running.
 # Happy Jekylling!
 gem "jekyll", "3.3.1"
-
+gem 'bootstrap', '~> 4.0.0.alpha6'
 # This is the default theme for new Jekyll sites. You may change this to anything you like.
 gem "minima", "~> 2.0"
 
@@ -28,7 +28,6 @@ end
 
 # => gem 'html-proofer'
 gem "jekyll-assets"
-
 #
 # Additional gems for jekyll-assets
 #
