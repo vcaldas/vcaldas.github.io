@@ -1,5 +1,5 @@
 source "https://rubygems.org"
-ruby 2.2
+ruby 2.3
 
 # Hello! This is where you manage which Jekyll version is used to run.
 # When you want to use a different version, change it below, save the
@@ -24,8 +24,8 @@ group :jekyll_plugins do
    gem "jekyll-feed", "~> 0.6"
    gem "rake"
    gem 'wdm', '>= 0.1.0' if Gem.win_platform?
-   gem "activesupport"
-   gem 'html-proofer'
+   #gem "activesupport"
+   #gem 'html-proofer', '~> 2.6', '>= 2.6.1'
 end
 
 # => gem 'html-proofer'

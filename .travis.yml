@@ -5,12 +5,12 @@ rvm:
 
 install: 
   - gem install jekyll 
-  - gem install html-proofer
+ # - gem install html-proofer
 
 script:
 - bundle install
 - bundle exec jekyll build
-- bundle exec htmlproofer ./_site
+#- bundle exec htmlproofer ./_site
 after_success:
 - git clone https://$GITHUB_REPO
 - cd $(basename ${GITHUB_REPO%.git})
