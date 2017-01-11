@@ -35,6 +35,23 @@ body {
     -------------------------------------------------- */
 
 
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+}
+
+	
+
+/* FOOTER CONTENT
+    -------------------------------------------------- */
+
+
 
 .full {
     width: 100%;	
@@ -48,7 +65,7 @@ body {
 .footer {
 	background: #E3E3E3;
 	height: auto;
-	padding-bottom: 70px;
+	padding-bottom: 30px;
 	position: relative;
 	width: 100%;
 	border-bottom: 1px solid #CCCCCC;
@@ -100,7 +117,7 @@ body {
 	float: left;
 	height: 36px;
 	line-height: 36px;
-	margin: 0 8px 0 0;
+	margin: 4px 4px 4px 4px;
 	padding: 0;
 	text-align: center;
 	width: 36px;
@@ -136,6 +153,3 @@ body {
 .align {
 	padding-top: 15px;
 }
-
-
-
