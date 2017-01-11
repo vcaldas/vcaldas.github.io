@@ -9,9 +9,10 @@
   box-sizing: border-box; 
 }
 
+.container {
+  padding: 20px 0px 0px 0px;
+}
 
-html, header { 
- }
 
 body {
 	background: #F8F8F8 url('bg-noise.png') top left;
@@ -51,26 +52,17 @@ body {
 /* FOOTER CONTENT
     -------------------------------------------------- */
 
-
-
 .full {
     width: 100%;	
 }
-.gap {
-	height: 30px;
-	width: 100%;
-	clear: both;
-	display: block;
-}
+
 .footer {
 	background: #E3E3E3;
 	height: auto;
 	padding-bottom: 30px;
-	position: relative;
 	width: 100%;
 	border-bottom: 1px solid #CCCCCC;
 	border-top: 4px solid #DDDDDD;
-	max-width: 1080px;
  	margin: 0 auto;
   
   box-sizing: border-box; 

@@ -1,0 +1,19 @@
+# Links for navigation bar
+main:
+  - title: "Science"
+    url: /science/
+
+  - title: "Publications"
+    url: /publications/
+
+  - title: "Codes"
+    url: /codes/
+
+  - title: "Photography"
+    url: /photography/
+
+  - title: "Blog"
+    url: /blog/
+
+  - title: "Contact"
+    url: /contact/
