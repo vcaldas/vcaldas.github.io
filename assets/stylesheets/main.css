@@ -1,5 +1,14 @@
 // Make carousel responsive
 
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 1080px;
+  margin: 0 auto;
+  padding-bottom: 0px;
+  box-sizing: border-box; 
+}
+
 
 html, header { 
  }
