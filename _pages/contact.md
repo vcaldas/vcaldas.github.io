@@ -1,6 +1,6 @@
 ---
 permalink: /contact/
-title: ""
+title: Contact
 modified: 2016-04-18T16:39:37-04:00
 author_profile: true
 layout: default
