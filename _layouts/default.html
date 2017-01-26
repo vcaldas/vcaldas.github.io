@@ -6,25 +6,14 @@
   </head>
 
   <body>
-    {% include navbar.html %}
-
+     {% include navbar2.html %}
+   
     <div class="container">
+      {{content}}
 
-      <div class="wrap">
-      <header>
-        <h1 class="entry-title">{{ page.title }}</h1>
-        <h2>{{ page.subtitle }}</h2>
-      
-      </header>
-      
-          {{ content }}
-      </div>
-    
+    </div>
 
-      <!-- FOOTER -->
       {% include footer.html %}
-
-      </div><!-- /.container -->
 
     <!-- Bootstrap core JavaScript
     ================================================== -->

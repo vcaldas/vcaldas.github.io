@@ -11,10 +11,10 @@ layout: default
 <div class="container">
     <div class="row">
         <div class="col-sm-6">
-            <div class="well">
+            <div class="card">
               <dl class="dl-horizontal">
         
-         <h4 style="line-height:20%;"><i class="fa fa-envelope" style="line-height:6%"></i>  Contact:</h4>
+         <h4><i class="fa fa-envelope" style="line-height:6%"></i>  Contact:</h4>
 
         <dd><script type="text/javascript" src="/assets/js/obfuscate-email.js"></script></dd>
         <dt><i class="fa fa-building"></i> Address:</dt>
@@ -37,9 +37,9 @@ layout: default
 
 
     <div class="col-sm-6">
-           <div class="well">
+           <div class="card">
  
-
+    <h4><i class="fa fa-envelope" style="line-height:6%"></i> Networks </h4>
      <ul class="author__urls social-icons">
       
 
@@ -60,7 +60,7 @@ layout: default
             </div>
         </div>
     </div>
-</div>
+
 
     
    

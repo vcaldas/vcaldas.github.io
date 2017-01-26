@@ -25,9 +25,15 @@ github_username:  vcaldas
 # Build settings
 markdown: kramdown
 theme: minima
+paginate: 5
+paginate_path: "/blog/page:num/"
+#comments: true
+excerpt_separator: <!-- more -->
+
 gems:
   - jekyll-feed
   - uglifier
+  - jekyll-paginate
 exclude:
   - Gemfile
   - Gemfile.lock
@@ -39,14 +45,6 @@ sass:
 include:
    - _pages
    
-permalink: /:categories/:title/
+#permalink: /:categories/:title/
 
 
-defaults:
-  # _pages
-  - scope:
-      path: ""
-      type: pages
-    values:
-      layout: single
-      author_profile: true
