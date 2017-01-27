@@ -6,6 +6,7 @@ layout: default
 
 ---
 
+## {{page.title}}
 {% include base_path %}
 
 
