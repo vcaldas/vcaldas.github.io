@@ -16,7 +16,7 @@ layout: default
         
          <h4><i class="fa fa-envelope" style="line-height:6%"></i>  Contact:</h4>
 
-        <dd><script type="text/javascript" src="/assets/js/obfuscate-email.js"></script></dd>
+        <dd><script type="text/javascript" src="{{base_path}}//assets/js/obfuscate-email.js"></script></dd>
         <dt><i class="fa fa-building"></i> Address:</dt>
         <dd>
         <span property="schema:address"

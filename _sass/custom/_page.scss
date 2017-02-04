@@ -47,7 +47,54 @@ body {
 
 /* Icon Info
 -----------------------------------------*/
-fa-2x {
+.fa-2x {
     font-size: 1.5em;
     padding-left: 0.5rem;
+}
+
+
+/* Publications page
+--------------------------------------------*/
+.cv {
+    text-align: justify; 
+  }
+
+
+
+
+.publication {
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 10pt;
+  margin-top: 12px;
+  margin-bottom: 30px;
+}
+
+.publication a {
+  text-decoration: none;
+}
+
+.publication .tweet {
+  margin-top: 3px;
+  font-style: italic;
+  color: #444;
+  font-size: 10pt;
+}
+
+.publication .pubLinks {
+  font-size: 9pt;
+}
+
+.publication .abstract {
+  /*background-color: #F6FCE1;*/ /* prior yellowish tint */
+  background-color: #f6f8f8;
+  padding: 12px;
+
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 10pt;
+
+  margin-top: 10px;
+}
+
+.publication .bibtex {
+  margin-top: 10px;
 }

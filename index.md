@@ -5,4 +5,4 @@
 layout: landing
 ---
  
- {% include mainCarousel.html %}
+
