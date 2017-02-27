@@ -13,8 +13,9 @@ Overview
 [This site](http://victorcaldas.com) is built with Jekyll and hosted on GitHub Pages. Site source at
 [vcaldas/vcaldas.github.io](http://github.com/vcaldas/vcaldas.github.io).
 
-Please report [errors or feedback
-here](https://github.com/vcaldas/vcaldas.github.io/issues). 
+Travis-CL Build status: ![alt text](https://travis-ci.org/vcaldas/vcaldas.github.io.svg?branch=master)
+
+Please report [errors or feedback here](https://github.com/vcaldas/vcaldas.github.io/issues). 
 
 -----------------------------------------------------------------------------------------------------------
 
