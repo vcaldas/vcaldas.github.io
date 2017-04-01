@@ -13,38 +13,33 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: VictorCaldas
+title: Victor Caldas
+author: Victor Caldas
 email: caldas.victor@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
-  My personal website. Always being changed!
+  Write an awesome description for your new site here. You can edit this
+  line in _config.yml. It will appear in your document head meta (for
+  Google search results) and in your feed.xml site description.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://victorcaldas.com" # the base hostname & protocol for your site, e.g. http://example.com
+url: "http://localhost:3000" # the base hostname & protocol for your site, e.g. http://example.com
+
 twitter_username: jekyllrb
 github_username:  vcaldas
 
 # Build settings
 markdown: kramdown
-theme: minima
-paginate: 5
-paginate_path: "/blog/page:num/"
-#comments: true
-excerpt_separator: <!-- more -->
 
 gems:
   - jekyll-feed
-  - uglifier
-  - jekyll-paginate
-exclude:
-  - Gemfile
-  - Gemfile.lock
-
-sass:
-    sass_dir: _sass
 
 # Reading Files
 include:
    - _pages
-   
-#permalink: /:categories/:title/
 
-
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - src
+  - node_modules
+  - gulpfile.js
+  - package.json

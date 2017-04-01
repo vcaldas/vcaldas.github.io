@@ -1,10 +1,20 @@
+<head>
+  {% include base_path.html %}
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="icon" href="{{base_path}}/favicon.ico">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+    <meta name="description" content="{% if page.description %}{{ page.description | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
 
-    <title>Victor Caldas</title>
+  <!-- Bootstrap Core CSS -->
+    <link href="{{base_path}}/assets/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Bootstrap core CSS -->
-    <link href="{{base_path}}/css/main.css" rel="stylesheet">
+  <!-- Custom Fonts -->
+    <link href="{{base_path}}/assets/lib/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="{{base_path}}/assets/lib/academicons-1.7.0/css/academicons.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Cabin:700' rel='stylesheet' type='text/css'>
+
+  <!-- Theme CSS -->
+    <link rel="stylesheet" href="{{base_path}}/assets/css/main.min.css">
+</head>

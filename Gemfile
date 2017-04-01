@@ -1,5 +1,5 @@
 source "https://rubygems.org"
-#Updated 
+#Updated
 ruby '2.4'
 
 # Hello! This is where you manage which Jekyll version is used to run.
@@ -11,12 +11,6 @@ ruby '2.4'
 # This will help ensure the proper Jekyll version is running.
 # Happy Jekylling!
 gem "jekyll"
-gem 'bootstrap', '~> 4.0.0.alpha6'
-gem "jekyll-paginate"
-
-# This is the default theme for new Jekyll sites. You may change this to anything you like.
-gem "minima", "~> 2.0"
-
 
 
 # If you want to use GitHub Pages, remove the "gem "jekyll"" above and
@@ -30,12 +24,5 @@ group :jekyll_plugins do
    gem 'wdm', '>= 0.1.0' if Gem.win_platform?
 end
 
-# => gem 'html-proofer'
-gem "jekyll-assets"
-#
-# Additional gems for jekyll-assets
-#
-
-gem "coffee-script" # We want to write our javascripts in CoffeeScript
-gem "uglifier"      # And we want our javascripts to be minified with UglifyJS
-gem "sass"          # And we 
+# Windows does not include zoneinfo files, so bundle the tzinfo-data gem
+gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]

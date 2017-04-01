@@ -1,0 +1,30 @@
+{
+    "name": "vcaldas.github.io",
+    "title": "Victor Caldas",
+    "version": "0.0.1",
+    "homepage": "http://victorcaldas.com",
+    "author": "Victor Caldas",
+    "private": true,
+    "license": {
+        "type": "MIT",
+        "url": "https://github.com/vcaldas/vcaldas.github.io/LICENSE"
+    },
+    "devDependencies": {
+        "bootstrap": "^4.0.0-alpha.6",
+        "browser-sync": "^2.13.0",
+        "font-awesome": "^4.6.3",
+        "gulp": "^3.9.1",
+        "gulp-clean-css": "^3.0.4",
+        "gulp-header": "^1.8.7",
+        "gulp-less": "^3.1.0",
+        "gulp-rename": "^1.2.2",
+        "gulp-sass": "^3.1.0",
+        "gulp-uglify": "^2.1.2",
+        "jquery": "^3.1.1",
+        "tether": "^1.4.0"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/vcaldas/vcaldas.github.io.git"
+    }
+}

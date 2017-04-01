@@ -1,24 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  <head>
-    {% include head.html %}
-  </head>
+<!-- Head -->
+{% include head.html %}
+  <body id="default">
+ <!-- Navigation -->
+  {% include navbar-main.html %}
 
-  <body>
-     {% include navbar2.html %}
-   
-    <div class="container">
-    
-      {{content}}
-
-    </div>
-
-      {% include footer.html %}
-
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-       {% include scripts.html %}
+        <div id="default" class="container">
+            {{content}}
+        </div>
+        {% include footer.html %}
+    {% include scripts.html %}
   </body>
 </html>

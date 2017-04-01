@@ -1,14 +1,12 @@
 ---
 permalink: /publications/
 title: "Publications"
-modified: 2016-04-18T16:39:37-04:00
 layout: publication
-
 ---
 
 
 ## {{page.title}}
-{% include base_path %}
+
 
 
 ### 2016
@@ -16,11 +14,11 @@ layout: publication
 <div class="publication" id="Ghodke2016">
 <a name="Ghodke2016"></a>
 <b>Single-molecule specific mislocalization of red fluorescent proteins in live <em>Escherichia coli</em></b>.
-<br> Ghodke, H., Caldas, V. E. A., Punter, C. M., van Oijen, A. M., and Robinson, A. 
+<br> Ghodke, H., Caldas, V. E. A., Punter, C. M., van Oijen, A. M., and Robinson, A.
 <br><em>Biophysical Journal </em>, 2016.
 
-<div class="pubLinks">[<a href="#" class="abstractLink">Abstract</a> | 
-<a href="#" class="bibtexLink">BibTeX</a> | 
+<div class="pubLinks">[<a href="#" class="abstractLink">Abstract</a> |
+<a href="#" class="bibtexLink">BibTeX</a> |
 <a href="http://www.sciencedirect.com/science/article/pii/S0006349516303940">URL</a>]</div>
 
 <div class="abstract">Tagging of individual proteins with genetically encoded fluorescent proteins (FPs) has been used extensively to study localization and interactions in live cells. Recent developments in single-molecule localization microscopy have enabled the dynamic visualization of individual tagged proteins inside living cells. However, tagging proteins with FPs is not without problems: formation of insoluble aggregates and inhibition of native functions of the protein are well-known issues. Previously reported artifacts manifest themselves at all expression levels of the FP-tagged proteins, making the design of control experiments relatively straightforward. Here, we describe a previously uncharacterized mislocalization artifact of Entacmaea quadricolor red fluorescent protein variants that is detectable at the single-molecule level in live <em>Escherichia coli</em> cells.
@@ -39,7 +37,7 @@ year = {2016}
 }
 </pre>
 </div>
-    
+
 
 ### 2015
 
@@ -49,8 +47,8 @@ year = {2016}
 <br> A. Robinson, John P. McDonald, V.E.A. Caldas, M. Patel, E. A. Wood, C. M. Punter, H. Ghodke, M. M. Cox, R. Woodgate, M. F. Goodman, A. M. van Oijen. <br>
 <em>PLOS Genetics</em>, 2015.
 
-<div class="pubLinks">[<a href="#" class="abstractLink">Abstract</a> | 
-<a href="#" class="bibtexLink">BibTeX</a> | 
+<div class="pubLinks">[<a href="#" class="abstractLink">Abstract</a> |
+<a href="#" class="bibtexLink">BibTeX</a> |
 <a href="http://journals.plos.org/plosgenetics/article?id=10.1371/journal.pgen.1005482">URL</a>]</div>
 
 <div class="abstract">Spatial regulation is often encountered as a component of multi-tiered regulatory systems in eukaryotes, where processes are readily segregated by organelle boundaries. Well-characterized examples of spatial regulation are less common in bacteria. Low-fidelity DNA polymerase V (UmuD'2C) is produced in <em>Escherichia coli</em> as part of the bacterial SOS response to DNA damage. Due to the mutagenic potential of this enzyme, pol V activity is controlled by means of an elaborate regulatory system at transcriptional and posttranslational levels. Using single-molecule fluorescence microscopy to visualize UmuC inside living cells in space and time, we now show that pol V is also subject to a novel form of spatial regulation. After an initial delay ($\sim$ 45 min) post UV irradiation, UmuC is synthesized, but is not immediately activated. Instead, it is sequestered at the inner cell membrane. The release of UmuC into the cytosol requires the RecA* nucleoprotein filament-mediated cleavage of UmuD→UmuD'. Classic SOS damage response mutants either block [umuD(K97A)] or constitutively stimulate [recA(E38K)] UmuC release from the membrane. Foci of mutagenically active pol V Mut (UmuD'2C-RecA-ATP) formed in the cytosol after UV irradiation do not co-localize with pol III replisomes, suggesting a capacity to promote translesion DNA synthesis at lesions skipped over by DNA polymerase III. In effect, at least three molecular mechanisms limit the amount of time that pol V has to access DNA: (1) transcriptional and posttranslational regulation that initially keep the intracellular levels of pol V to a minimum; (2) spatial regulation via transient sequestration of UmuC at the membrane, which further delays pol V activation; and (3) the hydrolytic activity of a recently discovered pol V Mut ATPase function that limits active polymerase time on the chromosomal template.
@@ -80,8 +78,8 @@ year = {2015}
 <br> V.E.A. Caldas, C.M. Punter, H. Ghodke, A. Robinson, A. M. van Oijen.<br>
 <em>Molecular Biosystems </em>, 2015.
 
-<div class="pubLinks">[<a href="#" class="abstractLink">Abstract</a> | 
-<a href="#" class="bibtexLink">BibTeX</a> | 
+<div class="pubLinks">[<a href="#" class="abstractLink">Abstract</a> |
+<a href="#" class="bibtexLink">BibTeX</a> |
 <a href="http://pubs.rsc.org/is/content/articlelanding/2015/mb/c5mb00321k#!divAbstract">URL</a>]</div>
 
 <div class="abstract">Recent technical advances have made it possible to visualize single molecules inside live cells. Microscopes with single-molecule sensitivity enable the imaging of low-abundance proteins, allowing for a quantitative characterization of molecular properties. Such data sets contain information on a wide spectrum of important molecular properties, with different aspects highlighted in different imaging strategies. The time-lapsed acquisition of images provides information on protein dynamics over long time scales, giving insight into expression dynamics and localization properties. Rapid burst imaging reveals properties of individual molecules in real-time, informing on their diffusion characteristics, binding dynamics and stoichiometries within complexes. This richness of information, however, adds significant complexity to analysis protocols. In general, large datasets of images must be collected and processed in order to produce statistically robust results and identify rare events. More importantly, as live-cell single-molecule measurements remain on the cutting edge of imaging, few protocols for analysis have been established and thus analysis strategies often need to be explored for each individual scenario. Existing analysis packages are geared towards either single-cell imaging data or in vitro single-molecule data and typically operate with highly specific algorithms developed for particular situations. Our tool, iSBatch, instead allows users to exploit the inherent flexibility of the popular open-source package ImageJ, providing a hierarchical framework in which existing plugins or custom macros may be executed over entire datasets or portions thereof. This strategy affords users freedom to explore new analysis protocols within large imaging datasets, while maintaining hierarchical relationships between experiments, samples, fields of view, cells, and individual molecules.
@@ -113,8 +111,8 @@ year = {2015}
 <br> Pozzi, E., Megda, C.R., Caldas, V. E. A., Damianovic, M., Pires, E. <br>
 <em>PLOS Genetics</em> 2015.
 
-<div class="pubLinks">[<a href="#" class="abstractLink">Abstract</a> | 
-<a href="#" class="bibtexLink">BibTeX</a> | 
+<div class="pubLinks">[<a href="#" class="abstractLink">Abstract</a> |
+<a href="#" class="bibtexLink">BibTeX</a> |
 <a href="http://www.sciencedirect.com/science/article/pii/S2214714414000865">URL</a>]</div>
 
 <div class="abstract">Aerated thermophilic reactors may have advantages for treating industrial effluents discharged at high temperatures. In this study, the wastewater from a recycled packaging cardboard plant was treated at 55°C in a moving bed aerated reactor. It was observed that, although the overall dissolved oxygen was maintained at 2–3mgL−1, several anaerobic microorganisms are found either in the mixed liquor or in the attached biofilm. This result indicates that both aerobic and anaerobic mechanisms participate in pollutant removal in this reactor, which confers advantages when recalcitrant compounds are found. The median COD removal efficiency of 84% for 36h of HRT observed in this experiment is expected for non-optimized activated sludge treatment of high temperatures industrial wastewater.
@@ -144,8 +142,8 @@ year = {2014}
 <br> Da Silva, M.T.A., Caldas, V. E. A., Costa, F.C., Silvestre, D.A.M.M., Thiemann, O.H.<br>
 <em>Molecular and Biochemical Parasitology - Cover</em> 2013.
 
-<div class="pubLinks">[<a href="#" class="abstractLink">Abstract</a> | 
-<a href="#" class="bibtexLink">BibTeX</a> | 
+<div class="pubLinks">[<a href="#" class="abstractLink">Abstract</a> |
+<a href="#" class="bibtexLink">BibTeX</a> |
 <a href="http://www.sciencedirect.com/science/article/pii/S0166685113000388">URL</a>]</div>
 
 <div class="abstract">Selenium (Se) is an essential trace element primarily found in selenoproteins as the 21st amino acid (selenocysteine, Sec, or U). Selenoproteins play an important role in growth and proliferation and are typically involved in cellular redox balance. Selenocysteine is encoded by an in-frame UGA codon specified by a stem-loop structure, the Sec insertion sequence element (SECIS), which, in eukaryotes, is located in the 3'-untranslated region (UTR). The availability of the Naegleria gruberi (ATCC 30224) genome sequence and the use of this organism as a model system for the pathogenic amoeba N. fowleri allowed us to investigate the Sec incorporation pathway in this primitive eukaryote. Using bioinformatics tools, we identified gene sequences encoding PSTK (O-phosphoseryl-tRNA(Sec) kinase), SepSecS (O-phosphoseryl-tRNA:selenocysteinyl-tRNA synthase), SelD/SPS2 (selenophosphate synthetase), EFSec (selenocysteine-specific elongation factor) and SBP (SECIS binding protein). These findings were confirmed by RT-PCR and by sequencing. A potential tRNA(Ser)Sec (SelC) gene and a putative selenoprotein with sequence similarity to a mitochondrial thioredoxin reductase (TR3) were also identified. Our results show that the selenocysteine incorporation machinery is indeed present in N. gruberi. Interestingly, the SelD/SPS2 gene is 2214 bp in length and contains two distinct domains. The N-terminal region shows sequence similarity to predicted methyltransferase proteins, and the C-terminal region is homologous to prokaryotic SelD/SPS2. Our results suggest the possibility of novel selenoproteins.
@@ -177,8 +175,8 @@ year = {2013}
 <br> Del Nery, V., Damianovic, M.H.Z., Pozzi, E., De Nardi, I.R., Caldas, V. E. A., Pires, E.C. <br>
 <em>Resources, Conservation and Recycling</em>, 2013.
 
-<div class="pubLinks">[<a href="#" class="abstractLink">Abstract</a> | 
-<a href="#" class="bibtexLink">BibTeX</a> | 
+<div class="pubLinks">[<a href="#" class="abstractLink">Abstract</a> |
+<a href="#" class="bibtexLink">BibTeX</a> |
 <a href="http://www.sciencedirect.com/science/article/pii/S0921344912002054">URL</a>]</div>
 
 <div class="abstract">This paper discusses the performance of a poultry slaughterhouse wastewater treatment plant (WWTP) in a tropical country and operating strategies that were applied over 84 months to this WWTP. The WWTP consisted of a dissolved air flotation (DAF) system, anaerobic ponds (APs) and a facultative pond (FP). The organic loading rates applied to the APs ranged from 0.26 to 1.05kgBOD/m3day, and the hydraulic retention time ranged from 2.2 to 3.8days. The resultant COD and BOD removal efficiencies were 42±11% and 38±15%, respectively. The FP surface loading was up to 983kgBOD/haday. The main observed events in the WWTP processes over this period were organic overload, low chemical oxygen demand (COD) and biochemical oxygen demand (BOD) removal efficiencies and color change from green to reddish at the FP. Molecular biology techniques were used to identify microbial groups in the FP in the period of low organic matter removal efficiency and when the liquid became reddish. Sunny conditions favored anoxygenic photosynthesis, the growth of purple nonsulfur bacteria (such as Rhodocyclales-like organisms), and green nonsulfur bacteria (such as Chloroflexi-like organisms). Mechanical aeration at the inlet of the FP restored the water to its original color and increased the COD and BOD removal efficiencies. Based on the BOD removal efficiencies of 89%, after the installation of aerators, the operating strategies illustrate the WWTP system's capacity and versatility to adapt to load variations.
@@ -209,8 +207,8 @@ year = {2013}
 <br> Serrão, V.H., Alessandro, F., Caldas, V. E. A., Marcal, R.L., Pereira, H.D., Thiemann, O.H., Garrat, R.C. <br>
 <em>FEBS Letters</em>, 2011.
 
-<div class="pubLinks">[<a href="#" class="abstractLink">Abstract</a> | 
-<a href="#" class="bibtexLink">BibTeX</a> | 
+<div class="pubLinks">[<a href="#" class="abstractLink">Abstract</a> |
+<a href="#" class="bibtexLink">BibTeX</a> |
 <a href="http://www.sciencedirect.com/science/article/pii/S0014579311007940">URL</a>]</div>
 
 <div class="abstract">We describe the purification, crystallization and structure for the GTP-binding domain of human septin 7 (SEPT7G). We show that it forms filaments within the crystal lattice which employ both the G and NC interfaces, similar to those seen in the hetero-filament of SEPT2/6/7. The NC interface is considered promiscuous as it is absent from the hetero-filament. Such promiscuity could provide the potential for permuting monomers along a filament in order to generate diversity in hetero-polymers. On the other hand, our results suggest that the G and NC interfaces may be necessary but insufficient for determining correct hetero-filament assembly.
