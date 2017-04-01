@@ -2,7 +2,6 @@ language: ruby
 rvm:
 - 2.4.0
 
-
 install:
   - gem install jekyll
  # - gem install html-proofer
@@ -10,10 +9,9 @@ install:
 before_script:
   - npm install
   - npm install -g gulp
-script: gulp
-
 
 script:
+- gulp
 - bundle install
 - bundle exec jekyll build
 #- bundle exec htmlproofer ./_site
