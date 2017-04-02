@@ -44,9 +44,7 @@ task :test do
     "./_site",
     {
       :allow_hash_href => true,
-      :parallel => {:in_processes => 4},
-      :only_4xx => true,
-      :url_ignore => ["#", "/^(?:http(?:s)?:\/\/)?(?:[^\.]+\.)?drupal\.org(?:/.*)?$/",
+      :url_ignore => ["/linkedin.com/","/^(?:http(?:s)?:\/\/)?(?:[^\.]+\.)?drupal\.org(?:/.*)?$/",
                       "/^(?:http(?:s)?:\/\/)?(?:[^\.]+\.)?linkedin\.com(?:/.*)?$/",
                       "/^(?:http(?:s)?:\/\/)?(?:[^\.]+\.)?fldrupal\.camp(?:/.*)?$/",
                       "/^(?:http(?:s)?:\/\/)?(?:[^\.]+\.)?vimeo\.camp(?:/.*)?$/"],
