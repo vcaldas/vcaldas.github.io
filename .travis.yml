@@ -3,9 +3,6 @@ sudo: required
 script:
   - ./tests.sh
 
-branches:
-  except:
-  - master
 node_js:
  - '6.1'
 before_install:
