@@ -4,7 +4,7 @@ script:
   - ./tests.sh
 
 node_js:
- - '6.1'
+ - '7.4'
 before_install:
   - if [[ `npm -v` != 3* ]]; then npm i -g npm@3; fi
   - npm cache clear

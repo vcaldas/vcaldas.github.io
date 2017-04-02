@@ -7,25 +7,16 @@ require 'html-proofer'
 # Change your GitHub reponame - Basic configurations.
 # Note I deploy to master. Travis deploys to gh-pages!
 GITHUB_REPONAME = "vcaldas/vcaldas.github.io"
-GITHUB_REPO_BRANCH = "master"
+GITHUB_REPO_BRANCH = "source"
 
 
 task default: %w[deploy]
 
-# Generate a stable build of your Jekyll source files into the `_site`-folder
 
-desc "Generate blog files"
-task :build do
-  Jekyll::Site.new(Jekyll.configuration({
-    "source"      => ".",
-    "destination" => "_site",
-    "config" => "_config.yml"
-  })).process
-end
 
 
 desc "Generate and publish blog to master"
-task :deploy => [:build] do
+task :deploy do
   puts "----------------------------------"
   puts "\n##Initiating #{GITHUB_REPONAME}"
   system "git init"

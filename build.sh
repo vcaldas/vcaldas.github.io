@@ -13,12 +13,24 @@ npm install
 # Build the site.
 gulp
 
-git clone https://$GITHUB_REPO
-cd $(basename ${GITHUB_REPO%.git})
-git config user.name "Travis CI"
-git config user.email ${EMAIL}
-rsync -az --delete --exclude '.git*' ../_site/ .
-touch .nojekyll
+# Checkout master and remove everything
+git clone https://${GH_TOKEN}@github.com/vcaldas/vcaldas.github.io.git ../vcaldas.github.io.master
+cd ../vcaldas.github.io.master
+git checkout master
+rm -rf *
+
+# Copy generated HTML site from source branch in original repo.
+# Now the master branch will contain only the contents of the _site directory.
+cp -R ../vcaldas.github.io/_site/* .
+
+# Make sure we have the updated .travis.yml file so tests won't run on master.
+cp ../vcaldas.github.io/.travis.yml .
+git config user.email ${GH_EMAIL}
+git config user.name "vcaldas"
+
+# Commit and push generated content to master branch.
+git status
 git add -A .
-git commit -m "Generated Jekyll site by Travis CI - ${TRAVIS_BUILD_NUMBER}"
-git push --force "https://${DEPLOY_KEY}@${GITHUB_REPO}" HEAD:${REPO_TARGET_BRANCH}
+git status
+git commit -a -m "Travis #$TRAVIS_BUILD_NUMBER"
+git push --quiet origin master > /dev/null 2>&1
