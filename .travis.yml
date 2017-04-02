@@ -1,7 +1,7 @@
 language: node_js
 sudo: required
 script:
-  - tests.sh
+  - ./tests.sh
 
 node_js:
  - '7.4'
