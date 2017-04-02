@@ -1,6 +1,6 @@
 source "https://rubygems.org"
 #Updated
-ruby '2.4'
+#ruby '2.4'
 
 # Hello! This is where you manage which Jekyll version is used to run.
 # When you want to use a different version, change it below, save the
@@ -12,7 +12,8 @@ ruby '2.4'
 # Happy Jekylling!
 gem "jekyll"
 gem 'html-proofer', '~> 3.0.0'
-
+gem 'travis'
+gem 'json',
 
 # If you want to use GitHub Pages, remove the "gem "jekyll"" above and
 # uncomment the line below. To upgrade, run `bundle update github-pages`.

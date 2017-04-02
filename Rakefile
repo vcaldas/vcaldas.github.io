@@ -1,7 +1,3 @@
-require "rubygems"
-require "tmpdir"
-require "bundler/setup"
-require "jekyll"
 require 'html-proofer'
 
 # Change your GitHub reponame - Basic configurations.
