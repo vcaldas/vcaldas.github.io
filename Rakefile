@@ -48,7 +48,8 @@ task :test do
       :only_4xx => true,
       :url_ignore => ["#", "/^(?:http(?:s)?:\/\/)?(?:[^\.]+\.)?drupal\.org(?:/.*)?$/",
                       "/^(?:http(?:s)?:\/\/)?(?:[^\.]+\.)?linkedin\.com(?:/.*)?$/",
-                      "/^(?:http(?:s)?:\/\/)?(?:[^\.]+\.)?fldrupal\.camp(?:/.*)?$/"],
+                      "/^(?:http(?:s)?:\/\/)?(?:[^\.]+\.)?fldrupal\.camp(?:/.*)?$/",
+                      "/^(?:http(?:s)?:\/\/)?(?:[^\.]+\.)?vimeo\.camp(?:/.*)?$/"],
       :empty_alt_ignore => false,
       :verbose => true,
       :typhoeus => {
