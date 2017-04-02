@@ -8,12 +8,7 @@ var rename = require("gulp-rename");
 var uglify = require('gulp-uglify');
 var pkg = require('./package.json');
 var cp = require('child_process');
-//--------//
 var runSequence = require('run-sequence');
-var run = require('gulp-run');
-var gutil = require('gulp-util');
-
-//-----//
 
 var jekyllCommand = (/^win/.test(process.platform)) ? 'jekyll.bat' : 'jekyll';
 
@@ -46,7 +41,6 @@ gulp.task('sass', function() {
         .pipe(browserSync.reload({
             stream: true
         }))
-        .on('error', gutil.log)
 });
 
 // Minify compiled CSS
@@ -76,15 +70,12 @@ gulp.task('minify-js', function() {
 gulp.task('copy', function() {
     gulp.src(['node_modules/bootstrap/dist/**/*', '!**/npm.js', '!**/bootstrap-theme.*', '!**/*.map'])
         .pipe(gulp.dest('assets/lib/bootstrap'))
-        .on('error', gutil.log);
 
     gulp.src(['node_modules/jquery/dist/jquery.js', 'node_modules/jquery/dist/jquery.min.js'])
         .pipe(gulp.dest('assets/lib/jquery'))
-        .on('error', gutil.log);
 
     gulp.src(['node_modules/tether/dist/js/*.js'])
         .pipe(gulp.dest('assets/lib/tether'))
-        .on('error', gutil.log);
 
     gulp.src([
             'node_modules/font-awesome/**',
@@ -95,7 +86,6 @@ gulp.task('copy', function() {
             '!node_modules/font-awesome/*.json'
         ])
         .pipe(gulp.dest('assets/lib/font-awesome'))
-        .on('error', gutil.log);
 })
 
 // Run everything
@@ -123,7 +113,6 @@ gulp.task('jekyll-build', function (done) {
 // Our 'build' tasks for jekyll server.
 gulp.task('jekyll-build', function (done) {
   return cp.spawn('bundle', ['exec', 'jekyll', 'build'], {stdio: 'inherit'})
-    .on('error', gutil.log)
     .on('close', done);
 });
 
@@ -147,24 +136,23 @@ gulp.task('dev', ['browserSync', 'sass', 'minify-css', 'minify-js'], function() 
 
 });
 
+// Compile LESS files from /less into /css
+gulp.task('less', function() {
+    return gulp.src('less/grayscale.less')
+        .pipe(less())
+        .pipe(header(banner, { pkg: pkg }))
+        .pipe(gulp.dest('css'))
+        .pipe(browserSync.reload({
+            stream: true
+        }))
+});
 
-//---- new codes -- //
+
 
 // Builds site anew using test config.
 gulp.task('build:test', function(callback) {
-    runSequence(//'clean',
-      //  ['build:scripts', 'build:images', 'build:styles', 'build:fonts'],
-        //'build:jekyll:test',
-        ['sass','minify-css','minify-js', 'copy'], 'build:jekyll:test',
+    runSequence('clean',
+        ['build:scripts', 'build:images', 'build:styles', 'build:fonts'],
+        'build:jekyll:test',
         callback);
-});
-
-// Runs jekyll build command using test config.
-gulp.task('build:jekyll:test', function(done) {
-    var shellCommand = 'bundle exec jekyll build --config _config.yml,_config.test.yml';
-
-    return gulp.src('')
-        .pipe(run(shellCommand))
-        .on('error', gutil.log)
-        .on('close', done);
 });

@@ -15,7 +15,7 @@ Overview
 
 Travis-CL Build status: ![alt text](https://travis-ci.org/vcaldas/vcaldas.github.io.svg?branch=master)
 
-Please report [errors or feedback here](https://github.com/vcaldas/vcaldas.github.io/issues). 
+Please report [errors or feedback here](https://github.com/vcaldas/vcaldas.github.io/issues).
 
 -----------------------------------------------------------------------------------------------------------
 
@@ -27,7 +27,10 @@ Site Features & Credits
 * Site and source code hosting on [Github](https://github.com/)
 * CSS based on [twitter bootstrap](http://getbootstrap.com)
 * Scalable CSS icons from [FontAwesome](http://fortawesome.github.com/Font-Awesome) and [Academicons](https://github.com/jpswalsh/academicons)
-- Automatic builds using [Travis-CI](https://travis-ci.org)
+* Automatic builds using [Travis-CI](https://travis-ci.org)
+* Workflow [GulpJS](http://gulpjs.com/)
+
+
 
 -----------------------------------------------------------------------------------------------------------
 
@@ -37,6 +40,10 @@ Websites that inspired me
 Source of great ideas and codes.
 
 * Carl Boettiger [cboettig/cboettig.github.io](http://github.com/cboettig/cboettig.github.io)
+* Layout ideas:
+  - [PaticleTheme by Nrandecker](https://github.com/nrandecker/particle)
+  - [Particle.JS](https://github.com/VincentGarreau/particles.js/)
+
 
 
 -----------------------------------------------------------------------------------------------------------
@@ -54,4 +61,3 @@ to cite or attribute this content where appropriate.
 
 *Any opinions, findings, and conclusions or recommendations expressed
 in this material are those of the author(s).*
-
