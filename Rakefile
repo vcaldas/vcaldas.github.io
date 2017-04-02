@@ -9,8 +9,6 @@ GITHUB_REPO_BRANCH = "source"
 task default: %w[deploy]
 
 
-
-
 desc "Generate and publish blog to master"
 task :deploy do
   puts "----------------------------------"
