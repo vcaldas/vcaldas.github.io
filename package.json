@@ -11,7 +11,7 @@
   },
   "devDependencies": {
     "bootstrap": "^4.0.0-alpha.6",
-    "browser-sync": "^2.13.0",
+    "browser-sync": "^2.18.8",
     "font-awesome": "^4.6.3",
     "gulp": "^3.9.1",
     "gulp-clean-css": "^3.0.4",
