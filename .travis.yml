@@ -12,7 +12,6 @@ node_js:
 before_install:
   - if [[ `npm -v` != 3* ]]; then npm i -g npm@3; fi
   - npm cache clear
-  - gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3
   - \curl -sSL https://get.rvm.io | bash -s stable --ruby
   - rvm reload
   - rvm get head --auto-dotfiles
