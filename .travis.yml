@@ -12,8 +12,8 @@ before_install:
   - \curl -sSL https://get.rvm.io | bash -s stable --ruby
   - rvm reload
   - rvm get head --auto-dotfiles
-  - rvm install 2.4
-  - rvm use 2.4
+  - rvm install 2.4.0
+  - rvm use 2.4.0
   - . $HOME/.nvm/nvm.sh && nvm install 6.1 && nvm use 6.1
   - gem install bundler
   - bundle check || bundle install
