@@ -38,6 +38,7 @@ task :deploy => [:build] do
   status = system("git status")
   puts "----------------------------------"
    puts "\n## Committing a site build at #{Time.now.utc}"
+   #Example rake message="mymessage"
   message = ENV["message"] || "Site updated at #{Time.now.utc}"
   status = system("git commit -m \"#{message}\"")
   puts status ? "Success" : "Failed"

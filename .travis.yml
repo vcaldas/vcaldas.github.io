@@ -18,7 +18,7 @@ before_install:
   - bundle check || bundle install
 before_script:
   - npm install -g gulp
-  script: gulp
+script: gulp
 
 after_success:
   - git clone https://$GITHUB_REPO
