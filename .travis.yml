@@ -7,6 +7,7 @@ node_js:
  - '7.4'
 before_install:
   - if [[ `npm -v` != 3* ]]; then npm i -g npm@3; fi
+  - sudo apt-get install curl
   - npm cache clear
   - rvm install 2.1
   - rvm use 2.1
