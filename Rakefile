@@ -37,10 +37,12 @@ task :deploy do
 end
 
 
-
+desc "build and test website"
 task :test do
-  HTMLProofer.check_directories(
-    ["./_site"], {
+  sh "bundle exec jekyll build"
+  HTMLProofer.check_directory(
+    "./_site",
+    {
       :allow_hash_href => true,
       :parallel => {:in_processes => 4},
       :only_4xx => true,
@@ -50,6 +52,12 @@ task :test do
       :empty_alt_ignore => false,
       :verbose => true,
       :typhoeus => {
-        :timeout => 3 }
-    }).run
+        :followlocation => true,
+        :ssl_verifypeer => false,
+        :headers => {
+          'User-Agent' => 'html-proofer'
+        }
+      }
+    }
+  ).run
 end
