@@ -13,7 +13,7 @@ source "https://rubygems.org"
 gem "jekyll"
 gem 'html-proofer', '~> 3.0.0'
 gem 'travis'
-gem 'json',
+gem 'json'
 
 # If you want to use GitHub Pages, remove the "gem "jekyll"" above and
 # uncomment the line below. To upgrade, run `bundle update github-pages`.
