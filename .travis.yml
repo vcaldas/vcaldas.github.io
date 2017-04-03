@@ -1,9 +1,6 @@
 language: node_js
 sudo: required
-before_script:
-- chmod +x ./_scripts/tests.sh
-script:
-- "./_scripts/tests.sh"
+
 node_js:
 - '7'
 before_install:
@@ -17,16 +14,13 @@ before_install:
 - ". $HOME/.nvm/nvm.sh && nvm install 6.1 && nvm use 6.1"
 - gem install bundler
 - bundle check || bundle install
-env:
-  global:
-  - NOKOGIRI_USE_SYSTEM_LIBRARIES=true
-  - GITHUB_REPO: github.com/vcaldas/vcaldas.github.io
-  - REPO_TARGET_BRANCH: master
-  - secure: cV5nBHRWcQZhDkReGsQJTexmTcN9dGgL6WMUvtF1+7NsW5bgD/OcOyruOI2FsDa+WC8kKa5XhWKV6DS0Q/29qWhygMq1rFaAHe7LMc/+/tfQNPhhBRcxzp/APUWF/7GQmEMZCxtL8Tp94lJIpaLNuzDiXaUk+NqKsACqkv9lPwZLSUi3I9jZg2hQcY6u81fOwu+taWnuS3H8+Pz7e6FmVnA23xlrvnIIwoM0HEeo1w1W8rADC7CdQUFkGtjOMGWhtTstu/gIn0eEGDZ1+IwJEfW/B3BmMnMMP639FPR5sO15Ri5lyw4/2oS7sWrpKt8ua+yt3yO7Yma4eDkFQjGQsYuWnuURPYnP25LYBrT6zQ880xgjUjYZwplaVcKB7KeANjA3To3U8n6JJWSWVTwwTCt1mV9dQrbISjTytvigYoVrOhRXYg6wguRAxlMRg82scFtDpafJrL8jAnq7WrWR02qpPz8YEO0XanTbNTSwsXviFLhWjiifBHcDR5A3ZFcC6nhPVAvYRGoCij+hTt8n+ewBBeD5h7FvBsW/lZ/G/2XxUXOUu0E3v1T6YuxZoTFtMNt0zd7yGfgHUhV2V2zX5ap1HIMGP/bfb98wNR7+f/SN1fmxMJtx64473A7OHFAnyoQWGYND1MmS5aJ3D1FB70iV4uYldqTM6aVU/7qqrpA=
+
+before_script:
+- chmod +x ./_scripts/tests.sh
+script:
+- "./_scripts/tests.sh"
+
 after_success:
-  - git config credential.helper "store --file=.git/credentials"
-  - echo "https://${GH_TOKEN}:@github.com" > .git/credentials
-  - node ./node_modules/grunt-cli/bin/grunt release
   - git clone https://$GITHUB_REPO
   - cd $(basename ${GITHUB_REPO%.git})
   - git config user.name "Travis CI"
@@ -36,5 +30,11 @@ after_success:
   - git add -A .
   - git commit -m "Generated Jekyll site by Travis CI - ${TRAVIS_BUILD_NUMBER}"
   - git push --force "https://${DEPLOY_KEY}@${GITHUB_REPO}" HEAD:${REPO_TARGET_BRANCH}
-dd:
-  secure: K8WcIUKpk1DXGfwwelKY0SBPXUiarsgpgU4JqfukT0ds0NS8zG3rxA2u0uU7EpSDBVziIFcQtKskxQhdJIJYSb4cShvU7tyg2qTmUr0Q6ThPhOvPksQ6FQmAyvutb79lYVMUXDeoZ7CqGqVaO0qANbaVL3EBNrbPlcoSoAoOAKYIH1OSz4d8Q7xUxTmb2gGQTC00U3gqkHBnwnA+1ygUxM8qB2J5r7TGuZSpjGfoPvUfEZ2FCcWs6TU/9xuQB7tTaIAG2abh1Z1kyyIPXsd1hg5KJsguOUnDmSwM7z7OdUC7syCwUE0xSW+Iblas0yv2J1lTfLqwYOUV4IVeQlLawjWGje3l606qOzvzhF32Hnh0FTlGAjGE5YWzo9HfQKCgORuf+iZTsgRTWSne9l7bPmC1VjFBiwWn2Cug7vZYakuSs1d7hFBcEVFIbKhMFTsPQrole8Bbop4A/bXxiZ5JPk9VsDXZMil8XO0s5x4bq7FloTM+UVD2LoAoUHj7vNrnMBko9AS6NsQs24OkDEiVEggcwHYm71Vk5ARJLO6xoafscNHbm3w22fUwA3eP5k8+ByjVsSDeRInlrAnHf9EGJ1LJj/jn2s5fZmBlKAlWacXorr0rgccruVjTtPFuPY4okAaI5L5yfHh6tUVyw3gunNUYYbLK3Eg4tNTHwWytrtg=
+
+env:
+  global:
+  - NOKOGIRI_USE_SYSTEM_LIBRARIES=true
+  - GITHUB_REPO: github.com/vcaldas/vcaldas.github.io
+  - REPO_TARGET_BRANCH: master
+  - secure: cV5nBHRWcQZhDkReGsQJTexmTcN9dGgL6WMUvtF1+7NsW5bgD/OcOyruOI2FsDa+WC8kKa5XhWKV6DS0Q/29qWhygMq1rFaAHe7LMc/+/tfQNPhhBRcxzp/APUWF/7GQmEMZCxtL8Tp94lJIpaLNuzDiXaUk+NqKsACqkv9lPwZLSUi3I9jZg2hQcY6u81fOwu+taWnuS3H8+Pz7e6FmVnA23xlrvnIIwoM0HEeo1w1W8rADC7CdQUFkGtjOMGWhtTstu/gIn0eEGDZ1+IwJEfW/B3BmMnMMP639FPR5sO15Ri5lyw4/2oS7sWrpKt8ua+yt3yO7Yma4eDkFQjGQsYuWnuURPYnP25LYBrT6zQ880xgjUjYZwplaVcKB7KeANjA3To3U8n6JJWSWVTwwTCt1mV9dQrbISjTytvigYoVrOhRXYg6wguRAxlMRg82scFtDpafJrL8jAnq7WrWR02qpPz8YEO0XanTbNTSwsXviFLhWjiifBHcDR5A3ZFcC6nhPVAvYRGoCij+hTt8n+ewBBeD5h7FvBsW/lZ/G/2XxUXOUu0E3v1T6YuxZoTFtMNt0zd7yGfgHUhV2V2zX5ap1HIMGP/bfb98wNR7+f/SN1fmxMJtx64473A7OHFAnyoQWGYND1MmS5aJ3D1FB70iV4uYldqTM6aVU/7qqrpA=
+  - secure: K8WcIUKpk1DXGfwwelKY0SBPXUiarsgpgU4JqfukT0ds0NS8zG3rxA2u0uU7EpSDBVziIFcQtKskxQhdJIJYSb4cShvU7tyg2qTmUr0Q6ThPhOvPksQ6FQmAyvutb79lYVMUXDeoZ7CqGqVaO0qANbaVL3EBNrbPlcoSoAoOAKYIH1OSz4d8Q7xUxTmb2gGQTC00U3gqkHBnwnA+1ygUxM8qB2J5r7TGuZSpjGfoPvUfEZ2FCcWs6TU/9xuQB7tTaIAG2abh1Z1kyyIPXsd1hg5KJsguOUnDmSwM7z7OdUC7syCwUE0xSW+Iblas0yv2J1lTfLqwYOUV4IVeQlLawjWGje3l606qOzvzhF32Hnh0FTlGAjGE5YWzo9HfQKCgORuf+iZTsgRTWSne9l7bPmC1VjFBiwWn2Cug7vZYakuSs1d7hFBcEVFIbKhMFTsPQrole8Bbop4A/bXxiZ5JPk9VsDXZMil8XO0s5x4bq7FloTM+UVD2LoAoUHj7vNrnMBko9AS6NsQs24OkDEiVEggcwHYm71Vk5ARJLO6xoafscNHbm3w22fUwA3eP5k8+ByjVsSDeRInlrAnHf9EGJ1LJj/jn2s5fZmBlKAlWacXorr0rgccruVjTtPFuPY4okAaI5L5yfHh6tUVyw3gunNUYYbLK3Eg4tNTHwWytrtg=
