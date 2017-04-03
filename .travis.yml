@@ -17,6 +17,7 @@ before_install:
 
 before_script:
 - chmod +x ./_scripts/tests.sh
+- chmod +x ./_scripts/build.sh
 script:
 - "./_scripts/tests.sh"
 
