@@ -4,9 +4,22 @@ require 'html-proofer'
 # Note I deploy to master. Travis deploys to gh-pages!
 GITHUB_REPONAME = "vcaldas/vcaldas.github.io"
 GITHUB_REPO_BRANCH = "source"
+GITHUB_DEPLOY_BRANCH = "newrepo"
 
 
 task default: %w[deploy]
+
+desc "Publish website Files"
+task :publish do
+    puts "Create Dummy directory for website"
+    system "mkdir dummy"
+    puts "----------------------------------"
+    puts "\n##Initiating #{GITHUB_REPONAME}"
+    system "git init"
+    puts "----------------------------------"
+    system "git checkout master"
+    system "cd .."
+end
 
 desc "Run gulp"
 task :gulp do
