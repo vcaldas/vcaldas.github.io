@@ -12,13 +12,15 @@ task default: %w[deploy]
 desc "Publish website Files"
 task :publish do
     puts "Create Dummy directory for website"
-    system "mkdir dummy"
-    puts "----------------------------------"
-    puts "\n##Initiating #{GITHUB_REPONAME}"
-    system "git init"
-    puts "----------------------------------"
-    system "git checkout master"
-    system "cd .."
+    system "mkdir temp"
+    Dir.chdir('temp') do
+      puts "----------------------------------"
+      system "git clone git@github.com:#{GITHUB_REPONAME}.git"
+      puts "----------------------------------"
+      system "git checkout master"
+    end
+
+
 end
 
 desc "Run gulp"
