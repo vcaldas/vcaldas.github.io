@@ -10,7 +10,7 @@ GITHUB_DEPLOY_BRANCH = "newrepo"
 task default: %w[deploy]
 
 desc "Publish website Files"
-task :publish do
+task :publish => :deploy do
     puts "Create Dummy directory for website"
     system "mkdir temp"
     Dir.chdir('temp') do
@@ -18,10 +18,11 @@ task :publish do
       system "git clone git@github.com:#{GITHUB_REPONAME}.git"
       puts "----------------------------------"
       system "git checkout master"
-      system "rm -rf *"
-      File.join(RAILS_ROOT, "../_site", "./")
+      #system "rm -rf *"
+      #File.join(RAILS_ROOT, "../_site", "./")
     end
-
+    system "git checkout source"
+  FileUtils.rm_rf('temp')
 
 end
 
