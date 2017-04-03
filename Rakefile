@@ -12,17 +12,15 @@ task default: %w[deploy]
 desc "Publish website Files"
 task :publish => :deploy do
     puts "Create Dummy directory for website"
-    system "mkdir temp"
+    system "git clone git@github.com:#{GITHUB_REPONAME}.git temp"
     Dir.chdir('temp') do
-      puts "----------------------------------"
-      system "git clone git@github.com:#{GITHUB_REPONAME}.git"
       puts "----------------------------------"
       system "git checkout master"
       #system "rm -rf *"
       #File.join(RAILS_ROOT, "../_site", "./")
     end
-    system "git checkout source"
-  FileUtils.rm_rf('temp')
+    #system "git checkout source"
+    #FileUtils.rm_rf('temp')
 
 end
 
