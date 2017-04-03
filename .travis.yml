@@ -2,7 +2,7 @@
 language: node_js
 sudo: required
 script:
-  - ./_scripts/run-tests.sh
+  - ./_scripts/tests.sh
 branches:
   except:
   - master
