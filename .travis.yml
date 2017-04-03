@@ -4,7 +4,7 @@ sudo: required
 node_js:
 - '7'
 before_install:
-- if [[ `npm -v` != 3* ]]; then npm i -g npm@3; fi
+- if [[ `npm -v` != 4* ]]; then npm i -g npm@4; fi
 - npm cache clear
 - "\\curl -sSL https://get.rvm.io | bash -s stable --ruby"
 - rvm reload
