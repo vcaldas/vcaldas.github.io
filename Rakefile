@@ -15,7 +15,7 @@ task :gulp do
 end
 
 desc "Publish website Files"
-task :publish => :deploy do
+task :publish =>  ['gulp', 'deploy'] do
     puts "Create Dummy directory for website"
     system "git clone git@github.com:#{GITHUB_REPONAME}.git temp"
     Dir.chdir('temp') do
@@ -82,7 +82,7 @@ task :deploy do
   #system "git remote add origin git@github.com:#{GITHUB_REPONAME}.git"
   system "git push origin #{GITHUB_REPO_BRANCH} --force"
   puts status ? "Success" : "Failed"
-  puts "Website deployed! Now Travis will work."
+  puts "Source branch updated."
 end
 
 
