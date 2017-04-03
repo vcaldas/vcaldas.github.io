@@ -10,10 +10,8 @@ GITHUB_DEPLOY_BRANCH = "master"
 task default: %w[deploy]
 
 desc "Copy tst"
-task :copy do
-  system "mkdir temp"
-  #FileUtils.mv('./_site', './temp')
-  FileUtils.cp_r('./_site/.', './temp')
+task :remove do
+  FileUtils.rm_rf(Dir.glob('./_site/*'))
 end
 
 desc "Publish website Files"
@@ -26,6 +24,7 @@ task :publish => :deploy do
       #system "rm -rf *"
       #File.join(RAILS_ROOT, "../_site", "./")
     end
+    FileUtils.rm_rf(Dir.glob('./temp/*'))
     FileUtils.cp_r('./_site/.', './temp')
     Dir.chdir('temp') do
       puts "----------------------------------"
