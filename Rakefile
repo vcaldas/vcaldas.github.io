@@ -4,7 +4,7 @@ require 'html-proofer'
 # Note I deploy to master. Travis deploys to gh-pages!
 GITHUB_REPONAME = "vcaldas/vcaldas.github.io"
 GITHUB_REPO_BRANCH = "source"
-GITHUB_DEPLOY_BRANCH = "newrepo"
+GITHUB_DEPLOY_BRANCH = "master"
 
 
 task default: %w[deploy]
