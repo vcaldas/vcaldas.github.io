@@ -18,6 +18,8 @@ task :publish do
       system "git clone git@github.com:#{GITHUB_REPONAME}.git"
       puts "----------------------------------"
       system "git checkout master"
+      system "rm -rf *"
+      File.join(RAILS_ROOT, "../_site", "./")
     end
 
 
