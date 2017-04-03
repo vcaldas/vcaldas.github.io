@@ -10,8 +10,8 @@ GITHUB_DEPLOY_BRANCH = "master"
 task default: %w[deploy]
 
 desc "Copy tst"
-task :remove do
-  FileUtils.rm_rf(Dir.glob('./_site/*'))
+task :gulp do
+  system "gulp"
 end
 
 desc "Publish website Files"

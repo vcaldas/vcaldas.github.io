@@ -98,7 +98,7 @@ gulp.task('copy', function() {
 })
 
 // Run everything
-gulp.task('default', ['sass', 'minify-css', 'minify-js', 'copy']);
+gulp.task('default', ['sass', 'minify-css', 'minify-js', 'copy','jekyll-build']);
 
 // Configure the browserSync task
 gulp.task('browserSync', ['jekyll-build'],function() {
