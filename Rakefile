@@ -9,6 +9,13 @@ GITHUB_DEPLOY_BRANCH = "newrepo"
 
 task default: %w[deploy]
 
+desc "Copy tst"
+task :copy do
+  system "mkdir temp"
+  #FileUtils.mv('./_site', './temp')
+  FileUtils.cp_r('./_site/.', './temp')
+end
+
 desc "Publish website Files"
 task :publish => :deploy do
     puts "Create Dummy directory for website"
@@ -19,8 +26,30 @@ task :publish => :deploy do
       #system "rm -rf *"
       #File.join(RAILS_ROOT, "../_site", "./")
     end
-    #system "git checkout source"
-    #FileUtils.rm_rf('temp')
+    FileUtils.cp_r('./_site/.', './temp')
+    Dir.chdir('temp') do
+      puts "----------------------------------"
+      puts "\n## Staging modified files"
+      status = system("git add --all")
+      puts status ? "Success" : "Failed"
+      puts "----------------------------------"
+      puts "\n# Checking repository status"
+      status = system("git status")
+      puts "----------------------------------"
+      puts "\n## Committing a site build at #{Time.now.utc}"
+      message = ENV["message"] || "Site updated at #{Time.now.utc}"
+      status = system("git commit -m \"#{message}\"")
+      puts status ? "Success" : "Failed"
+      puts "----------------------------------"
+      system "git commit -m #{message.inspect}"
+      puts "\n## Pushing commits to remote"
+      #system "git remote add origin git@github.com:#{GITHUB_REPONAME}.git"
+      system "git push origin #{GITHUB_DEPLOY_BRANCH} --force"
+      puts status ? "Success" : "Failed"
+      puts "Website deployed!"
+    end
+    system "git checkout source"
+    FileUtils.rm_rf('temp')
 
 end
 
