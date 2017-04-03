@@ -8,7 +8,6 @@ script:
 
 
 node_js:
- - "iojs"
  - "7"
 
 before_install:
