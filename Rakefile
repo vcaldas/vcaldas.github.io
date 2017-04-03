@@ -8,6 +8,11 @@ GITHUB_REPO_BRANCH = "source"
 
 task default: %w[deploy]
 
+desc "Run gulp"
+task :gulp do
+  puts "Run gulp"
+  system "gulp"
+end
 
 desc "Generate and publish blog to master"
 task :deploy do
