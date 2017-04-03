@@ -3,6 +3,9 @@
   "title": "Victor Caldas",
   "version": "0.0.1",
   "homepage": "http://victorcaldas.com",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
   "author": "Victor Caldas",
   "private": true,
   "license": {
