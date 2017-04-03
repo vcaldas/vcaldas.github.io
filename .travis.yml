@@ -4,7 +4,7 @@ sudo: required
 before_script:
   - chmod +x ./tests.sh
 script:
-  - ./tests.sh
+  - ./_scripts/tests.sh
 
 node_js:
  - "7"
@@ -29,9 +29,7 @@ env:
   - secure: AK9+XwjpzXcNxHnWCMzeihMSoS8mWaRdpnk7bVHcBcG+HANhEWrMtswbyV0HoMFAuZT7EpMqjOsNB/QXvwX3yPsoT0uasllNBe4IQTzHtkOsleIwZHipTBixI4gM3H+vf3h0vtPOebwPqJQZqDXxs0oGW6A6xroT7uol2YsvFXyQGB70ODelf5k+9EnHw8CN7UJf7ZpYIAwjkAPt8cxMxtJ6amEpOs3tDoVUEUmarqFhg7n4YbSp57cRVtuiSGbS3nF2DtEpjGQP+6wMN4fH12hDT90mePDmiF3JOg6t/YslYK2YPkHe7ei/iNBFN2j5Q7wIb6yuISWqD8QsnKnbjhKaNscgo16oxMKIgG86Po7Jz5RIdUWeAyk2sS27+W0WEwn5Yv62F36lbCNaWyCTHB1bpcL7LwSFixU2xOxD7oy03XCu2vKtIHmlRNnRO0Bc89JtbRGeasxon2+8uzh1cRc1OaXowsE/CqrDI97GGx3llhzw1/bZsY55ApxSGHiobVtYPg7McW03k9r68QWqyAMNwwqYVxo/m07hiPg3l8TD0zpSRgb/zI+KDNH0tytQsNobYLV6t8fWENykKteoDKeJv8Nb80X7hxt1PZ5ZbqXB4DjfIjzdDarduOhEndzrcRZddWDRR5GbWn1zlkMfnwjWde7b6BFdnIp0NX1s1Ww=
 deploy:
   provider: script
-  github_token: $GITHUB_TOKEN
-  script: ./build.sh
+  script: ./_scripts/build.sh
   skip_cleanup: true
-
   on:
     branch: source
