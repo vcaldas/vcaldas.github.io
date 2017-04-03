@@ -2,7 +2,7 @@ language: node_js
 sudo: required
 
 before_script:
-  - chmod +x ./tests.sh
+  - chmod +x ../_scripts/tests.sh
 script:
   - ./_scripts/tests.sh
 
