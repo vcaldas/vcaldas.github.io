@@ -34,7 +34,7 @@ var landingScripts = [paths.vendorJQuery,
         paths.vendorBootstrapJS,
         paths.vendorJQueryEasing,
         paths.vendorParticleJS,
-        paths.vendorSweetScroll,        
+        paths.vendorSweetScroll,
         paths.srcJS + 'apps.js',
         paths.srcJS + 'grayscale.js',
         //paths.srcJS + 'vendor/ie10-viewport-bug-workaround.js',
@@ -44,7 +44,7 @@ var landingScripts = [paths.vendorJQuery,
         paths.vendorBootstrapJS,
         paths.vendorJQueryEasing,
         paths.vendorParticleJS,
-        paths.vendorSweetScroll,        
+        paths.vendorSweetScroll,
         paths.srcJS + 'apps.js',
         paths.srcJS + 'grayscale.js',
         paths.srcJS + 'pubs.js'
@@ -61,7 +61,7 @@ gulp.task('scripts:landing', () =>
         stream: true
     }))
 
-    
+
 );
 
 gulp.task('scripts:publications', () =>
@@ -106,9 +106,9 @@ gulp.task('minify-css', function() {
         .pipe(uncss({
             html: ['_site/**/**.html', '_site/*.html']
         }))
-        // .pipe(cleanCSS({
-        //     compatibility: 'ie8'
-        // }))
+        .pipe(cleanCSS({
+            compatibility: 'ie8'
+        }))
         .pipe(rename({
             suffix: '.min'
         }))

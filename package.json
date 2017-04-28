@@ -18,18 +18,21 @@
     "browser-sync": "^2.18.8",
     "del": "^2.2.2",
     "font-awesome": "^4.6.3",
-    "gulp": "github:gulpjs/gulp#4.0",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
     "gulp-clean": "^0.3.2",
     "gulp-clean-css": "^3.0.4",
     "gulp-concat": "^2.6.1",
     "gulp-header": "^1.8.7",
     "gulp-if": "^2.0.2",
     "gulp-less": "^3.1.0",
+    "gulp-notify": "^3.0.0",
     "gulp-postcss": "^6.4.0",
     "gulp-rename": "^1.2.2",
     "gulp-run": "^1.7.1",
     "gulp-sass": "^3.1.0",
     "gulp-sequence": "^0.4.6",
+    "gulp-sourcemaps": "^2.6.0",
     "gulp-uglify": "^2.1.2",
     "gulp-uncss": "^1.0.6",
     "gulp-util": "^3.0.8",
@@ -45,6 +48,8 @@
     "type": "git",
     "url": "https://github.com/vcaldas/vcaldas.github.io.git"
   },
-  "dependencies": {},
+  "dependencies": {
+    "gulp": "^3.3.4"
+  },
   "optionalDependencies": {}
 }
