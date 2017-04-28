@@ -1,0 +1,41 @@
+# Todo list
+
+
+ ☐ CSS compiled to assests folder
+ ☐ bootstrap
+ ☐ font-awesome
+ ☐ academicons
+ ☐ particles
+ ☐ 
+ 
+ ☐ 
+ ☐ JS moved to assets/js
+ ☐ bootstrap.js
+ ☐ jquery
+ ☐ tether
+ 
+ ☐ Check website build
+
+ ☐ Minify CSS
+ 
+ ☐ Build check
+ ☐ Minify JS
+ ☐ Build Check
+ ☐ Remove useless CSS
+ ☐ Build Check
+ ☐ Deploy new version
+
+
+ ---- CSS Structure
+ base.css
+   bootstrap + variations
+
+ landing.css
+ publications.css
+
+ main.js
+ l
+ anding.js
+
+https://github.com/gulpjs/gulp/blob/master/docs/recipes/running-tasks-in-series.md
+

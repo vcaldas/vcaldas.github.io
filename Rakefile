@@ -11,7 +11,7 @@ task default: %w[deploy]
 
 desc "Copy tst"
 task :gulp do
-  system "gulp"
+  system "gulp deploy"
 end
 
 desc "Publish website Files"
@@ -98,6 +98,7 @@ task :test do
                       "/^(?:http(?:s)?:\/\/)?(?:[^\.]+\.)?fldrupal\.camp(?:/.*)?$/",
                       "/^(?:http(?:s)?:\/\/)?(?:[^\.]+\.)?vimeo\.camp(?:/.*)?$/"],
       :empty_alt_ignore => false,
+      :disable_external => true,
       :verbose => true,
       :typhoeus => {
         :followlocation => true,

@@ -45,9 +45,7 @@ Source of great ideas and codes.
   - [Particle.JS](https://github.com/VincentGarreau/particles.js/)
 
 
-
 -----------------------------------------------------------------------------------------------------------
-
 Copyrights & License
 ====================
 

@@ -3,3 +3,5 @@ _site
 .jekyll-metadata
 node_modules
 npm-debug.log
+bower_components
+examples
