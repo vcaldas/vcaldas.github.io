@@ -1,14 +1,11 @@
 language: ruby
 rvm:
 - 2.4.0
-- jruby-19mode
-- rbx-2
-
-
 install:
-  - gem install jekyll
- # - gem install html-proofer
-
+- gem install jekyll
 script:
 - bundle install
 - bundle exec jekyll build
+env:
+  global:
+    secure: v2b/jkcUJZASP6hhFMi/bR5OGYxO2Hkn5UZDlI+pxbmsAThEDKfuQbGpBwV+Pq2YwKkJ09anAZbwRHoT58m56hRigBkv0qdWh1esE5k/4cnEHquXGIczTuHUbBGrm5XXU+0pqmcUMMXjOiEEeEPBlgcaL8WFnz+a5v1hPGl1lrGyQYqWgWl6z/PGyzH35paCEUx2+L72gA8z4FhsAz3OlSLjgUp+Pcv0ZwAEEMCsLpJbq6SGFNGgXWLQDRMnRBb1ikq5qByb3zI1gHqqJY5mu1nRAMMINIHSzogn0SSGXCiju11JKD6VwU3cP74be8NIlFF1yPMU2h0JSVq7DIRxk+7OT4EiackiYAZ91LiWc4S5VCFh4Orv9FjdF7bRSKh+eGNKinjpNHQodhzZw/jv8PicgHA3KMjOtD8cEdfrJgZBAS+LMIBjETKz0CHuxDl80cRRXxcmO4PYYOIPm2esIXw9aEZvFvLtKWaioo+gzqLWLZ6TY1Fb+z6SkxIVMUQL0squrUw/1a+qVx48kCfwkWCKwvNHhUwLDTxbxlgOTK09oo9E7NzEU+EthpNp81BdBict4g8gN6BJk47USwAP3TEI6V/lirtzBC+z3PhZ3srs2CmL4pKHR6lezifeWAKwbDgQpH8+oaxdYy2ODnCUuB8ebPnVzqK9E2MxoAQ38GY=

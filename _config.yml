@@ -16,8 +16,7 @@
 title: Victor Caldas
 author: Victor Caldas
 email: caldas.victor@gmail.com
-description: > My personal website
-  Google search results) and in your feed.xml site description.
+description:  My personal website
 baseurl: "" # the subpath of your site, e.g. /blog
 url: ""
 # url: "http://victorcaldas.com" # the base hostname & protocol for your site, e.g. http://example.com
