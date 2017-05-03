@@ -1,60 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<!-- Head -->
-{% include head.html %}
-  <body id="page-top landing">
+<head>
+  {%include head.html%}
 
- <!-- Navigation -->
-  {% include navbar-landing.html %}
+</head>
 
-	<div id="particles-js">
-	<div class="content">
-      <h1>
-        <span class="site-title">{{site.title}}</span>
-        <span class="site-description">{{site.user_title}}</span>
-      </h1>
-
-      <div class="row row-icons">
-        <a aria-label="Send email" href="mailto:{{site.email}}">
-          <i class="icon fa fa-envelope"></i>
-        </a>
-
-        <a aria-label="Science"  href="/publications/">
-          <i class="icon fa fa-flask" aria-hidden="true"></i>
-        </a>
-
-        <a aria-label="Vimeo website" target="_blank" href="https://vimeo.com/vcaldas">
-          <i class="icon fa fa-vimeo" aria-hidden="true"></i>
-        </a>
-
-        <a aria-label="My Github" target="_blank" href="https://github.com/{{site.github_username}}">
-          <i class="icon fa fa-github-alt" aria-hidden="true"></i>
-        </a>
-
-      </div>
-
-      <!--
-        <a class="link" href="#about" data-scroll>About Me</a>
-      <a class="link" href="#projects" data-scroll>Projects</a>
-    -->
+<body id="page-top">
+  <div id="particles-js">
+    <!-- Navigation -->
+    {% include navigation.html %}
+    {% include intro.html %}
   </div>
 
-  	<a class="down" href="#about" data-scroll><i class="icon fa fa-chevron-down" aria-hidden="true"></i></a>
-	</div>
-
-    <section id="about">
-       <div class="container">
-          {% include contact-row.html %}
-        </div>
-    </section>
-
-
-
-
-        {% include footer.html %}
-	
-       <script src="assets/js/landing.js"></script>
+    <!-- About Section -->
+    {% include contactrow.html %}
 
   </body>
+
+    <!-- Footer -->
+    {% include footer.html %}
+
+    <!-- javascript -->
+    {% include scripts.html%}
+
+
+
 </html>

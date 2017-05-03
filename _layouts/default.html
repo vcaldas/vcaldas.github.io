@@ -1,17 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<!-- Head -->
-{% include head.html %}
-  <body id="default">
- <!-- Navigation -->
-  {% include navbar-main.html %}
+<head>
+  {%include head.html%}
 
-        <div id="default" class="container">
-            {{content}}
-        </div>
-        {% include footer.html %}
-   <script src="../assets/js/pubs.js"></script>
-   
-  </body>
+</head>
+
+<body>
+    <!-- Navigation -->
+    {% include navbar_default.html %}
+
+    <div class="container default-page-container">
+        {{content}}
+    </div>
+</body>
+    {% include footer.html %}
+
+    <!-- javascript -->
+    {% include scripts.html%}
+
+    <script src="../assets/js/pubs.js"></script>
+
+
 </html>

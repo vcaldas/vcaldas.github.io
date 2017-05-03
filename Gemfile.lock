@@ -18,6 +18,7 @@ GEM
       faraday (>= 0.7.4, < 1.0)
     ffi (1.9.18)
     forwardable-extended (2.6.0)
+    gemoji (3.0.0)
     gh (0.15.1)
       addressable (~> 2.4.0)
       backports
@@ -26,6 +27,9 @@ GEM
       net-http-persistent (~> 2.9)
       net-http-pipeline
     highline (1.7.8)
+    html-pipeline (2.5.0)
+      activesupport (>= 2)
+      nokogiri (>= 1.4)
     html-proofer (3.0.6)
       activesupport (~> 4.2)
       addressable (~> 2.3)
@@ -49,10 +53,16 @@ GEM
       safe_yaml (~> 1.0)
     jekyll-feed (0.9.2)
       jekyll (~> 3.3)
+    jekyll-paginate (1.1.0)
     jekyll-sass-converter (1.5.0)
       sass (~> 3.4)
     jekyll-watch (1.5.0)
       listen (~> 3.0, < 3.1)
+    jemoji (0.8.0)
+      activesupport (~> 4.0)
+      gemoji (~> 3.0)
+      html-pipeline (~> 2.2)
+      jekyll (>= 3.0)
     json (2.0.3)
     kramdown (1.13.2)
     launchy (2.4.3)
@@ -107,10 +117,12 @@ DEPENDENCIES
   html-proofer (~> 3.0.0)
   jekyll
   jekyll-feed (~> 0.6)
+  jekyll-paginate
+  jemoji
   json
   rake
   travis
   tzinfo-data
 
 BUNDLED WITH
-   1.14.5
+   1.14.6

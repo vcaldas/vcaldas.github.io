@@ -1,23 +1,18 @@
 # Todo list
 
 
- ☐ CSS compiled to assests folder
- ☐ bootstrap
- ☐ font-awesome
- ☐ academicons
- ☐ particles
- ☐ 
- 
- ☐ 
+☐ Fix Navbar https://panossakkos.github.io/personal-jekyll-theme/
+  use this website config yaml
+ ☐
  ☐ JS moved to assets/js
  ☐ bootstrap.js
  ☐ jquery
  ☐ tether
- 
+
  ☐ Check website build
 
  ☐ Minify CSS
- 
+
  ☐ Build check
  ☐ Minify JS
  ☐ Build Check
@@ -38,4 +33,3 @@
  anding.js
 
 https://github.com/gulpjs/gulp/blob/master/docs/recipes/running-tasks-in-series.md
-

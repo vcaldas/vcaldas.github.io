@@ -40,6 +40,7 @@ Websites that inspired me
 Source of great ideas and codes.
 
 * Carl Boettiger [cboettig/cboettig.github.io](http://github.com/cboettig/cboettig.github.io)
+* Grayscale Theme [https://startbootstrap.com/template-overviews/grayscale/](https://startbootstrap.com/template-overviews/grayscale/)
 * Layout ideas:
   - [PaticleTheme by Nrandecker](https://github.com/nrandecker/particle)
   - [Particle.JS](https://github.com/VincentGarreau/particles.js/)

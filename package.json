@@ -4,7 +4,7 @@
   "version": "0.0.1",
   "homepage": "http://victorcaldas.com",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "gulp": "./node_modules/gulp/bin/gulp.js"
   },
   "author": "Victor Caldas",
   "private": true,
@@ -18,8 +18,9 @@
     "browser-sync": "^2.18.8",
     "del": "^2.2.2",
     "font-awesome": "^4.6.3",
-    "gulp": "^3.9.1",
+    "gulp": "github:gulpjs/gulp#4.0",
     "gulp-autoprefixer": "^3.1.1",
+    "gulp-babel": "^6.1.2",
     "gulp-clean": "^0.3.2",
     "gulp-clean-css": "^3.0.4",
     "gulp-concat": "^2.6.1",
@@ -32,6 +33,7 @@
     "gulp-run": "^1.7.1",
     "gulp-sass": "^3.1.0",
     "gulp-sequence": "^0.4.6",
+    "gulp-shell": "^0.6.3",
     "gulp-sourcemaps": "^2.6.0",
     "gulp-uglify": "^2.1.2",
     "gulp-uncss": "^1.0.6",
@@ -49,7 +51,7 @@
     "url": "https://github.com/vcaldas/vcaldas.github.io.git"
   },
   "dependencies": {
-    "gulp": "^3.3.4"
+    "gulp": "github:gulpjs/gulp#4.0"
   },
   "optionalDependencies": {}
 }
