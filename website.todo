@@ -1,35 +1,22 @@
 # Todo list
 
-
-☐ Fix Navbar https://panossakkos.github.io/personal-jekyll-theme/
-  use this website config yaml
- ☐
- ☐ JS moved to assets/js
- ☐ bootstrap.js
- ☐ jquery
- ☐ tether
-
- ☐ Check website build
-
- ☐ Minify CSS
-
- ☐ Build check
- ☐ Minify JS
- ☐ Build Check
  ☐ Remove useless CSS
- ☐ Build Check
- ☐ Deploy new version
+
+☐ Add academicons https://jpswalsh.github.io/academicons/
+
+☐ Fix copy of fonts when sourcing website
+
+☐ Remove Main title for small screens.
 
 
- ---- CSS Structure
- base.css
-   bootstrap + variations
+☐ add build with travis
 
- landing.css
- publications.css
+☐ add compressed html reference
 
- main.js
- l
- anding.js
+☐ Chage distance between entries in publications
 
-https://github.com/gulpjs/gulp/blob/master/docs/recipes/running-tasks-in-series.md
+
+☐ Add github issues
+
+
+☐ Add projects section with github packages
