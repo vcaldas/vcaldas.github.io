@@ -8810,6 +8810,16 @@ ul.banner-social-buttons {
     .footer a:active {
       color: white; }
 
+.publications h2 {
+  padding-bottom: 1rem;
+  padding-top: 1rem; }
+
+.publications h3 {
+  padding-bottom: 1rem; }
+
+.publications .publication {
+  padding-bottom: 1rem; }
+
 .hline-w {
   border-bottom: 2px solid black;
   margin-bottom: 1rem;

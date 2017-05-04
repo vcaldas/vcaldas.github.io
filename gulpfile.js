@@ -67,12 +67,12 @@ function styles() {
   return gulp.src(sources.sass)
     .pipe(plumber())
     .pipe(sass())
-    // .pipe(gulp.dest(destinations.css))
+    .pipe(gulp.dest(destinations.css))
     .pipe(gulp.dest(destinations.cssdev))
 		.pipe(cleanCSS({ compatibility: 'ie8' }))
 		.pipe(rename({ suffix: '.min' }))
 		.pipe(gulp.dest(destinations.cssdev))
-		// .pipe(gulp.dest(destinations.css));
+		.pipe(gulp.dest(destinations.css));
 		// .pipe(browserSync.reload({stream: true}));
 }
 
@@ -86,7 +86,7 @@ function scripts() {
     .pipe(uglify())
     // .pipe(concat('main.min.js'))
     .pipe(gulp.dest(destinations.jsdev))
-		// .pipe(gulp.dest(destinations.js));
+		.pipe(gulp.dest(destinations.js));
 		// .pipe(browserSync.reload({stream: true}));
 }
 
@@ -111,15 +111,15 @@ exports.scripts = scripts;
 // Task for building blog when something changed:
 gulp.task('jekyll-build', shell.task(['bundle exec jekyll build --watch']));
 
-gulp.task('refresh', function(done){
-  browserSync.reload({stream: true});
-	done();
-});
+// gulp.task('refresh', function(done){
+//   browserSync.reload({stream: true});
+// 	done();
+// });
 
-/**
- * Rebuild Jekyll & do page reload
- */
-gulp.task('jekyll-rebuild', gulp.series('jekyll-build', 'refresh'));
+// /**
+//  * Rebuild Jekyll & do page reload
+//  */
+// gulp.task('jekyll-rebuild', gulp.series('jekyll-build', 'refresh'));
 
 
 // Task for serving blog with Browsersync
