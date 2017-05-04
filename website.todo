@@ -1,22 +1,14 @@
 # Todo list
 
- ☐ Remove useless CSS
-
-☐ Add academicons https://jpswalsh.github.io/academicons/
-
+☐ Remove useless CSS
 ☐ Fix copy of fonts when sourcing website
-
 ☐ Remove Main title for small screens.
-
-
 ☐ add build with travis
-
-☐ add compressed html reference
-
 ☐ Chage distance between entries in publications
-
-
-☐ Add github issues
-
-
 ☐ Add projects section with github packages
+
+＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿
+Archive:
+  ✔ Add academicons https://jpswalsh.github.io/academicons/ @done(2017-05-04 09:25)
+  ✔ add compressed html reference @done(2017-05-04 09:28)
+  ✔ Add github issues @done(2017-05-04 09:30)

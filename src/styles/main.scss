@@ -12,6 +12,7 @@ body {
     color: black;
     background-color: white;
     position: relative;
+
 }
 
 html {
@@ -285,29 +286,7 @@ ul.banner-social-buttons {
     }
 }
 
-.footer {
-  background: $footer-bg;
-  padding: 30px 0;
-  color: #FFF;
-    p {
-        font-size: 14px;
-        margin: 0;
-    }
-    .love {
-      color: red;
-    }
-    a {
-      text-decoration: none;
-      margin: 0;
-      color: #FFF;
-      &:hover{
-        color: $sec;
-      }
-      &:active {
-        color: $sec;
-      }
-    }
-}
+@import "footer.scss";
 
 .hline-w {
     border-bottom: 2px solid black;
