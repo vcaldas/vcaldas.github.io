@@ -8795,7 +8795,8 @@ ul.banner-social-buttons {
 .footer {
   background: #1f2833;
   padding: 30px 0;
-  color: #FFF; }
+  color: #FFF;
+  margin-top: 1rem; }
   .footer p {
     font-size: 14px;
     margin: 0; }

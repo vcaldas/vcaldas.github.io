@@ -189,10 +189,6 @@ exclude:
   - LICENSE
   - CONTRIBUTING
   - CONTRIBUTORS
-  - particle-master
-  - personal.master
-  - vcaldas.github
-  - startbootstrap
   - src
   - node_modules
   - Gemfile
@@ -200,10 +196,18 @@ exclude:
   - package.json
   - Gulpfile
   - website.todo
+  - otherBlogs
 
 
 
 # Pagination path
+
+# Build settings
+# paginate: 5
+# paginate_path: "/blog/page:num/"
+# comments: true
+# excerpt_separator: <!-- more -->
+
 
 # paginate_path: "blog/page:num/"
 

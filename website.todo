@@ -4,11 +4,15 @@
 ☐ Fix copy of fonts when sourcing website
 ☐ Remove Main title for small screens.
 ☐ add build with travis
-☐ Chage distance between entries in publications
 ☐ Add projects section with github packages
+
+☐ Current:
+
+  ☐ Adding blog section
 
 ＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿
 Archive:
+  ✔ Chage distance between entries in publications @done(2017-05-04 10:05)
   ✔ Add academicons https://jpswalsh.github.io/academicons/ @done(2017-05-04 09:25)
   ✔ add compressed html reference @done(2017-05-04 09:28)
   ✔ Add github issues @done(2017-05-04 09:30)
