@@ -33,21 +33,9 @@ This command will create a folder "vcaldas.github.io".
 I use a series of other packages, not necessarily following the best practices. Drop a message if something hurt your eyes! =D
 
 #### Gulp
-  Used to automatize routines
-
-  ``` sh
-  $ npm install gulp
-  ```
-
-  You might want to update (You will get a message):
-
-  ``` sh
-  # Depending on how you installed, you would need sudo
-  $ npm i -g npm
-  ```
 
   Get the gulp packages that will be used:
 
   ``` sh
   $ npm install
-  ```gulp
+  ```

@@ -1,4 +1,3 @@
-s
 var cleanCSS = require('gulp-clean-css');
 var rename = require("gulp-rename");
 var gulp = require('gulp');
