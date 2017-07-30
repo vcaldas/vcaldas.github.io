@@ -19,6 +19,7 @@ var wiredep       = require('wiredep').stream;
 var autoprefixer  = require('gulp-autoprefixer');
 var spawn         = require('cross-spawn');
 var sequence      = require('run-sequence');
+var purify        = require('gulp-purifycss');
 
 
 // --- Arguments
@@ -57,25 +58,37 @@ gulp.task('clean', function(done) {
 
 gulp.task('sass', function(done) {
     return gulp.src(config.sass.src)
-        .pipe(sourcemaps.init())
+        // .pipe(sourcemaps.init())
         .pipe(sass().on('error', sass.logError))
         .pipe(autoprefixer(config.sass.compatibility))
-        .pipe(gulpif(PRODUCTION, cssnano()))
-        .pipe(gulpif(!PRODUCTION, sourcemaps.write()))
         .pipe(gulp.dest(config.sass.dest.jekyllRoot))
+        .pipe(gulpif(PRODUCTION, cssnano()))
+        // .pipe(gulpif(!PRODUCTION, sourcemaps.write()))
         .pipe(gulp.dest(config.sass.dest.buildDir))
             ;
 });
 
+
+
 gulp.task('javascript', function(done) {
     browserSync.notify(config.javascript.notification);
     return gulp.src(config.javascript.src)
-        .pipe(sourcemaps.init())
+        // .pipe(sourcemaps.init())
         // .pipe(concat(config.javascript.filename))
         // .pipe(gulpif(PRODUCTION, uglify()))
         .pipe(gulp.dest(config.javascript.dest.jekyllRoot))
         .pipe(gulp.dest(config.javascript.dest.buildDir));
 });
+
+gulp.task('css', function(done) {
+  return gulp.src(config.jekyll.css)
+    .pipe(purify([config.jekyll.site]))
+    .pipe(gulp.dest(config.sass.dest.jekyllRoot))
+    .pipe(gulpif(PRODUCTION, cssnano()))
+    // .pipe(gulpif(!PRODUCTION, sourcemaps.write()))
+    .pipe(gulp.dest(config.sass.dest.buildDir));
+});
+
 
 gulp.task('fonts', function() {
     browserSync.notify(config.fonts.notification);
@@ -135,6 +148,8 @@ gulp.task('watch', function() {
     // gulp.watch(config.watch.images, gulp.series('copy', browserSync.reload));
     gulp.watch('_site/**/*.*').on('change', browserSync.reload);
 });
+
+gulp.task('build-clean', gulp.series('build', 'css'))
 
 gulp.task('default', gulp.series('build', gulp.parallel( 'browser-sync', 'watch')));
 

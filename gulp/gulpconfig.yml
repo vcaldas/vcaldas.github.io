@@ -62,6 +62,8 @@ javascript:
 
 jekyll:
   notification: "Running jekyll"
+  site: "_site/**/*.html"
+  css: "_site/assets/css/**.css"
 
 watch:
   images: "src/img/**/*"
