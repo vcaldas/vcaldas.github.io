@@ -1,0 +1,114 @@
+/* ==========================================================================
+   Forms
+   ========================================================================== */
+
+input,
+label,
+select {
+  display: block;
+}
+
+label {
+  margin-bottom: 0.5em;
+  font-family: $monospace-font-family;
+  font-size: 0.8em;
+
+  &.required::after {
+    content: '*';
+  }
+
+  abbr {
+    display: none;
+  }
+}
+
+input,
+textarea,
+select,
+select[multiple=multiple] {
+  box-sizing: border-box;
+  width: 100%;
+  margin-bottom: 0.25em;
+  padding: 0.75em;
+  transition: border-color;
+  border-color: $form-border-color;
+  border-style: solid;
+  border-width: 1px 1px 4px 1px;
+  border-radius: $form-border-radius;
+  background-color: #fff;
+  font-family: $form-font-family;
+  font-size: $form-font-size;
+  box-shadow: $form-box-shadow;
+
+  &:hover {
+    border-color: $form-border-color-hover;
+  }
+
+  &:focus {
+    border-color: $form-border-color-focus;
+    outline: none;
+    box-shadow: $form-box-shadow-focus;
+  }
+}
+
+textarea {
+  resize: vertical;
+}
+
+input[type="search"] {
+  appearance: none;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  display: inline;
+  width: initial;
+  margin-right: 0.5em;
+}
+
+input[type="file"] {
+  width: 100%;
+}
+
+select {
+  width: auto;
+  max-width: 100%;
+}
+
+form button,
+form .btn,
+input[type="submit"] {
+  margin: 1em 0;
+  appearance: none;
+  user-select: none;
+  white-space: nowrap;
+  cursor: pointer;
+  vertical-align: middle;
+}
+
+form {
+
+  ul,
+  ol,
+  li {
+    padding-left: 0;
+    list-style-type: none;
+  }
+}
+
+.form-group {
+  margin-bottom: 0.5rem;
+}
+
+/* required */
+.req,
+.required {
+  color: $danger-color !important;
+  font-weight: bold;
+}
+
+/* instructions */
+.instruct {
+  font-size: 0.8em;
+  font-style: italic;
+}

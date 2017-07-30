@@ -1,148 +1,144 @@
-var cleanCSS = require('gulp-clean-css');
-var rename = require("gulp-rename");
-var gulp = require('gulp');
-var uglify = require('gulp-uglify');
-var concat = require('gulp-concat');
-var sass = require('gulp-sass');
-var plumber = require('gulp-plumber');
-var cp = require('child_process');
-var imagemin = require('gulp-imagemin');
-var browserSync = require('browser-sync').create();
-var del = require('del');
-var babel = require('gulp-babel');
-var shell = require('gulp-shell');
+// modified from generator-jekyllized 1.0.0-rc.6
+var gulp          = require('gulp');
+var requireDir    = require('require-dir');
+var fs            = require('fs');
+var yargs         = require('yargs');
+var yaml          = require('js-yaml');
+var del           = require('del');
+var sass          = require('gulp-sass');
+var browserSync   = require('browser-sync').create();;
+var cssnano       = require('gulp-cssnano');
+var gulpif        = require('gulp-if');
+var sourcemaps    = require('gulp-sourcemaps');
+var autoprefixer  = require('gulp-autoprefixer');
+var rsync         = require('gulp-rsync');
+var concat        = require('gulp-concat');
+var uglify        = require('gulp-uglify');
+var imagemin      = require('gulp-imagemin');
+var wiredep       = require('wiredep').stream;
+var autoprefixer  = require('gulp-autoprefixer');
+var spawn         = require('cross-spawn');
+var sequence      = require('run-sequence');
 
-// ---------- Variables
-var outputFolder = "_site/";
 
-var sources = {
-  sass: 'src/styles/**/*.scss',
-	javascripts: 'src/js/**/*.js',
-  templates: 'src/templates/**/*.html',
-  assets: 'src/assets/**/*.*',
-  app: 'src/app/**/*.ts',
-  appWithDefinitions: 'src/**/*.ts',
-  integration: 'src/tests/integration/**/*.js',
-  index: 'src/index.html'
-};
+// --- Arguments
+var PRODUCTION = !!(yargs.argv.production);
 
-var destinations = {
-  css: outputFolder + "assets/styles",
-	cssdev: "assets/styles",
-  js: outputFolder + "assets/js",
-	jsdev: "assets/js",
-  libs: outputFolder + "/vendor",
-  assets: outputFolder + "/assets",
-  index: outputFolder,
-	images: "assets/img"
-};
-
-// Gulp tasks
-var jekyll   = process.platform === 'win32' ? 'jekyll.bat' : 'jekyll';
+// Set the banner content
+var banner = ['/*!\n',
+    ' * Victor Caldas - <%= pkg.title %> v<%= pkg.version %> (<%= pkg.homepage %>)\n',
+    ' * Copyright 2016-' + (new Date()).getFullYear(), ' <%= pkg.author %>\n',
+    ' * Licensed under <%= pkg.license %> (https://github.com/vcaldas/<%= pkg.name %>/blob/master/LICENSE)\n',
+    ' */\n',
+    ''
+].join('');
 
 var messages = {
     jekyllBuild: '<span style="color: grey">Running:</span> $ jekyll build'
 };
 
-// Set the banner content
-var banner = ['/*!\n',
-    ' * Start Bootstrap - <%= pkg.title %> v<%= pkg.version %> (<%= pkg.homepage %>)\n',
-    ' * Copyright 2013-' + (new Date()).getFullYear(), ' <%= pkg.author %>\n',
-    ' * Licensed under <%= pkg.license %> (https://github.com/BlackrockDigital/<%= pkg.name %>/blob/master/LICENSE)\n',
-    ' */\n',
-    ''
-].join('');
+// Gulp tasks
+var jekyll   = process.platform === 'win32' ? 'jekyll.bat' : 'jekyll';
 
-function clean() {
-  // You can use multiple globbing patterns as you would with `gulp.src`,
-  // for example if you are using del 2.0 or above, return its promise
-  return del([ '_site/', 'assets/js', 'assets/styles' ]);
+// Load configuration parameters
+function loadConfig() {
+    var ymlFile = fs.readFileSync('gulp/gulpconfig.yml', 'utf8');
+    return yaml.load(ymlFile);
 }
 
-/*
-* Compile and minify sass
-*/
-function styles() {
-  return gulp.src(sources.sass)
-    .pipe(plumber())
-    .pipe(sass())
-    .pipe(gulp.dest(destinations.css))
-    .pipe(gulp.dest(destinations.cssdev))
-		.pipe(cleanCSS({ compatibility: 'ie8' }))
-		.pipe(rename({ suffix: '.min' }))
-		.pipe(gulp.dest(destinations.cssdev))
-		.pipe(gulp.dest(destinations.css));
-		// .pipe(browserSync.reload({stream: true}));
-}
+var config = loadConfig();
+module.exports = config;
 
-/**
- * Compile and minify js
- */
-function scripts() {
-  return gulp.src(sources.javascripts, { sourcemaps: true })
-    .pipe(babel())
-		.pipe(gulp.dest(destinations.jsdev))
-    .pipe(uglify())
-    // .pipe(concat('main.min.js'))
-    .pipe(gulp.dest(destinations.jsdev))
-		.pipe(gulp.dest(destinations.js));
-		// .pipe(browserSync.reload({stream: true}));
-}
-
-
-/*
- * You can use CommonJS `exports` module notation to declare tasks
- */
-exports.clean = clean;
-exports.styles = styles;
-exports.scripts = scripts;
-// exports.imagemin = imagemin;
-// exports.watch = watch;
-
-/**
- * Build the Jekyll Site
- */
-// gulp.task('jekyll-build', function (done) {
-//     browserSync.notify(messages.jekyllBuild);
-//     return cp.spawn( jekyll , ['build'], {stdio: 'inherit'})
-//         .on('close', done);
-// });
-// Task for building blog when something changed:
-gulp.task('jekyll-build', shell.task(['bundle exec jekyll build --watch']));
-
-// gulp.task('refresh', function(done){
-//   browserSync.reload({stream: true});
-// 	done();
-// });
-
-// /**
-//  * Rebuild Jekyll & do page reload
-//  */
-// gulp.task('jekyll-rebuild', gulp.series('jekyll-build', 'refresh'));
-
-
-// Task for serving blog with Browsersync
-gulp.task('serve', function () {
-    browserSync.init({server: {baseDir: '_site/'}});
-    // Reloads page when some of the already built files changed:
-    gulp.watch('_site/**/*.*').on('change', browserSync.reload);
-    gulp.watch(sources.sass, gulp.series('styles'));
-    gulp.watch(sources.javascripts, gulp.series('scripts'));
+// Clean all compiled files
+gulp.task('clean', function(done) {
+    del(config.clean);
+    done();
 });
 
+gulp.task('sass', function(done) {
+    return gulp.src(config.sass.src)
+        .pipe(sourcemaps.init())
+        .pipe(sass().on('error', sass.logError))
+        .pipe(autoprefixer(config.sass.compatibility))
+        .pipe(gulpif(PRODUCTION, cssnano()))
+        .pipe(gulpif(!PRODUCTION, sourcemaps.write()))
+        .pipe(gulp.dest(config.sass.dest.jekyllRoot))
+        .pipe(gulp.dest(config.sass.dest.buildDir))
+            ;
+});
 
-gulp.task('browser-sync', gulp.series('jekyll-build', 'serve'));
+gulp.task('javascript', function(done) {
+    browserSync.notify(config.javascript.notification);
+    return gulp.src(config.javascript.src)
+        .pipe(sourcemaps.init())
+        // .pipe(concat(config.javascript.filename))
+        // .pipe(gulpif(PRODUCTION, uglify()))
+        .pipe(gulp.dest(config.javascript.dest.jekyllRoot))
+        .pipe(gulp.dest(config.javascript.dest.buildDir));
+});
+
+gulp.task('fonts', function() {
+    browserSync.notify(config.fonts.notification);
+    return gulp.src(config.fonts.src)
+        .pipe(gulp.dest(config.fonts.dest.jekyllRoot))
+        .pipe(gulp.dest(config.fonts.dest.buildDir));
+});
+
+gulp.task('copy', function() {
+    browserSync.notify(config.copy.notification);
+    return gulp.src(config.copy.assets)
+        .pipe(gulpif(PRODUCTION, imagemin()))
+        .pipe(gulp.dest(config.copy.dist));
+});
 
 /*
  * Specify if tasks run in series or parallel using `gulp.series` and `gulp.parallel`
  */
-gulp.task(
-  'build',
+var styles    = gulp.series('sass');
+var scripts   = gulp.series('javascript');
+var assets    = gulp.series(styles, scripts, 'fonts');
+// Define tasks
+gulp.task('assets', assets)
 
-    gulp.parallel(styles, scripts)
-);
+gulp.task('jekyll-build', function(done) {
+    browserSync.notify(config.jekyll.notification);
+    return spawn('jekyll', ['build'], {
+            stdio: 'inherit'
+        })
+        .on('close', done);
+});
 
-gulp.task(
-  'default',
-  gulp.series('build', gulp.parallel('jekyll-build', 'serve' ))
-);
+//functions to have in the end
+// build, deploy, dev, server
+
+
+gulp.task('build', gulp.series('clean', assets, 'jekyll-build', 'copy'))
+
+gulp.task('browser-sync', function() {
+    browserSync.init({
+        notify: config.browsersync.notify,
+        open: config.browsersync.open,
+        port: config.browsersync.port,
+        server: {
+            baseDir: config.browsersync.server.basedir
+        },
+        xip: config.browsersync.xip,
+        browser: config.browsersync.browser
+    });
+});
+
+
+gulp.task('watch', function() {
+    gulp.watch(config.watch.pages,  gulp.series('jekyll-build') );
+    gulp.watch(config.watch.javascript, gulp.series(scripts));
+    gulp.watch(config.watch.sass, gulp.series(styles));
+    // gulp.watch(config.watch.images, gulp.series('copy', browserSync.reload));
+    gulp.watch('_site/**/*.*').on('change', browserSync.reload);
+});
+
+gulp.task('default', gulp.series('build', gulp.parallel( 'browser-sync', 'watch')));
+
+gulp.task('develop', gulp.parallel('browser-sync', 'watch'))
+// gulp.task('deploy', function(done){
+//     sequence('build', 'rsync', done);
+// });

@@ -1,11 +1,8 @@
-{
+  {
   "name": "vcaldas.github.io",
   "title": "vcaldasWebsite",
   "version": "0.0.1",
   "homepage": "http://victorcaldas.com",
-  "scripts": {
-    "gulp": "./node_modules/gulp/bin/gulp.js"
-  },
   "author": "Victor Caldas",
   "private": true,
   "license": {
@@ -13,45 +10,29 @@
     "url": "https://github.com/vcaldas/vcaldas.github.io/LICENSE"
   },
   "devDependencies": {
-    "autoprefixer": "^6.7.7",
-    "browser-sync": "^2.18.8",
-    "del": "^2.2.2",
+    "browser-sync": "^2.18.13",
+    "cross-spawn": "^5.1.0",
+    "del": "^3.0.0",
+    "fs": "0.0.1-security",
     "gulp": "github:gulpjs/gulp#4.0",
-    "gulp-autoprefixer": "^3.1.1",
-    "gulp-babel": "^6.1.2",
-    "gulp-clean": "^0.3.2",
-    "gulp-clean-css": "^3.7.0",
+    "gulp-autoprefixer": "^4.0.0",
     "gulp-concat": "^2.6.1",
-    "gulp-header": "^1.8.7",
+    "gulp-cssnano": "^2.1.2",
     "gulp-if": "^2.0.2",
     "gulp-imagemin": "^3.3.0",
-    "gulp-less": "^3.1.0",
-    "gulp-notify": "^3.0.0",
-    "gulp-plumber": "^1.1.0",
-    "gulp-postcss": "^6.4.0",
-    "gulp-rename": "^1.2.2",
-    "gulp-run": "^1.7.1",
+    "gulp-rsync": "0.0.8",
     "gulp-sass": "^3.1.0",
-    "gulp-sequence": "^0.4.6",
-    "gulp-shell": "^0.6.3",
     "gulp-sourcemaps": "^2.6.0",
-    "gulp-uglify": "^2.1.2",
-    "gulp-uncss": "^1.0.6",
-    "gulp-util": "^3.0.8",
-    "jquery": "^3.1.1",
-    "particles.js": "^2.0.0",
-    "run-sequence": "^1.2.2",
-    "shelljs": "^0.7.7",
-    "sweet-scroll": "^2.2.0",
-    "tether": "^1.4.0",
-    "yargs": "^7.0.2"
+    "gulp-uglify": "^3.0.0",
+    "js-yaml": "^3.9.0",
+    "require-dir": "^0.3.2",
+    "run-sequence": "^2.1.0",
+    "wiredep": "^4.0.0",
+    "yargs": "^8.0.2"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/vcaldas/vcaldas.github.io.git"
   },
-  "dependencies": {
-    "gulp": "github:gulpjs/gulp#4.0"
-  },
-  "optionalDependencies": {}
+  "dependencies": {}
 }

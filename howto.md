@@ -28,14 +28,27 @@ $ git clone https://github.com/vcaldas/vcaldas.github.io.git
 
 This command will create a folder "vcaldas.github.io".
 
-### Checking dependencies
+Navigate inside the folder and get the gulp packages that will be used:
 
-I use a series of other packages, not necessarily following the best practices. Drop a message if something hurt your eyes! =D
+``` sh
+$ npm install
+```
 
 #### Gulp
 
-  Get the gulp packages that will be used:
+The following Gulp pipelines are available:
 
-  ``` sh
-  $ npm install
-  ```
+
+``` sh
+$ gulp
+```
+
+``` sh
+$ gulp clean
+```
+Remove clean all generated files, including the website. It runs before also when building to deploy.
+
+
+``` sh
+$ gulp
+```

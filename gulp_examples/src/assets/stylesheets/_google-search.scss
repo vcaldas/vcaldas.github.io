@@ -1,0 +1,43 @@
+/* ==========================================================================
+   GOOGLE SEARCH
+   ========================================================================== */
+
+.search-goog {
+
+  form {
+    margin-top: 12px;
+  }
+}
+
+#goog-fixurl {
+
+  ul {
+    @include list-unstyled();
+  }
+
+  .other-things {
+    display: none;
+  }
+}
+
+// input field
+#goog-wm-qt {
+
+  @include breakpoint($medium) {
+    display: inline-block;
+    width: 70%;
+  }
+}
+
+// submit button
+#goog-wm-sb {
+  background-color: #000;
+  color: #fff;
+  font-weight: 700;
+
+  @include breakpoint($medium) {
+    display: inline-block;
+    width: 29%;
+    margin-left: 1%;
+  }
+}

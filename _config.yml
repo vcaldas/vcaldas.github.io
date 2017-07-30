@@ -19,12 +19,6 @@ markdown: kramdown
 # Google tracking id
 google-tracking-id: ""
 
-# Forces https everywhere in your website, except when you serve it locally
-# If you are not hosted on Github Pages, and your host doesn't support https
-# then you should disable it
-
-# force-https: True
-
 #############
 # HTML Head #
 #############
@@ -59,9 +53,6 @@ favicon: "/img/favicon.ico"
 ##############################
 # color-browser: "#000000"
 # apple-status-bar-style: "black"
-
-
-
 
 
 ################
@@ -197,6 +188,8 @@ exclude:
   - Gulpfile
   - website.todo
   - otherBlogs
+  - gulp_examples
+  - gulp
 
 
 

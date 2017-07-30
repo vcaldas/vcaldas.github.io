@@ -1,9 +1,10 @@
-@import "../vendor/bootstrap/bootstrap";
-@import "../vendor/font-awesome/font-awesome";
-@import "../vendor/academicons/academicons";
+@import "bootstrap/bootstrap";
+@import "font-awesome/font-awesome";
+@import "academicons/academicons";
 
 @import "variables.scss";
 @import "mixins.scss";
+// remove comment
 
 body {
     width: 100%;
