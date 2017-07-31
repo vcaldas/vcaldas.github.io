@@ -206,6 +206,6 @@ exclude:
 
 
 
-gems:
+plugins:
   # - jekyll-paginate
   - jemoji
