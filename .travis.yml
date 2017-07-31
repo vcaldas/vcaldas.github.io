@@ -5,8 +5,6 @@ branches:
   - source
 rvm:
 - 2.4.0
-before_install:
-  - rvm install 2.4.0
 install:
   - bundle install
   - npm install
