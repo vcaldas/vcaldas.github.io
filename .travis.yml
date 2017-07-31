@@ -2,14 +2,14 @@ language: ruby
 # only run CI-builds on master branch
 branches:
   only:
-  - master
+  - source
 rvm:
 - 2.4.0
 before_install:
   - rvm install 2.4.0
 install:
   - bundle install
-  
+  - npm install
 # set execution permission on our build script
 before_script:
  - chmod +x ./script/cibuild
