@@ -17,4 +17,4 @@ before_script:
   - bundle install
 
 script:
-  - gulp
+  - gulp build-clean  --production 
