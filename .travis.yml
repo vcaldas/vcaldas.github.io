@@ -10,11 +10,11 @@ before_install:
 install:
   - bundle install
   - npm install
-  - gulp build-clean --production
-# set execution permission on our build script
-#before_script:
+  # - gulp build-clean --production
+set execution permission on our build script
+before_script:
 # - chmod +x ./script/cibuild
-# - gulp build-clean --production
+- gulp build-clean --production
 # path to our build script.
 # Travis will run `bundle install` by default before running our script
 #script: ./script/cibuild
