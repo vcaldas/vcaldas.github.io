@@ -1,11 +1,17 @@
-language: ruby
+language: node_js
 # only run CI-builds on master branch
 branches:
   only:
   - source
 
-rvm:
-- 2.4.0
+node_js:
+  - '7'
 
 before_install:
-  - npm install
+  - rvm install 2.4.0
+
+before_script:
+  - npm install -g bower
+  - npm install -g gulp
+  - gem install bundler
+  - bundle install
