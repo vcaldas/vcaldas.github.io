@@ -11,10 +11,10 @@ before_install:
   - rvm install 2.4.0
 
 before_script:
-  - npm install -g bower
   - npm install -g gulp
+  - npm install
   - gem install bundler
   - bundle install
 
 script:
-  - gulp build-clean --production
+  - gulp
