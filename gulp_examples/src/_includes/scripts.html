@@ -1,7 +1,0 @@
-{% if site.google_analytics %}
-  {% include google-analytics.html %}
-{% endif %}
-
-{% assign index_js = site.data.js-manifest['index.js'] | default: 'index.js' | prepend: 'assets/javascripts/' | absolute_url %}
-
-<script async src="{{ index_js }}"></script>
