@@ -4,10 +4,6 @@ branches:
   only:
   - source
 
-cache:
-  directories:
-    - "node_modules"
-
 rvm:
 - 2.4.0
 
