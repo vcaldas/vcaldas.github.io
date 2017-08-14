@@ -9575,9 +9575,7 @@ ul.banner-social-buttons {
   margin-top: -2rem; }
 
 ::-moz-selection {
-  text-shadow: none;
-  background: #fcfcfc;
-  background: rgba(255, 255, 255, 0.2); }
+  background: #D3D3D3; }
 
 ::selection {
   text-shadow: none;

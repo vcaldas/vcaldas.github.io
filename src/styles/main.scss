@@ -13,6 +13,7 @@ body {
     color: black;
     background-color: white;
     position: relative;
+    
 
 }
 
@@ -297,9 +298,7 @@ ul.banner-social-buttons {
   }
 
 ::-moz-selection {
-    text-shadow: none;
-    background: #fcfcfc;
-    background: fade-out(white, 0.8);
+    background: #D3D3D3;
 }
 
 ::selection {
