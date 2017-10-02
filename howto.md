@@ -43,6 +43,8 @@ The following Gulp pipelines are available:
 $ gulp
 ```
 
+Compile and launch the website
+
 ``` sh
 $ gulp clean
 ```

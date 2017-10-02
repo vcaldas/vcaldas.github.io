@@ -8,6 +8,25 @@ layout: publication
 ## {{page.title}}
 
 
+### 2017
+
+<div class="publication" id="Aleklett2017">
+<a name="Ghodke2016"></a>
+<b>Build your own soil: exploring microfluidics to create microbial habitat structure.</em></b>.
+<br> Kristin Aleklett, E. Toby Kiers, Pelle Ohlsson, Thomas S. Shimizu, Victor E. A. Caldas, Edith C. Hammer
+<br><em>ISME Journal </em>, 2017.
+
+<div class="pubLinks">[<a href="#" class="abstractLink">Abstract</a> |
+<a href="#" class="bibtexLink">BibTeX</a> |
+<a href="">In print</a>]</div>
+
+<div class="abstract">
+In this perspectives paper, we show how microfluidics can be applied in soil microbial ecology, we present inspirational examples of microfluidic approaches in other fields such as biomedical cell research, and critically reflect on potential drawbacks and challenges to studying soil ecology with this technology.  
+</div>
+<pre class="bibtex">@article{Aleklett2017}
+</pre>
+</div>
+
 
 ### 2016
 

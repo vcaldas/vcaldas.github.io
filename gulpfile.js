@@ -115,11 +115,20 @@ gulp.task('assets', assets)
 
 gulp.task('jekyll-build', function(done) {
     browserSync.notify(config.jekyll.notification);
-    return spawn('jekyll', ['build'], {
+    return spawn('bundle', ['exec', 'jekyll', 'build'], {
             stdio: 'inherit'
         })
         .on('close', done);
 });
+
+
+// gulp.task('jekyll-build', function(done) {
+//     browserSync.notify(config.jekyll.notification);
+//     return spawn('jekyll', ['build'], {
+//             stdio: 'inherit'
+//         })
+//         .on('close', done);
+// });
 
 //functions to have in the end
 // build, deploy, dev, server

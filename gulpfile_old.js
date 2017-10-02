@@ -47,7 +47,7 @@ var messages = {
 // Set the banner content
 var banner = ['/*!\n',
     ' * Start Bootstrap - <%= pkg.title %> v<%= pkg.version %> (<%= pkg.homepage %>)\n',
-    ' * Copyright 2013-' + (new Date()).getFullYear(), ' <%= pkg.author %>\n',
+    ' * Copyright 2016-' + (new Date()).getFullYear(), ' <%= pkg.author %>\n',
     ' * Licensed under <%= pkg.license %> (https://github.com/BlackrockDigital/<%= pkg.name %>/blob/master/LICENSE)\n',
     ' */\n',
     ''
@@ -109,16 +109,6 @@ exports.scripts = scripts;
 // });
 // Task for building blog when something changed:
 gulp.task('jekyll-build', shell.task(['bundle exec jekyll build --watch']));
-
-// gulp.task('refresh', function(done){
-//   browserSync.reload({stream: true});
-// 	done();
-// });
-
-// /**
-//  * Rebuild Jekyll & do page reload
-//  */
-// gulp.task('jekyll-rebuild', gulp.series('jekyll-build', 'refresh'));
 
 
 // Task for serving blog with Browsersync
