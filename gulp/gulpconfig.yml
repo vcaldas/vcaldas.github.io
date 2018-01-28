@@ -84,6 +84,6 @@ watch:
 #     dest: "./assets/js"
 
 deploy:
-  hostname: 'victorcaldas.com'
+  hostname: 'neubias.github.io'
   destination: '/srv/users/serverpilot/apps/xxxxx/public/'
   username: 'vcaldas'

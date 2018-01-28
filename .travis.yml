@@ -1,33 +1,5 @@
 language: node_js
-branches:
-  only:
-  - source
-node_js:
-- '7'
-before_install:
-- rvm install 2.4.0
-before_script:
-- npm i -g gulp-cli
-- npm install
-- gem install bundler
-- bundle install
-script:
-- gulp build-clean  --production
-after_success:
-- git clone https://$GITHUB_REPO
-- git branch
-- cd $(basename ${GITHUB_REPO%.git})
-- git config user.name "Travis CI"
-- git config user.email ${EMAIL}
-- rsync -az --delete --exclude '.git*' ../_site/ .
-- touch .nojekyll
-- git add -A .
-- git commit -m "Generated Jekyll site by Travis CI - ${TRAVIS_BUILD_NUMBER}"
-- git push --force "https://user:${GH_TOKEN}@${GITHUB_REPO}" HEAD:${REPO_TARGET_BRANCH}
 env:
   global:
-  - NOKOGIRI_USE_SYSTEM_LIBRARIES=true
-  - GITHUB_REPO: github.com/vcaldas/vcaldas.github.io
-  - REPO_TARGET_BRANCH: master
-  - secure: Uz6tlNjJsGrVOdbm/cTqWBfg7DXq1XKzvwK6i9pY0KhzuaAlpnhKvdW84CmTRCZBwM7zuaBwUfjJ20J9WR0J2s846qtxKVbwJut9HzxrsbjLU9pQKGEBRLR9tOKJ1bThuoqyhHvecvrLcICie5iQnmDlVYyU6WM/6DZc5PWsgImu4Q4EotlIvRU23lbhVqfwNPSeXeDzzzUANGCWqAST/5akoAQ1qdhBw95XmfL3tJJF4r9nzk1Eijz3jUMnBMZ1jkNIDDhnfiQwNSLdObmtAoSBb7xyT5ySnMxEf1uyQXyv2+oVyuEegphHnfWDfBRRU91JADWYLeSm6ztg6t5jiNXPYCJPaO2Gti3CWCSbDOqrqCCUTElZYzRebkhXuFibNleUZmointRluObhiZ8hx1RCarZ16g0QRZODmV1BALWyqIX6T6Pv24mNzWy0Ukk7JZZQ5nQoWKsQp4diiqpCyVqDrJTTWMUuwgfmceWVJf2TM4KoBLfKJfgebL6O0/GsUtiYwxExQ+yHKYd7k77ZlDs/Tp244lNri53wcQ3NIcMYv3K0cXmSSF5s4ZVAnqnPniHdyReoW18pC4rOscaqgQQPsm7CZci+ZWtflSH7y90S5K6ArJ7fVkFCoXonF85+U4mcD1EFXU6KMFnP0zbzSNNOfIF+ly2qr1m5K1Ta+kU=
-  - secure: lHvKgXVPdY2+7ijlIRWgzva64rzo6alF+WNdTv6jJA1yP0d8P+XLACTYlEglRa+tBCOj+WdXvnO71zWcBsLv7ku7Fqg0OD062YzKjia5+L8PoklNj8+6AUR++RXaUp0PeXNozqkdWmuIyehG/DuW0I60eQOzTkNTlXw/+ObycL67xFyZ3nn8ao2Ibdf01qMVwcEee75OdNdvyFJYqRXFUhMxqdGvD14ytF7n5gITP/dbSKuo8Fg3pLbJGAh8k+PliDxNDq4GfBlQaUWyLwtu2F0vXpp0EBrmOK9GPGJO161bBONvf9O9xbUUNBikh1rfsIf5Jc8l+FLfWmhRtUA57rd7pHQxVj+sVy4wXGCKZNfsYe/ibvHS6Pv4J3nMITK4j5Db4Q5D+fDdxELuX5KWbBOz1co8cJtbno68mQso7QEjld3zj+OcdX6sVLzdAn9s+c/5YIv1VTEPT+KwghNy6KJDLvRy5Nbc7g7fCzAZRX2YJaMUaNAJ0txV+K5XFEO5kKS3R13HKLch7zktpw8UweHn32a2nOXm4lcFqgiTVCMAk/7pzLjCkm+gwWle/i5fvAaI6NnamsbZxXTOz+WRhdz6kmpvxn9LBB9u4OpC8wuShUHUlWF0Q0oYbmnpOyJNqxT/pKh82iEgetuGRbaC4ZuvTVnKWTmH2lEcLvxikwE=
+  - secure: MbzQLvSGx5EP4e2ql+9LaDxZmOpXIrttRGU/RKKsU1BDUN1c/lk0v4o0A3aLoF0MkgJHposakF5GEfSZhs/0iIYFYbJfoCWG8nJ9+kwGJ9O+zHZnJmknPcU0Etyrnjk1/Eht/ykr3nZbYGYc2PE1E9mcG+T8rMAsfFiRvuwCBjnqfx70+jGK3ynx4JCPZ1Uk1GAd86IqFW26eSjqq0lBbnK0ygJm4wMkkRwgm/EaXO5Z3c1PIAn+oobcSre5mAWtu4QKMv/y9Gnv4YLzVj7xJbskntIum/Zyi7ZLp43tOTz5mTdNPZ+RzlzcnZgqEGZu4gIK7JEn4sl9/9V97LfilVIdenoY+5FB8hL+q9fo60HI2KM7DJ17QCA8V9MBlI8QKdYMACo8W7p5DLfYEpHwa4G37YBWYSwfPxdp3i9Q4YAn48vIe0R2dObt4FnOaqnu5hnJedch4UI4DZPzAEFLr1Ig/oTsa3y4aOySIcsHpxGxOeR+5UnfrQ31nE3ktGpGWyYw+5bHaPTtsArWzUN5ovweqsMqHIYTMj01FktOMyoqoXZbpD7eWLUf2s4T9G5T6qk8Vex98XvAypba4MTjB245TiqQeoFXIM5SNt8MFAnZNwgn+h+BpPsGe+4dxvzSjgqnGQLJ83G5ky1kYNufTsvxOce4cS//tGJhEy1Cg5M=
+  - secure: MqgNsSo854Gdh05rdrglVBC6Yp+MESUhulfjbkmu/LYZNQI7zKrP/atKsN9h4ScUeVZ/uvaMRPMhMg3DoFAwu5NoNDXa0YtAB16m0AsIKEmj58RdPlD8tNsB+ZMfryYlgphISa61JrjxtjS/2UTsO55FRXMZXFLOMY3D8CRu5ysLqdW0R/wywNDFBWnAl9QUpB4kl+Naut6eZ5hgEuOagfXI42N59nqQiB3pzJrAsAXG9TnP0ha3oclt/vPjw7qdwJH/3xqt5IOXCiLUC4dBrTiNh42eTmETp6PWRBod/HWQDQqso5L51HScMtQ3kUcOKeWBG+VWyr0VHsO3wnjvSRCKhJ3kzwP71c2QlZKqwnxscCGWWMgOuCoFH30n+3nJmOf3xxqK98nmDAkKCDIML3arwcIgyNjDYEawnPIhRAHxqprdnyk/Ul6Oi5Rkr5gdzjs5gImxkbDw63MbdoQwa5vwEZZjqHkVQYKLqz+sSrRBttew/mTjXD+qru/lKBCBq6mxky6hzsj5MBtHEljlGr62XCespM6xXo3++QodC1BxnZRiXXjmOnE+pE/TD0x7gkhr4JTb1HMGhk3Sc7xwF2bF/livYR9jRs//chjqtKhu3opXoYyy5EKxCblA0mPRpN1NgJJcwv22S/up/zicUc4/DeuAsIQ2YZijFfQHL8c=
