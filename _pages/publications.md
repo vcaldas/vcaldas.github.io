@@ -12,7 +12,7 @@ layout: publication
 
 <div class="publication" id="Aleklett2017">
 <a name="Aleklett2017"></a>
-<b>Build your own soil: exploring microfluidics to create microbial habitat structure.</b>.
+<b>Build your own soil: exploring microfluidics to create microbial habitat structure.</b>
 <br> Kristin Aleklett, E. Toby Kiers, Pelle Ohlsson, Thomas S. Shimizu, Victor E. A. Caldas, Edith C. Hammer
 <br><em>ISME Journal </em>, 2017.
 
