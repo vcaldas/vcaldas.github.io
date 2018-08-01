@@ -11,8 +11,8 @@ layout: publication
 ### 2017
 
 <div class="publication" id="Aleklett2017">
-<a name="Ghodke2016"></a>
-<b>Build your own soil: exploring microfluidics to create microbial habitat structure.</em></b>.
+<a name="Aleklett2017"></a>
+<b>Build your own soil: exploring microfluidics to create microbial habitat structure.</b>.
 <br> Kristin Aleklett, E. Toby Kiers, Pelle Ohlsson, Thomas S. Shimizu, Victor E. A. Caldas, Edith C. Hammer
 <br><em>ISME Journal </em>, 2017.
 
@@ -128,7 +128,7 @@ year = {2015}
 <a name="Pozzi2014"></a>
 <b>Microbial population in an aerated thermophilic reactor that treats recycled card-board plant wastewater</b>.
 <br> Pozzi, E., Megda, C.R., Caldas, V. E. A., Damianovic, M., Pires, E. <br>
-<em>PLOS Genetics</em> 2015.
+<em>J. Water Process Eng.</em> 2014.
 
 <div class="pubLinks">[<a href="#" class="abstractLink">Abstract</a> |
 <a href="#" class="bibtexLink">BibTeX</a> |
