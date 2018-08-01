@@ -18,7 +18,7 @@ layout: publication
 
 <div class="pubLinks">[<a href="#" class="abstractLink">Abstract</a> |
 <a href="#" class="bibtexLink">BibTeX</a> |
-<a href="">In print</a>]</div>
+<a href="https://www.nature.com/articles/ismej2017184">URL</a>]</div>
 
 <div class="abstract">
 In this perspectives paper, we show how microfluidics can be applied in soil microbial ecology, we present inspirational examples of microfluidic approaches in other fields such as biomedical cell research, and critically reflect on potential drawbacks and challenges to studying soil ecology with this technology.  
