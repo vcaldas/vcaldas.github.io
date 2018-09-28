@@ -1,0 +1,400 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="3.5.1">Jekyll</generator><link href="https://vcaldas.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://vcaldas.github.io/" rel="alternate" type="text/html" hreflang="en" /><updated>2018-09-28T13:27:15+00:00</updated><id>https://vcaldas.github.io/</id><title type="html">{ V/Caldas }</title><author><name>Victor Caldas</name></author><entry><title type="html">Welcome to { Personal } Jekyll Theme!</title><link href="https://vcaldas.github.io/tech/2015/06/27/welcome.html" rel="alternate" type="text/html" title="Welcome to { Personal } Jekyll Theme!" /><published>2015-06-27T00:00:00+00:00</published><updated>2015-06-27T00:00:00+00:00</updated><id>https://vcaldas.github.io/tech/2015/06/27/welcome</id><content type="html" xml:base="https://vcaldas.github.io/tech/2015/06/27/welcome.html">&lt;p&gt;Click the view more posts link bellow, to see the currently available post-tutorials to help you get your { Personal } website up and running quicker!&lt;/p&gt;
+
+&lt;p&gt;Note that every time you update the site configuration (_config.yml), you will need
+to cancel the serving (&lt;em&gt;Ctr + C&lt;/em&gt;) and serve the website again.&lt;/p&gt;
+
+&lt;p&gt;Any contributions, feedback or issues to the &lt;a href=&quot;https://github.com/PanosSakkos/personal-jekyll-theme&quot; target=&quot;\_blank&quot;&gt;repo&lt;/a&gt; are more than welcome!&lt;/p&gt;</content><author><name>Victor Caldas</name></author><category term="tech" /><category term="tutorial" /><summary type="html">Click the view more posts link bellow, to see the currently available post-tutorials to help you get your { Personal } website up and running quicker!</summary></entry><entry><title type="html">Initial setup</title><link href="https://vcaldas.github.io/tech/2015/06/25/initial-setup.html" rel="alternate" type="text/html" title="Initial setup" /><published>2015-06-25T00:00:00+00:00</published><updated>2015-06-25T00:00:00+00:00</updated><id>https://vcaldas.github.io/tech/2015/06/25/initial-setup</id><content type="html" xml:base="https://vcaldas.github.io/tech/2015/06/25/initial-setup.html">&lt;p&gt;All features of { Personal } are controlled by setting values to variables that are defined in the
+_config.yml file. Let’s start with the initial variables that you have to set before
+serving your { Personal } website for the first time.&lt;/p&gt;
+
+&lt;h3 id=&quot;essential-variables&quot;&gt;Essential variables&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code data-trim=&quot;&quot; class=&quot;yaml&quot;&gt;
+# NB! Set your site's url, otherwise stuff will break :)
+
+url: &quot;https://panossakkos.github.io&quot;
+
+# If you're hosting your site at a Project repository on GitHub pages
+# (https://yourusername.github.io/repository-name)
+# and NOT your user repository (https://yourusername.github.io)
+# then add in the baseurl here, like this: &quot;/repository-name&quot;
+#
+# NB! Without this *nothing* will work, because it's used in every path :)
+
+baseurl: /personal-jekyll-theme
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The url and baseurl variables are essential, because they are used &lt;em&gt;everywhere&lt;/em&gt; where an anchor is defined!&lt;/p&gt;
+
+&lt;h3 id=&quot;coloring&quot;&gt;Coloring&lt;/h3&gt;
+
+&lt;p&gt;You can define the colors that you want in your { Personal } website by setting
+the following variable sin the /_sass/_variables.scss file:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code data-trim=&quot;&quot; class=&quot;scss&quot;&gt;
+// Main color
+$primary-color: #000;
+
+// Anchor color
+$secondary-color: #00cdff;
+
+// Font color
+$font-color: #fff;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&quot;https&quot;&gt;HTTPS&lt;/h3&gt;
+
+&lt;p&gt;By default { Personal } will enforce https by javascript redirection.
+HTTPS is important because it encrypts the data sent between the client and the server.
+If you are hosting on GitHub Pages then it will just work, because your website
+will be piggybacking GitHub’s certificate.
+If you are hosting your website in a server that doesn’t have a certificate and
+you don’t want to issue one, then you can disable this feature by setting the following
+variable to False:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code data-trim=&quot;&quot; class=&quot;yaml&quot;&gt;
+force-https: True
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&quot;html-head&quot;&gt;HTML Head&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code data-trim=&quot;&quot; class=&quot;yaml&quot;&gt;
+lang: &quot;en&quot;
+author: &quot;John Smith&quot;
+title: &quot;{ John Smith }&quot;
+description: &quot;Blog and website of John Smith, blogging mainly for tech. Opinions expressed are mine.&quot;
+keywords: &quot;smith, jones, personal, jekyll, theme&quot;
+favicon: &quot;/img/favicon.ico&quot;
+err-404-img: &quot;/img/labtocat.png&quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The values that you set, will be placed in the head section of every generated HTML page.&lt;/p&gt;
+
+&lt;h3 id=&quot;google-analytics&quot;&gt;Google Analytics&lt;/h3&gt;
+
+&lt;p&gt;The Google tracking code will be placed in every generated page.
+If you don’t want Google analytics tracking your website’s traffic, set the google-tracking-id to an empty string.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code data-trim=&quot;&quot; class=&quot;yaml&quot;&gt;
+google-tracking-id: &quot;UA-35880426-4&quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&quot;serving--personal-&quot;&gt;Serving { Personal }&lt;/h3&gt;
+
+&lt;p&gt;Install the required dependencies:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code data-trim=&quot;&quot; class=&quot;bash&quot;&gt;
+gem install jekyll jekyll-paginate jemoji html-proofer
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Serve the jekyll website:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code data-trim=&quot;&quot; class=&quot;bash&quot;&gt;
+./scripts/serve-production
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;That’s it!&lt;/p&gt;
+
+&lt;p&gt;Visit &lt;a href=&quot;http://127.0.0.1:4000&quot;&gt;http://127.0.0.1:4000&lt;/a&gt; and you are ready to start hacking around your { Personal } website!&lt;/p&gt;
+
+&lt;p&gt;&lt;small&gt;Many thanks to &lt;a href=&quot;https://github.com/joariasl&quot; target=&quot;\_blank&quot;&gt;@joariasl&lt;/a&gt; for the language support! &lt;/small&gt;&lt;/p&gt;</content><author><name>Victor Caldas</name></author><category term="tech" /><category term="tutorial" /><summary type="html">All features of { Personal } are controlled by setting values to variables that are defined in the _config.yml file. Let’s start with the initial variables that you have to set before serving your { Personal } website for the first time.</summary></entry><entry><title type="html">Modifying the Header</title><link href="https://vcaldas.github.io/tech/2015/06/24/intro-layout-tutorial.html" rel="alternate" type="text/html" title="Modifying the Header" /><published>2015-06-24T00:00:00+00:00</published><updated>2015-06-24T00:00:00+00:00</updated><id>https://vcaldas.github.io/tech/2015/06/24/intro-layout-tutorial</id><content type="html" xml:base="https://vcaldas.github.io/tech/2015/06/24/intro-layout-tutorial.html">&lt;p&gt;The intro part of the index page (Header) is consisted of four elements:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;A black favicon&lt;/li&gt;
+  &lt;li&gt;Background image&lt;/li&gt;
+  &lt;li&gt;Welcome text&lt;/li&gt;
+  &lt;li&gt;Your image&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;black-favicon&quot;&gt;Black favicon&lt;/h3&gt;
+
+&lt;p&gt;The black favicon is an image on the left of the navigation bar.
+Preferably it should be a black and white version of your favicon.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code data-trim=&quot;&quot; class=&quot;yaml&quot;&gt;
+black-favicon: &quot;/img/black-lab-glass.ico&quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&quot;background-image&quot;&gt;Background image&lt;/h3&gt;
+
+&lt;p&gt;In order to set the background, set the path to following variable:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code data-trim=&quot;&quot; class=&quot;yaml&quot;&gt;
+background-img: &quot;../img/intro-bg.jpg&quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;small&gt;NB! Keep the .. in the beginning of the background image path&lt;/small&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;welcome-text&quot;&gt;Welcome text&lt;/h3&gt;
+
+&lt;p&gt;The welcome text is controlled by the following (self-explanatory) variables:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code data-trim=&quot;&quot; class=&quot;yaml&quot;&gt;
+dynamic-typing: True
+shuffle: True # Shuffle the lines.
+loop: True
+loop-count: False # Set False for infinite loop, or set any number for finite loop.
+type-speed: 10 # Default 10
+start-delay: 200 # Default 200
+delete-delay: 5000 # Default 5000
+lines: # You can add HTML Tags in the Text
+  - text: &quot;The lower you fall, the higher you'll fly.&quot;
+  - text: &quot;Where’s your will to be weird?&quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;small&gt;Many thanks to &lt;a href=&quot;https://github.com/prashantsolanki3&quot; target=&quot;blank&quot;&gt;@prashantsolanki3&lt;/a&gt; for the dynamic typing feature!&lt;/small&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;your-image&quot;&gt;Your image&lt;/h3&gt;
+
+&lt;p&gt;You can set your image from the following variable:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code data-trim=&quot;&quot; class=&quot;yaml&quot;&gt;
+me-img: &quot;/img/jetpacktocat.png&quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;All set!&lt;/p&gt;</content><author><name>Victor Caldas</name></author><category term="tech" /><category term="tutorial" /><summary type="html">The intro part of the index page (Header) is consisted of four elements:</summary></entry><entry><title type="html">Web app mode</title><link href="https://vcaldas.github.io/tech/2015/06/22/web-app-mode.html" rel="alternate" type="text/html" title="Web app mode" /><published>2015-06-22T00:00:00+00:00</published><updated>2015-06-22T00:00:00+00:00</updated><id>https://vcaldas.github.io/tech/2015/06/22/web-app-mode</id><content type="html" xml:base="https://vcaldas.github.io/tech/2015/06/22/web-app-mode.html">&lt;p&gt;You can make your website behave like a native web app in iOS and Android devices
+by providing links for the icons for each resolution:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code data-trim=&quot;&quot; class=&quot;yaml&quot;&gt;
+web-app-mode: True
+
+# Icons for Web App mode
+
+icon-36p: &quot;/img/web-app/icon-36p.png&quot;
+icon-48p: &quot;/img/web-app/icon-48p.png&quot;
+icon-72p: &quot;/img/web-app/icon-72p.png&quot;
+icon-96p: &quot;/img/web-app/icon-96p.png&quot;
+icon-144p: &quot;/img/web-app/icon-144p.png&quot;
+icon-192p: &quot;/img/web-app/icon-192p.png&quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;small&gt;If you want to disable this feature, simply set the web-app-mode variable to False&lt;/small&gt;&lt;/p&gt;
+
+&lt;p&gt;This is how your website will look when added to the homescreen:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://dl.dropboxusercontent.com/u/8522559/personal-jekyll-theme/ios.jpg&quot; alt=&quot;iOS&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://dl.dropboxusercontent.com/u/8522559/personal-jekyll-theme/pinned.jpg&quot; alt=&quot;Android&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;And when the user opens it (note that it renders in fullscreen):&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://dl.dropboxusercontent.com/u/8522559/personal-jekyll-theme/web-app.jpg&quot; alt=&quot;Web App&quot; /&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;browser-status-bar-customization&quot;&gt;Browser status bar customization&lt;/h1&gt;
+
+&lt;p&gt;You can color the browser status bar when in mobile mode, by setting it to a color.&lt;/p&gt;
+
+&lt;p&gt;The color is define in the site config with the following variables&lt;/p&gt;
+
+&lt;pre&gt;&lt;code data-trim=&quot;&quot; class=&quot;yaml&quot;&gt;
+##############################
+# Color the browser elements #
+##############################
+color-browser: &quot;#000000&quot;
+apple-status-bar-style: &quot;black&quot;
+&lt;/code&gt;&lt;/pre&gt;</content><author><name>Victor Caldas</name></author><category term="tech" /><category term="tutorial" /><summary type="html">You can make your website behave like a native web app in iOS and Android devices by providing links for the icons for each resolution:</summary></entry><entry><title type="html">Setting up the Blog</title><link href="https://vcaldas.github.io/tech/2015/06/20/blog-tutorial.html" rel="alternate" type="text/html" title="Setting up the Blog" /><published>2015-06-20T00:00:00+00:00</published><updated>2015-06-20T00:00:00+00:00</updated><id>https://vcaldas.github.io/tech/2015/06/20/blog-tutorial</id><content type="html" xml:base="https://vcaldas.github.io/tech/2015/06/20/blog-tutorial.html">&lt;p&gt;A website is truly personal if it hosts your blog as well, this place of the internet
+where you can place your thoughts about anything!&lt;/p&gt;
+
+&lt;h3 id=&quot;latest-post-preview-in-index-page&quot;&gt;Latest post preview in Index page&lt;/h3&gt;
+
+&lt;p&gt;First of all, you get a preview of the latest post in the index, in order to attract the visitor to visit your blog.
+The size of this preview is defined by:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code data-trim=&quot;&quot; class=&quot;yaml&quot;&gt;
+post-preview-words: 96
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Feel free to experiment with different sizes, and pick the best for you :smile:&lt;/p&gt;
+
+&lt;h3 id=&quot;archive&quot;&gt;Archive&lt;/h3&gt;
+
+&lt;p&gt;A blog is expected to host many posts, so you will need an archive with pagination,
+which in a nutshell it’s a grouping of your posts in pages, in reverse chronological
+order. You can define the number of posts that are displayed per page by changing:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code data-trim=&quot;&quot; class=&quot;yaml&quot;&gt;
+paginate: 5
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&quot;share-buttons&quot;&gt;Share buttons&lt;/h3&gt;
+
+&lt;p&gt;Many share buttons are available and can be enabled or disabled by setting the following:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code data-trim=&quot;&quot; class=&quot;yaml&quot;&gt;
+email-share: True
+fb-share: True
+twitter-share: True
+linkedin-share: True
+reddit-share: True
+google-plus-share: True
+tumblr-share: True
+pinterest-share: True
+pocket-share: True
+vkontakte-share: True
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&quot;comments&quot;&gt;Comments&lt;/h3&gt;
+
+&lt;p&gt;You can enable &lt;a href=&quot;http://www.disqus.com&quot; target=&quot;\_blank&quot;&gt;Disqus&lt;/a&gt; comments by just setting your Disqus username here:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code data-trim=&quot;&quot; class=&quot;yaml&quot;&gt;
+disqus-shortname: &quot;Your Disqus username&quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&quot;rss-feed&quot;&gt;RSS feed&lt;/h3&gt;
+
+&lt;p&gt;The RSS feed is automatically generated and placed in /feed.xml.&lt;/p&gt;
+
+&lt;h3 id=&quot;sitemap&quot;&gt;Sitemap&lt;/h3&gt;
+
+&lt;p&gt;The Sitemap is automatically generated and placed in /sitemap.xml&lt;/p&gt;</content><author><name>Victor Caldas</name></author><category term="tech" /><category term="tutorial" /><summary type="html">A website is truly personal if it hosts your blog as well, this place of the internet where you can place your thoughts about anything!</summary></entry><entry><title type="html">Writing posts</title><link href="https://vcaldas.github.io/tech/2015/06/19/writing-posts.html" rel="alternate" type="text/html" title="Writing posts" /><published>2015-06-19T00:00:00+00:00</published><updated>2015-06-19T00:00:00+00:00</updated><id>https://vcaldas.github.io/tech/2015/06/19/writing-posts</id><content type="html" xml:base="https://vcaldas.github.io/tech/2015/06/19/writing-posts.html">&lt;h3 id=&quot;creating-a-new-post&quot;&gt;Creating a new post&lt;/h3&gt;
+
+&lt;p&gt;Run the ./scripts/newpost script with the file name of the post as an argument:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code data-trim=&quot;&quot; class=&quot;bash&quot;&gt;
+cd &amp;lt;your { Personal } repo&amp;gt;
+./scripts/newpost hello-world
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;A a new post template with name YYYY-MM-DD-hello-world.md will be created under ./_posts, with the current date.&lt;/p&gt;
+
+&lt;p&gt;In the created post, just replace the Title, Category and tags and you can
+start writing your post in markdown right bellow the end of the post header.&lt;/p&gt;
+
+&lt;p&gt;Every file with the format &lt;i&gt;YYYY-MM-DD-post-title.md&lt;/i&gt; will be processed as a
+post, with publication date &lt;i&gt;YYYY-MM-DD&lt;/i&gt;.&lt;/p&gt;
+
+&lt;p&gt;The content starts with:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code data-trim=&quot;&quot; class=&quot;yaml&quot;&gt;
+---
+layout: post
+section-type: post
+title: Title
+category: Category
+tags: [ 'tag1', 'tag2' ]
+---
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The &lt;em&gt;layout&lt;/em&gt; and &lt;em&gt;section-type&lt;/em&gt; variables are used by the theme and you shouldn’t remove them.&lt;/p&gt;
+
+&lt;h3 id=&quot;hashtags&quot;&gt;Hashtags&lt;/h3&gt;
+
+&lt;p&gt;Jekyll generates a static pages.
+As a result we have to create the tag pages before building and publishing the site.
+In order to generate the tag pages, simply run the &lt;em&gt;generate-tags&lt;/em&gt; script from the repo’s root directory:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code data-trim=&quot;&quot; class=&quot;bash&quot;&gt;
+./scripts/generate-tags
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The script will parse all your posts, and generate the tag pages for the newly added tags.&lt;/p&gt;
+
+&lt;p&gt;&lt;small&gt;If you are not using GitHub Pages, you can automate the execution of this script during build time.&lt;/small&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;categories&quot;&gt;Categories&lt;/h3&gt;
+
+&lt;p&gt;You can organize your posts under categories. Categories are behaving like hashtags,
+they have to be generated offline, by running the ./scripts/generate-categories script.&lt;/p&gt;
+
+&lt;p&gt;The category of the post is specified in the yaml header, in the Category variable.&lt;/p&gt;
+
+&lt;p&gt;NB! Only one category can be defined per post.&lt;/p&gt;
+
+&lt;h3 id=&quot;syntax-highlighting&quot;&gt;Syntax highlighting&lt;/h3&gt;
+
+&lt;p&gt;If you want to demonstrate source code in your posts, syntax highlighting is provided.
+If you want to see how to render your code with the highlight, simply check the source
+code of this tutorial post :smile:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code data-trim=&quot;&quot; class=&quot;c&quot;&gt;
+
+int main()
+{
+  printf(&quot;Hello, world of syntax highlighting!&quot;);
+
+  return 0;
+}
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;small&gt;If you don’t need syntax highlight in your website you can disable it by setting the syntax-highlight variable to False&lt;/small&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;emoji-support&quot;&gt;Emoji support&lt;/h3&gt;
+
+&lt;p&gt;You can add emojis to your posts by simply typing their &lt;a href=&quot;http://www.emoji-cheat-sheet.com/&quot;&gt;emoji code&lt;/a&gt; :wink:&lt;/p&gt;
+
+&lt;h3 id=&quot;author-blurb&quot;&gt;Author Blurb&lt;/h3&gt;
+
+&lt;p&gt;You can add a short description of yourself bellow your posts, by setting the next two variables in the site config&lt;/p&gt;
+
+&lt;pre&gt;&lt;code data-trim=&quot;&quot; class=&quot;yaml&quot;&gt;
+################
+# Author Blurb #
+################
+
+# The author blurb goes underneath blog posts.
+# This works best when your author blurb image has a transparent background, or matches your site background color.
+
+# if the author_blurb is not set, then this feature is skipped
+author_blurb: &quot;John Smith is an awesome person. He lives in Flatland, where he works on two-dimensional engineering projects. In his spare time, John likes to eat cotton candy.&quot;
+author_blurb_image: &quot;/img/author.png&quot;
+&lt;/code&gt;&lt;/pre&gt;</content><author><name>Victor Caldas</name></author><category term="tech" /><category term="tutorial" /><summary type="html">Creating a new post</summary></entry><entry><title type="html">Adding a life event in the Timeline</title><link href="https://vcaldas.github.io/tech/2015/06/12/timeline-tutorial.html" rel="alternate" type="text/html" title="Adding a life event in the Timeline" /><published>2015-06-12T00:00:00+00:00</published><updated>2015-06-12T00:00:00+00:00</updated><id>https://vcaldas.github.io/tech/2015/06/12/timeline-tutorial</id><content type="html" xml:base="https://vcaldas.github.io/tech/2015/06/12/timeline-tutorial.html">&lt;p&gt;One of the coolest features of { Personal } is that enables you to tell your life’s story in
+the form of a timeline of photos, dates and text descriptions.&lt;/p&gt;
+
+&lt;p&gt;The Timeline is controlled by the following variables:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code data-trim=&quot;&quot; class=&quot;yaml&quot;&gt;
+events:
+  - image: &quot;/img/timeline/spidertocat.png&quot;
+    date: &quot;September 2013 - Today&quot;
+    description: &quot;Saving the neighborhood!&quot;
+  - image: &quot;/img/timeline/baracktocat.jpg&quot;
+    date: &quot;September 2007 - August 2013&quot;
+    description: &quot;Started coding&quot;
+
+# First image of the Timeline
+
+timeline-img: &quot;/img/timeline/default.png&quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;For each event of your life, add a tuple of image, date and description to the events,
+and the timeline will be automatically generated!&lt;/p&gt;
+
+&lt;p&gt;The timeline-img path variable is the image that you want to show up in the beginning of your Timeline, be creative!&lt;/p&gt;
+
+&lt;p&gt;&lt;small&gt;Square images are recommended 😉&lt;/small&gt;&lt;/p&gt;</content><author><name>Victor Caldas</name></author><category term="tech" /><category term="tutorial" /><summary type="html">One of the coolest features of { Personal } is that enables you to tell your life’s story in the form of a timeline of photos, dates and text descriptions.</summary></entry><entry><title type="html">Modifying the social buttons</title><link href="https://vcaldas.github.io/tech/2015/06/11/social-buttons-tutorial.html" rel="alternate" type="text/html" title="Modifying the social buttons" /><published>2015-06-11T00:00:00+00:00</published><updated>2015-06-11T00:00:00+00:00</updated><id>https://vcaldas.github.io/tech/2015/06/11/social-buttons-tutorial</id><content type="html" xml:base="https://vcaldas.github.io/tech/2015/06/11/social-buttons-tutorial.html">&lt;p&gt;Social buttons (rendered above the footer) are great for having a small hub with all your social footprint.&lt;/p&gt;
+
+&lt;p&gt;You can edit them with the following variables:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code data-trim=&quot;&quot; class=&quot;yaml&quot;&gt;
+social:
+  - title: &quot;facebook&quot;
+    url: &quot;https://facebook.com/&quot;
+  - title: &quot;twitter&quot;
+    url: &quot;https://twitter.com/&quot;
+  - title: &quot;github&quot;
+    url: &quot;https://github.com/PanosSakkos/personal-jekyll-theme&quot;
+  - title: &quot;bitcoin&quot;
+    url: &quot;https://blockchain.info/address/1LHuKC9Em3KA5yoZaf7nngnNdf9K7s2gSi&quot;
+  - title: &quot;rss&quot;
+    url: &quot;/feed.xml&quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The title selects the desired &lt;a href=&quot;https://fortawesome.github.io/Font-Awesome/icons/&quot;&gt;Font Awesome&lt;/a&gt;
+icon and it shouldn’t include the “fa-“ prefix.&lt;/p&gt;</content><author><name>Victor Caldas</name></author><category term="tech" /><category term="tutorial" /><summary type="html">Social buttons (rendered above the footer) are great for having a small hub with all your social footprint.</summary></entry><entry><title type="html">Modifying the Contact</title><link href="https://vcaldas.github.io/tech/2015/06/10/contact-tutorial.html" rel="alternate" type="text/html" title="Modifying the Contact" /><published>2015-06-10T00:00:00+00:00</published><updated>2015-06-10T00:00:00+00:00</updated><id>https://vcaldas.github.io/tech/2015/06/10/contact-tutorial</id><content type="html" xml:base="https://vcaldas.github.io/tech/2015/06/10/contact-tutorial.html">&lt;p&gt;The contact part of the index page is consisted of two elements:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Text&lt;/li&gt;
+  &lt;li&gt;Your email address&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;You can modify the Contact text from the /contact.html file and set the email in the site config:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code data-trim=&quot;&quot; class=&quot;yaml&quot;&gt;
+email: &quot;your@email.here&quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Don’t be afraid of email harvesting, write your email properly and the page will perform javascript obfuscation.&lt;/p&gt;
+
+&lt;p&gt;&lt;small&gt;Many thanks to &lt;a href=&quot;https://github.com/joariasl&quot; target=&quot;\_blank&quot;&gt;@joariasl&lt;/a&gt; for this feature!&lt;/small&gt;&lt;/p&gt;</content><author><name>Victor Caldas</name></author><category term="tech" /><category term="tutorial" /><summary type="html">The contact part of the index page is consisted of two elements:</summary></entry></feed>
