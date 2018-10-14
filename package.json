@@ -10,7 +10,7 @@
     "url": "https://github.com/vcaldas/vcaldas.github.io/LICENSE"
   },
   "devDependencies": {
-    "browser-sync": "^2.18.13",
+    "browser-sync": "^2.26.3",
     "cross-spawn": "^5.1.0",
     "del": "^3.0.0",
     "fs": "0.0.1-security",
@@ -23,7 +23,7 @@
     "gulp-purifycss": "^0.2.0",
     "gulp-rsync": "0.0.8",
     "gulp-sass": "^3.1.0",
-    "gulp-sourcemaps": "^2.6.0",
+    "gulp-sourcemaps": "^2.6.4",
     "gulp-uglify": "^3.0.0",
     "js-yaml": "^3.9.0",
     "require-dir": "^0.3.2",
