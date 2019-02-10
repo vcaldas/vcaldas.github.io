@@ -6,7 +6,7 @@ browsersync:
   server:
     basedir: "_site/"
   xip:    false
-  browser: "Google Chrome"
+  browser: "firefox"
 
 clean:
   # The jekyll build dir
