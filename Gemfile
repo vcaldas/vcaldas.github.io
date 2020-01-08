@@ -10,7 +10,7 @@ ruby '2.4.4'
 #
 # This will help ensure the proper Jekyll version is running.
 # Happy Jekylling!
-gem 'jekyll'
+gem "jekyll", ">= 3.6.3"
 gem 'html-proofer', '~> 3.0.0'
 gem 'travis'
 gem 'json'
