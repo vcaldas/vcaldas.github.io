@@ -13,7 +13,7 @@ before_script:
 - gem install bundler
 - bundle install
 script:
-- gulp build-clean  --production
+- gulp build-clean --production
 after_success:
 - git clone https://$GITHUB_REPO
 - git branch
