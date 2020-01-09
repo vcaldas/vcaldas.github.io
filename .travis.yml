@@ -9,6 +9,7 @@ before_install:
 before_script:
 - npm i -g gulp-cli
 - npm install
+- npm update -g npm
 - gem install bundler
 - bundle install
 script:
