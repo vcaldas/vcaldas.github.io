@@ -5,13 +5,12 @@ branches:
 node_js:
 - '7'
 before_install:
-- rvm install 2.4.0
+- rvm install 2.4.4
 before_script:
 - npm update -g npm
 - npm i -g gulp-cli
 - npm install
 - gem install bundler
-- bundle update --bundler
 - bundle install
 script:
 - gulp build-clean  --production
