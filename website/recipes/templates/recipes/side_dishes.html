@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="recipe-container">
+
+    <div class="card">
+        <a href="{{ url_for('recipes.side_dishes_recipe', recipe_name='sweet_potatoes') }}">
+            <img
+              src="{{ url_for('static', filename='img/sweet_potatoes.jpg') }}"
+              alt="Sweet Potatoes"
+              class="card__image" />
+            <div class="card__body">
+                <h2>Sweet Potatoes</h2>
+                <p class="recipe-badge dairy-free-badge">Dairy-Free</p>
+                <p class="recipe-badge soy-free-badge">Soy-Free</p>
+            </div>
+        </a>
+    </div>
+
+    <div class="card">
+        <a href="{{ url_for('recipes.side_dishes_recipe', recipe_name='spanish_rice') }}">
+            <img
+              src="{{ url_for('static', filename='img/spanish_rice.jpg') }}"
+              alt="Spanish Rice"
+              class="card__image" />
+            <div class="card__body">
+                <h2>Spanish Rice</h2>
+                <p class="recipe-badge dairy-free-badge">Dairy-Free</p>
+                <p class="recipe-badge soy-free-badge">Soy-Free</p>
+            </div>
+        </a>
+    </div>
+
+    <div class="card">
+        <a href="{{ url_for('recipes.side_dishes_recipe', recipe_name='jasmine_rice') }}">
+            <img
+              src="{{ url_for('static', filename='img/jasmine_rice.jpg') }}"
+              alt="Jasmine Rice"
+              class="card__image" />
+            <div class="card__body">
+                <h2>Jasmine Rice</h2>
+                <p class="recipe-badge dairy-free-badge">Dairy-Free</p>
+                <p class="recipe-badge soy-free-badge">Soy-Free</p>
+            </div>
+        </a>
+    </div>
+
+</div>
+{% endblock %}

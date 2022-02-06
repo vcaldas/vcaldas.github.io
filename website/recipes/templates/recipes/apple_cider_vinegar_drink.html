@@ -1,0 +1,45 @@
+{% extends "recipe.html" %}
+
+{% block recipe_title %}
+<h1>Apple Cider Vinegar Drink</h1>
+{% endblock %}
+
+{% block recipe_description %}
+<h2>Description</h2>
+<p>This drink is the best way that I've found to drink apple cider vinegar (ACV), as it has a very harsh and acidic taste.</p>
+<p>Apple cider vinegar has a number of <a href="https://health.clevelandclinic.org/exploring-the-health-benefits-of-apple-cider-vinegar/">health benefits</a>, including lower blood sugar and promoting weight loss.  I've found it to be really beneficial for my digestive health.</p>
+<p>The agave nectar in this drink makes it slightly sweet, so it almost tastes like drinking an applie pie.</p>
+{% endblock %}
+
+{% block recipe_image %}
+<img src="{{ url_for('static', filename='img/apple_cider_vinegar_drink.jpg') }}"  alt="Apple Cider Vinegar Drink" />
+{% endblock %}
+
+{% block recipe_tips %}
+<h2>Tips</h2>
+<p>Try to disolve/mix the cinnamon in hot water before adding any other ingredients, as the cinnamon can really clump up in liquid.</p>
+<p>Since apple cider vinegar is so acidic, it's best to drink this drink with a straw to avoid the acidity affecting your teeth if you were to drink it straight from a cup.</p>
+{% endblock %}
+
+{% block recipe_ingredients %}
+<h2>List of Ingredients</h2>
+<ul>
+    <li>1 Teaspoon of Ground Cinnamon</li>
+    <li>4 Fluid Ounces of Hot Water</li>
+    <li>2 Tablespoons of Apple Cider Vinegar (ACV)</li>
+    <li>1 Tablespoon of Agave Nectar (or Maple Syrup)</li>
+    <li>1 Cup of Ice</li>
+    <li>20 Fluid Ounces of Cold Water</li>
+</ul>
+{% endblock %}
+
+{% block recipe_steps %}
+<h2>Recipe Steps</h2>
+<ol>
+    <li>This drink makes about 25 fluid ounces, so start by using a large cup or a <a href="https://www.target.com/p/ball-32oz-12pk-glass-regular-mouth-mason-jar-with-lid-and-band/-/A-12911372#lnk=sametab">large mason jar.</a></li>
+    <li>Add the cinnamon and hot water to the cup and mix thoroughly with a spoon.</li>
+    <li>Add the Apple Cider Vinegar (ACV) and Agave Nectar (or Maple Syrup).</li>
+    <li>Add the ice and cold water to the cup and mix thoroughly.</li>
+    <li>Enoy with a straw!</li>
+</ol>
+{% endblock %}

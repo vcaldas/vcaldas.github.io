@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="recipe-container">
+
+    <div class="card">
+        <a href="{{ url_for('recipes.drink_recipe', recipe_name='berry_smoothie') }}">
+            <img
+              src="{{ url_for('static', filename='img/berry_smoothie.jpg') }}"
+              alt="Berry Smoothie"
+              class="card__image" />
+            <div class="card__body">
+                <h2>Berry Smoothie</h2>
+                <p class="recipe-badge dairy-free-badge">Dairy-Free</p>
+                <p class="recipe-badge soy-free-badge">Soy-Free</p>
+            </div>
+        </a>
+    </div>
+
+    <div class="card">
+        <a href="{{ url_for('recipes.drink_recipe', recipe_name='chocolate_milk_shake') }}">
+            <img
+              src="{{ url_for('static', filename='img/chocolate_milk_shake.jpg') }}"
+              alt="Chocolate Milk Shake"
+              class="card__image" />
+            <div class="card__body">
+                <h2 class="recipe-title-long">Chocolate Milk Shake</h2>
+                <p class="recipe-badge dairy-free-badge">Dairy-Free</p>
+                <p class="recipe-badge soy-free-badge">Soy-Free</p>
+            </div>
+        </a>
+    </div>
+
+    <div class="card">
+        <a href="{{ url_for('recipes.drink_recipe', recipe_name='apple_cider_vinegar_drink') }}">
+            <img
+              src="{{ url_for('static', filename='img/apple_cider_vinegar_drink.jpg') }}"
+              alt="Apple Cider Vinegar Drink"
+              class="card__image" />
+            <div class="card__body">
+                <h2 class="recipe-title-extra-long">Apple Cider Vinegar Drink</h2>
+                <p class="recipe-badge dairy-free-badge">Dairy-Free</p>
+                <p class="recipe-badge soy-free-badge">Soy-Free</p>
+            </div>
+        </a>
+    </div>
+
+</div>
+{% endblock %}

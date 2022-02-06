@@ -1,0 +1,104 @@
+/* Recipe Container
+ ******************/
+.recipe-title {
+    grid-area: title;
+}
+.recipe-description {
+    grid-area: description;
+}
+.recipe-image {
+    grid-area: image;
+}
+.recipe-tips {
+    grid-area: tips;
+}
+.recipe-ingredients {
+    grid-area: ingredients;
+}
+.recipe-steps {
+    grid-area: steps;
+}
+
+.recipe-detail-container {
+    margin: auto;
+    display: grid;
+    /*grid-template-columns: 10% auto 10%;*/
+    grid-auto-rows: minmax(50px, auto);
+    grid-gap: 1rem;
+    grid-template-areas:
+        "...  title        ..."
+        "...  image        ..."
+        "...  description  ..."
+        "...  tips         ..."
+        "...  ingredients  ..."
+        "...  steps        ..."
+}
+
+@media screen and (min-width: 600px) {
+    .recipe-detail-container {
+        margin: 0 12px;
+        grid-template-columns: 25% auto;
+        grid-template-areas:
+            "title        title"
+            "description  image"
+            "tips         tips"
+            "ingredients  steps"
+    }
+}
+
+@media screen and (min-width: 800px) {
+    .recipe-detail-container {
+        grid-template-columns: 5% 25% auto 5%;
+        grid-template-areas:
+            "...  title        title  ..."
+            "...  description  image  ..."
+            "...  tips         tips   ..."
+            "...  ingredients  steps  ..."
+    }
+}
+
+
+/* Recipe Sections
+ *****************/
+.recipe-title {
+    margin: auto;
+    font-size: 1.5em;
+    text-align: center;
+}
+
+@media screen and (min-width: 800px) {
+    .recipe-title {
+        font-size: 2.0em;
+    }
+}
+
+.recipe-detail-container h2 {
+    text-align: center;
+    border-bottom: 3px solid black;
+    font-weight: bold;
+    padding-bottom: 1rem;
+}
+
+.recipe-detail-container p {
+    padding-top: 1rem;
+    padding-bottom: 0.2rem;
+}
+
+.recipe-image img {
+    width: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.recipe-detail-container ul, .recipe-detail-container ol {
+    list-style-position: inside;
+    padding-bottom: 0.5rem;
+}
+
+.recipe-detail-container li {
+    padding: 0.6rem 0;
+}
+
+.recipe-detail-container a, .recipe-detail-container a:visited {
+    color: #9e9ed4;
+}

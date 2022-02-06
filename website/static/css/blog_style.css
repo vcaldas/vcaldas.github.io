@@ -1,0 +1,55 @@
+/* Cards
+ *******/
+.blog-container {
+  margin: 2.0rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(18rem, 0.3fr));
+  grid-gap: 2.0rem;
+  justify-content: center;
+}
+
+.blog-post-card {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: var(--radius);
+}
+
+.blog-post-card__image {
+  height: 16rem;
+  width: 100%;
+  object-fit: cover;
+}
+
+.blog-post-card__body {
+  width: 100%;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+.blog-post-card__body h2 {
+  padding-bottom: 0.7rem;
+}
+
+.blog-post-card__body p {
+  padding: 0.5rem 0;
+}
+
+.blog-post-card__date {
+  font-weight: lighter;
+  font-size: 0.8rem;
+}
+
+.blog-post-card__link {
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius);
+  background: darkblue;
+  text-align: center;
+}
+
+.blog-post-card__link a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.3rem;
+}

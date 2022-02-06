@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+
+{% block styling %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/blog_style.css') }}">
+{% endblock %}
+
+{% block content %}
+<div class="blog-container">
+
+    <div class="blog-post-card card-overlay">
+        <img
+          src="{{ url_for('static', filename='img/kitchenaid_mixer.jpg') }}"
+          alt="Kitchenaid Mixer"
+          class="blog-post-card__image" />
+        <div class="blog-post-card__body">
+            <h2>Why I Love my Kitchenaid Stand Mixer</h2>
+            <p>The Kitchenaid stand mixer is such a versatile kitchen tool for making lots of different recipes.</p>
+            <p class="blog-post-card__date">Published on January 21th, 2021</p>
+        </div>
+        <div class="blog-post-card__link">
+            <a href="{{ url_for('blog.posts', blog_title='kitchenaid_mixer') }}">Read Article</a>
+        </div>
+    </div>
+
+    <div class="blog-post-card card-overlay">
+        <img
+          src="{{ url_for('static', filename='img/measuring_cups.jpg') }}"
+          alt="Measuring Cups"
+          class="blog-post-card__image" />
+        <div class="blog-post-card__body">
+            <h2>Why I Love having Lots of Measuring Cups</h2>
+            <p>I have so many measuring cups and I use them everyday!</p>
+            <p class="blog-post-card__date">Published on January 8th, 2021</p>
+        </div>
+        <div class="blog-post-card__link">
+            <a href="{{ url_for('blog.posts', blog_title='measuring_cups') }}">Read Article</a>
+        </div>
+    </div>
+
+    <div class="blog-post-card card-overlay">
+        <img
+          src="{{ url_for('static', filename='img/air_fryer.jpg') }}"
+          alt="Air Fryer"
+          class="blog-post-card__image" />
+        <div class="blog-post-card__body">
+            <h2>Thoughts on Air Fryers After Owning  For One Year</h2>
+            <p>I've had an air fryer for one year and I recommend getting one!</p>
+            <p class="blog-post-card__date">Published on December 28th, 2020</p>
+        </div>
+        <div class="blog-post-card__link">
+            <a href="{{ url_for('blog.posts', blog_title='air_fryer') }}">Read Article</a>
+        </div>
+    </div>
+
+</div>
+{% endblock %}

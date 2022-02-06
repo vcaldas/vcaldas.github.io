@@ -1,0 +1,232 @@
+:root {
+  /* color variables */
+  --clr-primary: #304ffe;
+  --clr-primary-hover: #29e6a7;
+  --clr-primary-dark: #039d69;
+  --clr-gray100: #f0f7f8;
+  --clr-gray200: #cfd8dc;
+  --clr-gray300: #a7b7be;
+  --clr-gray400: #6b7e86;
+  --clr-gray500: #425a65;
+
+  /* border radius */
+  --radius: 0.2rem;
+}
+
+
+/* Overall Styling
+ *****************/
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: rgba(23, 50, 91, 1.0);
+  background-image: url('../img/lukas-blazek-f-TWhXOrLiU-unsplash_cropped.jpg');
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+  color: black;
+  font-family: Verdana, sans-serif;
+}
+
+.card-overlay {
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: rgba(0, 0, 0, 0.65); /* Black background with 0.65 opacity */
+  box-shadow: 0 0 88px 0 rgba(0, 0, 0, 0.52);
+  color: #f1f1f1;
+  /*width: 100%;*/
+  padding: 0.5rem 1rem;
+}
+
+
+/* Navigation Bar
+ ****************/
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 12px;
+  padding: 0.5rem 0.4rem;
+  border-radius: var(--radius);
+  background: rgba(0, 0, 0, 0.4); /* Black background with 0.4 opacity */
+  box-shadow: 0 0 88px 0 rgba(0, 0, 0, 0.52);
+  color: #f1f1f1;
+}
+
+@media screen and (min-width: 800px) {
+  header {
+    padding: 1rem 2rem;
+    flex-direction: row;
+    text-align: center;
+  }
+}
+
+header h1 {
+  text-align: center;
+  font-size: 1.6rem;
+  padding-bottom: 0.6rem;
+}
+
+@media screen and (min-width: 800px) {
+    header h1 {
+      text-align: none;
+      font-size: 1.8rem;
+      padding-bottom: 0;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    header h1 {
+        text-align: none;
+        font-size: 2.5rem;
+    }
+}
+
+
+nav {
+  margin: auto 0;
+}
+
+nav ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  list-style: none;
+}
+
+@media screen and (min-width: 800px) {
+  nav ul {
+    justify-content: space-between;
+  }
+}
+
+.nav__link, .nav__link:visited {
+  text-decoration: none;
+  font-size: 1.3rem;
+  color: white;
+}
+
+.nav__item + .nav__item {
+  margin-left: 0.5rem;
+}
+
+@media screen and (min-width: 800px) {
+    .nav__link, .nav__link:visited {
+        font-size: 1.75rem;
+    }
+
+    .nav__item + .nav__item {
+        margin-left: 2.0rem;
+    }
+}
+
+/* Cards
+ *******/
+.recipe-container {
+  margin: 2.0rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(18rem, 0.3fr));
+  grid-gap: 1.0rem;
+  justify-content: center;
+}
+
+@media screen and (min-width: 1081px) {
+  .recipe-container {
+    grid-template-columns: repeat(auto-fit, minmax(22rem, 0.3fr));
+    grid-gap: 2.0rem;
+  }
+}
+
+
+.card {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  position: relative;
+  border-radius: var(--radius);
+}
+
+.card a {
+  text-decoration: none;
+}
+
+.card__image {
+  height: 16rem;
+  width: 100%;
+  object-fit: cover;
+}
+
+.card__body {
+  width: 100%;
+  text-align: center;
+  padding: 0.5rem 1rem;
+  position: absolute;
+  top: 70%;
+  background: rgba(0, 0, 0, 0.4); /* Black background with 0.4 opacity */
+  color: #f1f1f1; /* Grey text */
+}
+
+.card__body h2 {
+  border-bottom: 3px solid black;
+  font-weight: bold;
+}
+
+.recipe-title-long {
+  font-size: 1.2rem;
+  padding-bottom: 0.35rem;
+}
+
+.recipe-title-extra-long {
+  font-size: 1.1rem;
+  padding-bottom: 0.35rem;
+}
+
+.card__body p {
+  font-weight: lighter;
+}
+
+.recipe-badge {
+  border-radius: 6px;
+  padding: 4px;
+  display: inline-block;
+  font-size: 0.8em;
+  margin-top: 6px;
+}
+
+.dairy-free-badge {
+  background-color: green;
+  color: white;
+}
+
+.soy-free-badge {
+  background-color: purple;
+  color: white;
+}
+
+
+/* Footer
+ ********/
+footer {
+  text-align: center;
+  margin: 1.5rem 0;
+}
+
+
+/* Error Page Styling
+ ********************/
+.errorpage-title {
+  text-align: center;
+  margin-bottom: 1em;
+}
+
+.errorpage-section {
+  text-align: center;
+  font-size: 1.15rem;
+  margin-bottom: 1em;
+}

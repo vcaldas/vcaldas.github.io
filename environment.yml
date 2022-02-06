@@ -13,5 +13,6 @@ dependencies:
   - isort==5.10.1
   - black==21.10b0
   - flake8
+  - pytest
 prefix: /Users/victorcaldas/opt/miniconda3/envs/website
 

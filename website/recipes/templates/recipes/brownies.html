@@ -1,0 +1,53 @@
+{% extends "recipe.html" %}
+
+{% block recipe_title %}
+<h1>Brownies</h1>
+{% endblock %}
+
+{% block recipe_description %}
+<h2>Description</h2>
+<p>While there are a lot of great options for brownie mixes, this homemade recipe makes my favorite brownies.</p>
+<p>For more inspiration about brownies, I recommend the <a href="https://www.youtube.com/watch?v=VvJm4pQZ04s">Best Brownies You'll Ever Eat</a> video on YouTube.  I don't follow this recipe, but the techniques shown are excellent.</p>
+<p>This recipe makes chewy and fudgy brownies that are just the perfect texture.</p>
+{% endblock %}
+
+{% block recipe_image %}
+<img src="{{ url_for('static', filename='img/brownies.jpg') }}"  alt="Brownies" />
+{% endblock %}
+
+{% block recipe_tips %}
+<h2>Tips</h2>
+<p>The <b>KEY STEP</b> to making brownies is using a hand mixer to mix the batter for 10 minutes.  It may feel like an eternity, but it's the key to fudgy and light brownies.</p>
+<p>Add a pinch of sea salt to the top of the brownies to add a salty note with the chocolatey brownies.</p>
+<p>Make sure to coat the pan with a generous amount of butter to try to prevent the brownies from sticking to the pan.</p>
+<p>If you have problems with the brownies sticking to the pan, try slamming the pan upside-down onto a cutting board.</p>
+{% endblock %}
+
+{% block recipe_ingredients %}
+<h2>List of Ingredients</h2>
+<ul>
+    <li>1/2 Cup of Dairy-Free Butter (recommendation: <a href="https://www.earthbalancenatural.com/spreads/soy-free-buttery-spread">Earth Balance - Soy Free Butter Spread</a>)</li>
+    <li>1.25 Cups of Granulated Sugar</li>
+    <li>3/4 Cup of Cocoa Powder</li>
+    <li>1/2 Teaspoon of Salt</li>
+    <li>1 Teaspoon of Vanilla Extract</li>
+    <li>2 Large Eggs</li>
+    <li>1/3 Cup of All-Purpose Flour</li>
+    <li>Sea Salt (optional)</li>
+</ul>
+{% endblock %}
+
+{% block recipe_steps %}
+<h2>Recipe Steps</h2>
+<ol>
+    <li>Preheat the oven to 325 degrees (Fahrenheit)</li>
+    <li>Spread a generous amount of dairy-free butter on the bottom and sides of an 8"x8" shallow pan</li>
+    <li>In a large mixing bowl, combine all ingredients EXCEPT the flour</li>
+    <li>Using a hand mixer, mix the batter for 10 minutes (important step!)</li>
+    <li>Add the flour to the mixture and GENTLY fold in flour into the batter until just incorporated (to prevent over mixing the batter with the flour in it)</li>
+    <li>Scrape the batter into the pan and even out with a spatula</li>
+    <li>Bake for 25-30 minutes, checking with a toothpick (no batter when sticking it into the brownies) to see that the brownies are cooked all the way through</li>
+    <li>(Optional) Halfway through the baking, add a pinch of sea salt to the top of the brownies</li>
+    <li>Let the brownies cool for at least 15 minutes before enjoying!</li>
+</ol>
+{% endblock %}

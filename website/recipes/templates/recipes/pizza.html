@@ -1,0 +1,50 @@
+{% extends "recipe.html" %}
+
+{% block recipe_title %}
+<h1>Pizza</h1>
+{% endblock %}
+
+{% block recipe_description %}
+<h2>Description</h2>
+<p>Pizza made with flatbread with your favorite toppings!</p>
+<p>Pizza is such a yummy meal and this recipe makes it so easy to make great pizza at home.</p>
+<p>Flatbread can be found at most grocery stores.  It's a slightly doughy bread, but it's thin enought to work well to make pizza.</p>
+<p>Add your favorite toppings to make a custom pizza for everyone in your familiy (like we always do!).  You can skip the cheese to make this a <b>Dairy-Free</b> recipe.</p>
+{% endblock %}
+
+{% block recipe_image %}
+<img src="{{ url_for('static', filename='img/pizza.jpg') }}"  alt="Pizza" />
+{% endblock %}
+
+{% block recipe_tips %}
+<h2>Tips</h2>
+<p>The flatbread can be frozen and then you can pull as many flatbread slices out when it's pizza night.  I like to bake the flatbread slices (turned upside down) first for about 8 minutes at 415 degrees to get the bottoms nice and crunchy.</p>
+<p>Thinly sliced bell peppers add a really nice sweetnes to a pizza.</p>
+{% endblock %}
+
+{% block recipe_ingredients %}
+<h2>List of Ingredients</h2>
+<ul>
+    <li>Flatbread</li>
+    <li>Pizza Sauce</li>
+    <li>Shredded Mozzarella Cheese</li>
+    <li>Slice Cheddar Cheese</li>
+    <li>Turkey Pepperoni</li>
+    <li>Sweet Italian Sausage</li>
+    <li>Bell Peppers (Thinly Sliced)</li>
+    <li>Black Olives</li>
+</ul>
+{% endblock %}
+
+{% block recipe_steps %}
+<h2>Recipe Steps</h2>
+<ol>
+    <li>Preheat the over to 415 degrees</li>
+    <li>If the flatbread slices are frozen, let them thaw for at least 30 minutes on the counter</li>
+    <li>Place the flatbread slices upside-down on a wire rack in a baking sheet; Cook for 8 minutes</li>
+    <li>Take out the flatbread slices and start arranging the toppings, always starting with a nice layer of pizza sauce</li>
+    <li>Depending on how crispy you like your pizza, cook from 7-9 minutes in the oven</li>
+    <li>After the pizzas are done cooking, take them out of the oven and slice them into pieces using a pizza cutter</li>
+    <li>Serve the pizzas while they are hot!</li>
+</ol>
+{% endblock %}

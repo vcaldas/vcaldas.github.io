@@ -1,0 +1,76 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="recipe-container">
+
+    <div class="card">
+        <a href="{{ url_for('recipes.dinner_recipe', recipe_name='steak_fajitas') }}">
+            <img
+              src="{{ url_for('static', filename='img/steak_fajitas.jpg') }}"
+              alt="Steak Fajitas"
+              class="card__image" />
+            <div class="card__body">
+                <h2>Steak Fajitas</h2>
+                <p class="recipe-badge dairy-free-badge">Dairy-Free</p>
+                <p class="recipe-badge soy-free-badge">Soy-Free</p>
+            </div>
+        </a>
+    </div>
+
+    <div class="card">
+        <a href="{{ url_for('recipes.dinner_recipe', recipe_name='ground_beef_tacos') }}">
+            <img
+              src="{{ url_for('static', filename='img/ground_beef_tacos.jpg') }}"
+              alt="Ground Beef Tacos"
+              class="card__image" />
+            <div class="card__body">
+                <h2>Ground Beef Tacos</h2>
+                <p class="recipe-badge dairy-free-badge">Dairy-Free</p>
+                <p class="recipe-badge soy-free-badge">Soy-Free</p>
+            </div>
+        </a>
+    </div>
+
+    <div class="card">
+        <a href="{{ url_for('recipes.dinner_recipe', recipe_name='pizza') }}">
+            <img
+              src="{{ url_for('static', filename='img/pizza.jpg') }}"
+              alt="Pizza"
+              class="card__image" />
+            <div class="card__body">
+                <h2>Pizza</h2>
+                <p class="recipe-badge soy-free-badge">Soy-Free</p>
+            </div>
+        </a>
+    </div>
+
+    <div class="card">
+        <a href="{{ url_for('recipes.dinner_recipe', recipe_name='sweet_fire_chicken') }}">
+            <img
+              src="{{ url_for('static', filename='img/sweet_fire_chicken.jpg') }}"
+              alt="Sweet Fire Chicken"
+              class="card__image" />
+            <div class="card__body">
+                <h2 class="recipe-title-long">Sweet Fire Chicken</h2>
+                <p class="recipe-badge dairy-free-badge">Dairy-Free</p>
+                <p class="recipe-badge soy-free-badge">Soy-Free</p>
+            </div>
+        </a>
+    </div>
+
+    <div class="card">
+        <a href="{{ url_for('recipes.dinner_recipe', recipe_name='tri_tip') }}">
+            <img
+              src="{{ url_for('static', filename='img/tri_tip.jpg') }}"
+              alt="Tri-Tip"
+              class="card__image" />
+            <div class="card__body">
+                <h2>Tri-Tip</h2>
+                <p class="recipe-badge dairy-free-badge">Dairy-Free</p>
+                <p class="recipe-badge soy-free-badge">Soy-Free</p>
+            </div>
+        </a>
+    </div>
+
+</div>
+{% endblock %}

@@ -1,0 +1,49 @@
+{% extends "recipe.html" %}
+
+{% block recipe_title %}
+<h1>Pitas</h1>
+{% endblock %}
+
+{% block recipe_description %}
+<h2>Description</h2>
+<p>This pita recipe is fast enough to make during the week, as it does not use yeast!  Baking powder is the key ingredient to make light, fluffy pitas.</p>
+<p>These pitas go amazingly with grilled chicken/vegetables and hummus!</p>
+{% endblock %}
+
+{% block recipe_image %}
+<img src="{{ url_for('static', filename='img/pitas.jpg') }}"  alt="Pitas" />
+{% endblock %}
+
+{% block recipe_tips %}
+<h2>Tips</h2>
+<p>Let the dough rest for 15 minutes before shaping into pitas. I've found that waiting less time causes the pitas to not be very fluffy.</p>
+<p>Make sure to thoroughly mix the baking powder into the dough so that it is evenly incorporated.</p>
+<p>This recipe makes 6-8 small pitas.</p>
+<p>If you are going to be making pitas, it's worth buying a <a href="https://www.bedbathandbeyond.com/store/product/silpat-reg-silpain-reg-silicone-bread-baking-mat/1044058814">SilPain</a> as it REALLY makes a difference.</p>
+{% endblock %}
+
+{% block recipe_ingredients %}
+<h2>List of Ingredients</h2>
+<ul>
+    <li>300 grams of All-Purpose Flour</li>
+    <li>200 mL of Cold Water</li>
+    <li>2 Tablespoons of Extra-Virgin Olive Oil</li>
+    <li>1 Teaspoon of Salt</li>
+    <li>2 Teaspoons of Baking Powder</li>
+</ul>
+{% endblock %}
+
+{% block recipe_steps %}
+<h2>Recipe Steps</h2>
+<ol>
+    <li>Preheat the over to 400 degrees (Fahrenheit).</li>
+    <li>Combine half of the flour, water, oil, salt, and baking powder and mix thoroughly.</li>
+    <li>Add in the remaining flour and mix until all the dough pieces form together to make a dough ball.</li>
+    <li>Let the dough rest for 15 minutes.</li>
+    <li>Take out individual balls of dough (recipe should make 6-8 pitas) onto a surface generously covered in flour (the dough is quite sticky at this point).</li>
+    <li>Roll out the pitas using a rolling pin into circle shapes (about 4 inches in diameter).</li>
+    <li>Place each pita on a baking sheet (preferably with a <a href="https://www.bedbathandbeyond.com/store/product/silpat-reg-silpain-reg-silicone-bread-baking-mat/1044058814">SilPain</a>); you'll need to do this in two patches.</li>
+    <li>Bake the pitas for 9 minutes (just before getting browned on top).</li>
+    <li>Let rest for 5 minutes and enjoy!</li>
+</ol>
+{% endblock %}

@@ -1,0 +1,44 @@
+{% extends "recipe.html" %}
+
+{% block recipe_title %}
+<h1>Chocolate Milk Shake</h1>
+{% endblock %}
+
+{% block recipe_description %}
+<h2>Description</h2>
+<p>This chocolate milk shake is inspired by the Frosty from Wendy's, but a much healthier version!</p>
+<p>This milkshake is perfect on a hot day!  My favorite part of the shake is the small chocolate pieces that remain from the chocolate chips, even after blending.</p>
+<p>This recipe is inspired by the <a hreef="https://www.youtube.com/watch?v=NcjiTBO-ghQ&t=3s">Chocolate Frosty</a> video on YouTube by Brett Cap.</p>
+{% endblock %}
+
+{% block recipe_image %}
+<img src="{{ url_for('static', filename='img/chocolate_milk_shake.jpg') }}"  alt="Chocolate Milk Shake" />
+{% endblock %}
+
+{% block recipe_tips %}
+<h2>Tips</h2>
+<p>This recipe makes a thick milkshake that needs to be eaten with a spoon until it melts a bit!</p>
+{% endblock %}
+
+{% block recipe_ingredients %}
+<h2>List of Ingredients</h2>
+<ul>
+    <li>1 Cup of Ice</li>
+    <li>8 Ounces of Unsweetened Almond Milk</li>
+    <li>1 Spoonful of Peanut Butter</li>
+    <li>2 Spoonfuls of Chai Seeds</li>
+    <li>1 Teaspoon of Vanilla Extract</li>
+    <li>1 Fresh Banana</li>
+    <li>1 Spoonful of Wheat Bran</li>
+    <li>1/4 Cup of Allergy-Friendly Chocolate Chips (recommendation: <a href="https://www.guittard.com/our-chocolate/detail/extra-dark-chocolate-chips")>Guittard Extra Dark Chocolate Chips</a>)</li>
+</ul>
+{% endblock %}
+
+{% block recipe_steps %}
+<h2>Recipe Steps</h2>
+<ol>
+    <li>Start by adding the ice to a blender and then add all the remaining ingredients</li>
+    <li>Blend on a medium speed until the mixture is smooth and everything is incorporated together</li>
+    <li>Pour the mixture into a cup and enjoy with a spoon and straw!</li>
+</ol>
+{% endblock %}

@@ -1,0 +1,55 @@
+{% extends "recipe.html" %}
+
+{% block recipe_title %}
+<h1>Pancakes</h1>
+{% endblock %}
+
+{% block recipe_description %}
+<h2>Description</h2>
+<p>Pancakes are a breakfast classic and this pancake recipe makes fluffy and light pancakes!</p>
+<p>I love making pancakes on the weekend, especially with a side of bacon!</p>
+<p>I've use Bisquik for making pancakes before, as the regular Bisquik mix is dairy-free.  When we ran out of Bisquik mix one weekend, I started researching pancake recipes and came up with this recipe.  I think making pancakes from scratch is almost as easy as using a mix, plus you're in control of all of the ingredients.</p>
+{% endblock %}
+
+{% block recipe_image %}
+<img src="{{ url_for('static', filename='img/pancakes.jpg') }}"  alt="Pancake" />
+{% endblock %}
+
+{% block recipe_tips %}
+<h2>Tips</h2>
+<p>Wait to add the melted butter into the mix until just before adding the pancake mixture to the pan to cook.</p>
+<p>This recipe was inspired by the <a href="https://cafedelites.com/best-fluffy-pancakes/">fluffy pancake recipe</a> from Cafe Delites.</p>
+{% endblock %}
+
+{% block recipe_ingredients %}
+<h2>List of Ingredients</h2>
+<ul>
+    <li>2 Cups of All-Purpose Flour</li>
+    <li>1/4 Cup of Granulated Sugar</li>
+    <li>4 Teaspoons of Baking Powder</li>
+    <li>1/4 Teaspoon of Baking Soda</li>
+    <li>1/2 Teaspoon of Salt</li>
+    <li>1.5 Cups of Unsweetened Almond Milk</li>
+    <li>4 Tablespoons of Dairy-Free Butter (melted and cooled)</li>
+    <li>2 Teaspoons of Vanilla Extract</li>
+    <li>1 Egg</li>
+    <li>Extra Dairy-Free Butter (for melting in the pan)</li>
+</ul>
+{% endblock %}
+
+{% block recipe_steps %}
+<h2>Recipe Steps</h2>
+<ol>
+    <li>In a mixing bowl, combine the dry ingredients: Flour, Sugar, Baking Powder, Baking Soda, and Salt</li>
+    <li>Mix the dry ingredients to combine evenly</li>
+    <li>Add the Almond Milk to the mixing bowl</li>
+    <li>Add the Egg and Vanilla Extract to the mixing bowl and mix well</li>
+    <li>Melt the butter in the microwave in a microwave safe bowl or measuring cup</li>
+    <li>Preheat a frying pan or pancake pan on Medium-Low heat</li>
+    <li>Once the pan is hot, add a bit of Dairy-Free Butter to the pan and spread it out using a spatula or turner</li>
+    <li>Add approximately 1/3 cup of pancake batter into the pan and continue filling up the pan with pancakes (leaving room between each)</li>
+    <li>Once bubbles start to form in the pancake batter and the sides of the pancake look solid (not liquidy), flip the pancakes over</li>
+    <li>Wait a minute (or until some golden color on the second side) and take the pancakes out of the pan</li>
+    <li>Serve hot and with syrup!</li>
+</ol>
+{% endblock %}

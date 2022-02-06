@@ -1,0 +1,51 @@
+{% extends "recipe.html" %}
+
+{% block recipe_title %}
+<h1>Breakfast Scramble</h1>
+{% endblock %}
+
+{% block recipe_description %}
+<h2>Description</h2>
+<p>A breakfast scramble is a mix of my favorite foods for breakfast.  This recipe can be modified to use any vegetables that you have available.</p>
+<p>I like to think of a breakfast scramble as scrambled eggs mixed in with veggies and meats that you like.</p>
+<p>I think sauted spinach and bell peppers are great veggies to put into a breakfast scramble.</p>
+{% endblock %}
+
+{% block recipe_image %}
+<img src="{{ url_for('static', filename='img/breakfast_scramble.jpg') }}"  alt="Breakfast Scramble" />
+{% endblock %}
+
+{% block recipe_tips %}
+<h2>Tips</h2>
+<p>Cook the veggies prior to scrambling the eggs and putting the scramble together.</p>
+<p>Top the breakfast scramble with ketchup, salsa, or hot sauce to spice it up!</p>
+{% endblock %}
+
+{% block recipe_ingredients %}
+<h2>List of Ingredients</h2>
+<ul>
+    <li>2 or 3 Eggs</li>
+    <li>Canola Oil (ideally, a spray)</li>
+    <li>1/2 Teaspoon of Salt</li>
+    <li>1 Teaspoon of Black Pepper</li>
+    <li>1/2 of a Bell Pepper</li>
+    <li>1 Cup of Spinach</li>
+    <li>2 Breakfast Sausage Links</li>
+</ul>
+{% endblock %}
+
+{% block recipe_steps %}
+<h2>Recipe Steps</h2>
+<ol>
+    <li>Start by sauting the spinach and bell peppers in a frying pan on medium heat</li>
+    <li>Once the spinach has wilted down and the bell peppers are still crunchy, remove from the pan</li>
+    <li>Reduce the heat on the frying pan to low</li>
+    <li>Heat the breakfast sausages according to their packaging and slice into small pieces</li>
+    <li>Add a spray or spash of canola oil to the frying pan</li>
+    <li>In a bowl or measuring cup, beat the eggs with a fork to incorporate the yolk and whites of the eggs</li>
+    <li>Add the eggs to the frying pan and add in the salt and black pepper</li>
+    <li>Using a spatula, start mixing the eggs once the eggs start to settle slightly</li>
+    <li>Mix the eggs until fully cooked and then add in the veggies and breakfast sausage</li>
+    <li>Top with ketchup or salsa and enjoy!</li>
+</ol>
+{% endblock %}

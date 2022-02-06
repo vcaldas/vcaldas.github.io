@@ -1,0 +1,85 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="recipe-container">
+
+    <div class="card">
+        <a href="{{ url_for('recipes.breakfast_recipes') }}">
+            <img
+              src="{{ url_for('static', filename='img/breakfast.jpg') }}"
+              alt="Breakfast"
+              class="card__image" />
+            <div class="card__body">
+                <h2>Breakfast</h2>
+                <p>7 recipes</p>
+            </div>
+        </a>
+    </div>
+
+    <div class="card">
+        <a href="{{ url_for('recipes.dinner_recipes') }}">
+            <img
+              src="{{ url_for('static', filename='img/dinner.jpg') }}"
+              alt="Dinner"
+              class="card__image" />
+            <div class="card__body">
+                <h2>Dinner</h2>
+                <p>5 recipes</p>
+            </div>
+        </a>
+    </div>
+
+    <div class="card">
+        <a href="{{ url_for('recipes.side_dishes_recipes') }}">
+            <img
+              src="{{ url_for('static', filename='img/side_dishes.jpg') }}"
+              alt="Side Dishes"
+              class="card__image" />
+            <div class="card__body">
+                <h2>Side Dishes</h2>
+                <p>3 recipes</p>
+            </div>
+        </a>
+    </div>
+
+    <div class="card">
+        <a href="{{ url_for('recipes.dessert_recipes') }}">
+            <img
+              src="{{ url_for('static', filename='img/dessert.jpg') }}"
+              alt="Dessert"
+              class="card__image" />
+            <div class="card__body">
+                <h2>Dessert</h2>
+                <p>4 recipes</p>
+            </div>
+        </a>
+    </div>
+
+    <div class="card">
+        <a href="{{ url_for('recipes.drink_recipes') }}">
+            <img
+              src="{{ url_for('static', filename='img/drink.jpg') }}"
+              alt="Drink"
+              class="card__image" />
+            <div class="card__body">
+                <h2>Drinks</h2>
+                <p>3 recipes</p>
+            </div>
+        </a>
+    </div>
+
+    <div class="card">
+        <a href="{{ url_for('recipes.baked_goods_recipes') }}">
+            <img
+              src="{{ url_for('static', filename='img/baked_goods.jpg') }}"
+              alt="Baked Goods"
+              class="card__image" />
+            <div class="card__body">
+                <h2>Baked Goods</h2>
+                <p>6 recipes</p>
+            </div>
+        </a>
+    </div>
+
+</div>
+{% endblock %}

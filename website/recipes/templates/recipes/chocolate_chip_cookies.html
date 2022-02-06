@@ -1,0 +1,53 @@
+{% extends "recipe.html" %}
+
+{% block recipe_title %}
+<h1>Chocolate Chip Cookies</h1>
+{% endblock %}
+
+{% block recipe_description %}
+<h2>Description</h2>
+<p>Chocolate chip cookies are the classic cookie! This recipe makes soft and chewy cookies with a crunchy bottom layer.</p>
+<p>This recipe is a classic chocolate chip cookie recipe, but it uses dairy-free butter and allergy-friendly chocolate chips. A lot of chocolate chips have contain soy and milk, so be sure to read the ingredients.</p>
+{% endblock %}
+
+{% block recipe_image %}
+<img src="{{ url_for('static', filename='img/chocolate_chip_cookies.jpg') }}"  alt="Chocolate Chip Cookies" />
+{% endblock %}
+
+{% block recipe_tips %}
+<h2>Tips</h2>
+<p>The measurements in this recipe need to be followed exactly! I've found that changing any item can result in the cookies coming out flat.</p>
+<p>For the ultimate guide to how to make different varieties of chocolate chip cookies, I highly recommend <a href="https://www.youtube.com/watch?v=hCzVqaFMlIw">The Science Behind the Perfect Chocolate Chip Cookies - Kitchen Conundrums with Thomas Joseph</a>.</p>
+<p>I've found the biggest factor in a great batch of cookies is making sure to take out the dairy-free butter a few hours before baking to make sure it softens to room temperature.</p>
+<p>This might sound weird, but I actually think these cookies taste better the day after baking them!</p>
+{% endblock %}
+
+{% block recipe_ingredients %}
+<h2>List of Ingredients</h2>
+<ul>
+    <li>2 1/4 Cups of All-Purpose Flour</li>
+    <li>1/2 Teaspoon of Baking Soda</li>
+    <li>1 Cup of Dairy-Free Butter softened to room temperature (recommendation: <a href="https://www.earthbalancenatural.com/spreads/soy-free-buttery-spread">Earth Balance - Soy Free Butter Spread</a>)</li>
+    <li>1/2 Cup of Granulated Sugar</li>
+    <li>1 Cup of Brown Sugar</li>
+    <li>1 Teaspoon of Salt</li>
+    <li>2 Teaspoons of Vanilla Extract</li>
+    <li>2 Eggs</li>
+    <li>1.5 Cups of Allergy-Friendly Chocolate Chips (recommendation: <a href="https://www.guittard.com/our-chocolate/detail/extra-dark-chocolate-chips")>Guittard Extra Dark Chocolate Chips</a>)</li>
+</ul>
+{% endblock %}
+
+{% block recipe_steps %}
+<h2>Recipe Steps</h2>
+<ol>
+    <li>Preheat the oven to 350 degrees (F).</li>
+    <li>In a stand mixer with the paddle attachment, cream the dairy-free butter and both sugars for 3-4 minutes</li>
+    <li>Add the eggs one at a time with mixing on low speed</li>
+    <li>Add the vanilla extract, salt, baking soda, and flour</li>
+    <li>Mix to combine</li>
+    <li>Lastly, add the chocolate chips and mix until the chocolate chips look evenly distributed</li>
+    <li>Using an ice cream scoop or small spoons, place small balls (slightly smaller than a golf ball) of dough onto a baking sheet (8-12 cookies should fit on the baking sheet)</li>
+    <li>Cook for 9-10 minutes (the cookies will darken by a shade during cooling)</li>
+    <li>After taking the baking sheet out of the oven, let the cookies rest for 5 minutes and then move them to a wire rack to cool</li>
+</ol>
+{% endblock %}

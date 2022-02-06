@@ -16,14 +16,14 @@ pages = FlatPages(app)
 freezer = Freezer(app)
 
 # URL Routing - Home Page
-@app.route('/')
+@app.route("/")
 def landing():
-    return render_template('landing.html')
+    return render_template("landing.html")
 
 
-@app.route('/publications/')
+@app.route("/publications/")
 def publications():
-    return render_template('publications.html')
+    return render_template("publications.html")
 
 
 # # URL Routing - Flat Pages
@@ -36,6 +36,7 @@ def publications():
 # Main Function, Runs at http://0.0.0.0:8000
 if __name__ == "__main__":
     if len(sys.argv) > 1 and sys.argv[1] == "build":
+        print('Building')
         freezer.freeze()
     else:
         app.run(port=8000)

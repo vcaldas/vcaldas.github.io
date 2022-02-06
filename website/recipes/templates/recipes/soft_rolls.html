@@ -1,0 +1,61 @@
+{% extends "recipe.html" %}
+
+{% block recipe_title %}
+<h1>Soft Rolls</h1>
+{% endblock %}
+
+{% block recipe_description %}
+<h2>Description</h2>
+<p>Soft rolls are little clouds of bread that are delicious by themselves, with butter, or as hamburger rolls.</p>
+<p>These rolls take a much shorter time to make than traditional breads (with long proofing times), so they are perfect for making during the week.</p>
+<p>I've stopped buying hamburger rolls from the grocery store, as I always use these soft rolls to make hamburgers.</p>
+<p>A soft roll with strawberry jam is perfect for breakfast the next morning after making a batch of these delicious rolls!</p>
+<p>This recipe is based on this amazing recipe from Bigger Bolder Baking: <a href="https://www.biggerbolderbaking.com/dinner-rolls-1-hour/">Dinner Rolls</a>.</p>
+{% endblock %}
+
+{% block recipe_image %}
+<img src="{{ url_for('static', filename='img/soft_rolls.jpg') }}"  alt="Soft Rolls" />
+{% endblock %}
+
+{% block recipe_tips %}
+<h2>Tips</h2>
+<p>Since this recipe uses active dry yeast, make sure to bloom the yeast in warm water (approximately 100 degrees Fahrenheit (F)).</p>
+<p>The proofing times for these rolls are very short, so make sure to include sugar when blooming the yeast to jump-start it.</p>
+<p>When placing the dough balls onto a baking sheet (with parchment paper), leave about 2 centimeters (cm) between the dough balls, as they will expand during the final proof.  They should be slightly touching when they go into the oven.</p>
+{% endblock %}
+
+{% block recipe_ingredients %}
+<h2>List of Ingredients</h2>
+<ul>
+    <li>4 cups of All-Purpose Flour</li>
+    <li>1 Tablespoon of Active Dry Yeast</li>
+    <li>2 Tablespoons of Sugar</li>
+    <li>1 Teaspoon of Salt</li>
+    <li>2 Tablespoons of Butter (melted)</li>
+    <li>1.5 Cups of Warm Water (approximately 100 degrees Fahrenheit (F))</li>
+    <li>Canola Oil (spray)</li>
+</ul>
+{% endblock %}
+
+{% block recipe_steps %}
+<h2>Recipe Steps</h2>
+<ol>
+    <li>In the bowl of a stand mixer (such as Kitchenaid), add the yeast, warm water, and sugar.  The yeast needs time to bloom, so wait for 5-8 minutes to check that the yeast starts bubbling (activating).</li>
+    <li>While waiting for the yeast to bloom, measure out the flour in a small bowl and mix in the salt.</li>
+    <li>Once the yeast has bloomed, melt the butter (using a measuring cup or other microwave-safe bowl) in a microwave for 30 seconds.  The butter should be fully melted (in a liquid form!).</li>
+    <li>Add the flour/salt into the bowl containing the yeast.</li>
+    <li>With the dough book attached to the stand mixer, start mixing the dough on the slowest speed.  Add the melted butter as the dough starts mixing.</li>
+    <li>Once dough is starting to come together as a single dough bowl, increase the speed of the stand mixer by one setting.</li>
+    <li>Mix the dough in the stand mixer for 6 minutes.</li>
+    <li>Once done mixing, spray a small amount of Canola oil into the mixing bowl.  This oil will prevent the dough from sticking to the bowl as it raises.</li>
+    <li>Using a spatula, scrape the dough off the dough hook and form it into a ball in the mixing bowl.</li>
+    <li>Cover the bowl with cling wrap and store in a warm spot (such as an oven that is turned off) for 30-45 minutes.  The dough should double in size during this rise time.</li>
+    <li>Using a dough scraper, remove the dough from the bowl onto a clean work surface.</li>
+    <li>Divide the dough into 16 even pieces and form each dough piece into a ball.</li>
+    <li>Place each dough ball onto a baking sheet lined with parchment paper.  The dough balls should be arranged in a 4x4 array with approximately 2 centimeters (cm) between each dough ball.</li>
+    <li>Loosely cover the dough balls on the baking sheet with cling wrap and let the dough rise for 30 minutes.</li>
+    <li>Pre-heat the oven to 400 degrees (Fahrenheit).</li>
+    <li>Once the rise time is completed, remove the cling wrap and bake in the oven for 20 minutes.</li>
+    <li>Let the rolls rest for 10 minutes before enjoying!</li>
+</ol>
+{% endblock %}

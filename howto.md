@@ -19,7 +19,7 @@ This short document will guide you through the steps to use my template. Note th
 
 Follow the steps:
 1. $ conda env create -f environment.yml
-2. 
+2. $ pre-commit install
 
 ### Getting the website
 On the directory you want to copy, type:

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>Flask Recipe App</title>
+
+        <!-- Local CSS file for styling the application-->
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/base_style.css') }}">
+        <link rel="shortcut icon" href="{{ url_for('static', filename='img/favicon.ico') }}" type="image/x-icon">
+
+        <!-- Additional Styling -->
+        {% block styling %}
+        {% endblock %}
+    </head>
+
+    <body>
+        <header>
+            <h1>Kennedy Family Recipes</h1>
+            <nav>
+                <ul>
+                    <li class="nav__item"><a href="{{ url_for('recipes.recipes') }}" class="nav__link">Recipes</a></li>
+                    <li class="nav__item"><a href="{{ url_for('blog.blog') }}" class="nav__link">Blog</a></li>
+                    <li class="nav__item"><a href="{{ url_for('blog.about') }}" class="nav__link">About</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main class="content">
+            <!-- child template -->
+            {% block content %}
+            {% endblock %}
+        </main>
+
+        <footer>
+            <p>Created by <a href="https://www.patricksoftwareblog.com/">Patrick Kennedy</a> (2022)</p>
+        </footer>
+    </body>
+</html>

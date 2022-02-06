@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block styling %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/recipe_style.css') }}">
+{% endblock %}
+
+{% block content %}
+<div class="recipe-detail-container">
+    <div class="recipe-title">
+        {% block recipe_title %}
+        {% endblock %}
+    </div>
+
+    <div class="recipe-description card-overlay">
+        {% block recipe_description %}
+        {% endblock %}
+    </div>
+
+    <div class="recipe-image">
+        {% block recipe_image %}
+        {% endblock %}
+    </div>
+
+    <div class="recipe-tips card-overlay">
+        {% block recipe_tips %}
+        {% endblock %}
+    </div>
+
+    <div class="recipe-ingredients card-overlay">
+        {% block recipe_ingredients %}
+        {% endblock %}
+    </div>
+
+    <div class="recipe-steps card-overlay">
+        {% block recipe_steps %}
+        {% endblock %}
+    </div>
+</div>
+{% endblock %}

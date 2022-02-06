@@ -1,0 +1,43 @@
+{% extends "recipe.html" %}
+
+{% block recipe_title %}
+<h1>Sweet Potatoes</h1>
+{% endblock %}
+
+{% block recipe_description %}
+<h2>Description</h2>
+<p>Roasted sweet potatoes are a delish side dish for any meal!  These sweet potatoes are roasted until slightly browned to give a crunchy exterior, but still maintains the sweet interior.</p>
+<p>I've never been an expert at roasting vegetables, as I find it very easy to overcook (or burn!) vegetables when roasting them in the oven.  However, I've been so happy with how roasted sweet potatoes come out, I've worked to come up with a great recipe.</p>
+{% endblock %}
+
+{% block recipe_image %}
+<img src="{{ url_for('static', filename='img/sweet_potatoes.jpg') }}"  alt="Sweet Potatoes" />
+{% endblock %}
+
+{% block recipe_tips %}
+<h2>Tips</h2>
+<p>After peeling and cutting the sweet potatoes, place them in a bowl with Canola Oil (plus salt and black pepper).  This step eliminates the need to include additional oil on the baking sheet.</p>
+<p>The sweet potatoes should be cut into similar sized pieces, about 1/2" to 3/4" squares.</p>
+{% endblock %}
+
+{% block recipe_ingredients %}
+<h2>List of Ingredients</h2>
+<ul>
+    <li>2 or 3 Sweet Potatoes (Large)</li>
+    <li>1.5 Tablespoons of Canola Oil</li>
+    <li>1 Teaspoon of Salt</li>
+    <li>2 Teaspoons of Black Pepper</li>
+</ul>
+{% endblock %}
+
+{% block recipe_steps %}
+<h2>Recipe Steps</h2>
+<ol>
+    <li>Using a peeler, peel one sweet potato at a time</li>
+    <li>After peeling the sweet potato, cut the sweet potato into 1/2" to 3/4" squares</li>
+    <li>Place all of the sweet potato squares into a mixing bowl containing the Canola Oil, Salt, and Black Pepper</li>
+    <li>After mixing the sweetrecipe_starter.html potatoes in the Canola Oil, spread them out on a baking sheet</li>
+    <li>Roast the sweet potatoes for 40-45 minutes, making sure to flip the potatoes half-way through</li>
+    <li>Enjoy!</li>
+</ol>
+{% endblock %}

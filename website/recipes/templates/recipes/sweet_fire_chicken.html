@@ -1,0 +1,64 @@
+{% extends "recipe.html" %}
+
+{% block recipe_title %}
+<h1>Sweet Fire Chicken</h1>
+{% endblock %}
+
+{% block recipe_description %}
+<h2>Description</h2>
+<p>This recipe is inspired by the Sweet Fire Chicken from Panda Express.  I think this recipe is even better than the original!</p>
+<p>This dish is such a huge hit in my house.  The key ingredient is the sweet chili sauce.  I've found that <a
+        href="https://tastenirvana.com/product-page/gramas-sweet-chili-sauce/">Grama's Sweet Chili Sauce</a> works the best.</p>
+<p>Sweet Fire Chicken is great served over a bed of Jasmine Rice, as some of the sauce incorporates with the rice to make it delicious!</p>
+{% endblock %}
+
+{% block recipe_image %}
+<img src="{{ url_for('static', filename='img/sweet_fire_chicken.jpg') }}"  alt="Sweet Fire Chicken" />
+{% endblock %}
+
+{% block recipe_tips %}
+<h2>Tips</h2>
+<p>Any moisture makes the corn starch start to clump up, so don't leave the chicken pieces sitting in the corn starch for very long.</p>
+<p>I really like using a lot of flour, as this makes for crispy chicken pieces.  This approach is similar to making fried chicken.</p>
+<p>I love extra bell peppers in this dish, so reduce to 1 bell pepper if they are not your favorite.</p>
+<p>I think pineapple chunks come too large, so I like to cut them in half for this dish.</p>
+{% endblock %}
+
+{% block recipe_ingredients %}
+<h2>List of Ingredients</h2>
+<ul>
+    <li>2 Boneless, Skinless Chicken Breasts</li>
+    <li>1 Cup of Corn Starch</li>
+    <li>3 Large Eggs</li>
+    <li>2 Cups of All-Purpose Flour</li>
+    <li>1 Teaspoon of Salt</li>
+    <li>3-4 Cups of Canola Oil</li>
+    <li>3/4 Cup of Sweet Chili Sauce (Recommendation: <a
+        href="https://tastenirvana.com/product-page/gramas-sweet-chili-sauce/">Grama's Sweet Chili Sauce</a>)</li>
+    <li>2 Medium Red Bell Peppers</li>
+    <li>8 Ounces of Pineapple Chunks</li>
+</ul>
+{% endblock %}
+
+{% block recipe_steps %}
+<h2>Recipe Steps</h2>
+<ol>
+    <li>Pre-heat the oven to 375 degrees Fahrenheit</li>
+    <li>Prepare the bell pepper by cutting into 3/4" x 3/4" piecs</li>
+    <li>(Optional) Cut the pineapple chunks in half.</li>
+    <li>Assemble a dredging station with three plates: Corn starch plus salt, Eggs (thoroughly mixed with a fork), and Flour</li>
+    <li>Cut the chicken breasts into small pieces about 3/4" x 3/4", with the key being to make each piece thin (1/2" maximum)</li>
+    <li>In small batches, coat the chicken pieces in corn starch, then in egg, and lastly in flour (I like to keep the chicken pieces in the flour plate)</li>
+    <li>Pour the Canola Oil into a large saute pan or a Dutch oven</li>
+    <li>Heat the oil to a high temperature (usually high setting on the cooktop)</li>
+    <li>In small batches, place the chicken into the oil</li>
+    <li>Flip each chicken piece after about 1 minute (there should be a bit of browning on the bottom)</li>
+    <li>After another minute, remove the chicken pieces to a wire rack on a baking sheet</li>
+    <li>After cooking all the chicken pieces, cook the chicken (still on the wire rack/baking sheet) in the oven for 7 minutes (at 375F)</li>
+    <li>While the chicken is in the oven, place the bell pepper into a separate saute pan on medium heat</li>
+    <li>Saute the bell peppers for 3 minutes and then add the pineapple</li>
+    <li>Once the chicken is done cooking, add the chicken pieces into the pan and add the sweet chili sauce</li>
+    <li>Mix thoroughly with a wooden spoon or spatula to make sure all the sauce is covering the chicken</li>
+    <li>Serve over Jasmine Rice and enjoy while hot!</li>
+</ol>
+{% endblock %}

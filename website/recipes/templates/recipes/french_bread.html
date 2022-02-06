@@ -1,0 +1,59 @@
+{% extends "recipe.html" %}
+
+{% block recipe_title %}
+<h1>French Bread</h1>
+{% endblock %}
+
+{% block recipe_description %}
+<h2>Description</h2>
+<p>There is something really special about loaves of fresh bread coming out of your oven!</p>
+<p>While baking bread seemed very intimidating for me at first, after a few times making this recipe, it becomes a staple in our house.</p>
+{% endblock %}
+
+{% block recipe_image %}
+<img src="{{ url_for('static', filename='img/french_bread.jpg') }}"  alt="French Bread" />
+{% endblock %}
+
+{% block recipe_tips %}
+<h2>Tips</h2>
+<p>Before putting the bread dough into the oven, cut shallow (1/4 inch) lines in the bread to allow steam to escape ("scoring the bread"). A serrated bread knife is best for this step.</p>
+<p>The temperature of the water needs to be between 100 and 110 degrees Fahrenheit to properly bloom the yeast. Careful! If the water is too hot, it could kill the yeast.</p>
+<p>When letting the dough rise, I like to put my dough into the oven with the oven turned off.</p>
+<p>If you are going to be making bread, it's worth buying a <a href="https://www.bedbathandbeyond.com/store/product/silpat-reg-silpain-reg-silicone-bread-baking-mat/1044058814">SilPain</a> as it REALLY makes a difference.</p>
+{% endblock %}
+
+{% block recipe_ingredients %}
+<h2>List of Ingredients</h2>
+<ul>
+    <li>1 package (1/4 oz; 7 grams) of Active Dry Yeast</li>
+    <li>1.5 Cups of Warm Water (approximately 100 degrees Fahrenheit)</li>
+    <li>1.5 Teaspoons of Salt</li>
+    <li>19 oz of Bread Flour</li>
+</ul>
+{% endblock %}
+
+{% block recipe_steps %}
+<h2>Recipe Steps</h2>
+<ol>
+    <li>In a stand mixer with the hook attachment, add the yeast and warm water.</li>
+    <li>Let the yeast bloom for ~5 minutes; there should be small, brown bubbles forming on the surface to indicate that the yeast is alive.</li>
+    <li>In a separate bowl, measure out the flour and mix in the salt.</li>
+    <li>Add the flour and salt to the mixing bowl; mix using the stand mixer for 8 minutes.</li>
+    <li>On a clean, smooth surface, knead the dough a few times to get a smooth ball of dough.</li>
+    <li>Spray a small amount of canola oil into the mixing bowl (to help the dough rise up the sides).</li>
+    <li>Add the dough ball back into the mixing bowl and cover the bowl with a wet towel or saran wrap.</li>
+    <li>Let the dough rest in a warm (not hot!) area for 1.5 to 2 hours.</li>
+    <li>Push down on the dough to release air and scrape it out onto a clean, smooth surface (no flour on the surface!).</li>
+    <li>Divide the dough into 3 or 4 even-sized balls.</li>
+    <li>Flatten out each dough ball into a rectangle shape and then roll one end toward the other end to form a rolled loaf of dough.</li>
+    <li>Place each loaf onto a baking sheet (preferably with a Silpain) and cover with a wet towel.</li>
+    <li>Let the loaves rise for 1 hour.</li>
+    <li>Preheat the oven to 450 degrees (F).</li>
+    <li>Cut shallow (1/4 inch) lines in the bread to allow steam to escape.</li>
+    <li>Spray the loaves with water to make them damp.</li>
+    <li>At the same time, put an oven-safe bowl filled with water in the bottom rack of the oven and the bread loaves in the middle rack.</li>
+    <li>Bake for 20 minutes.</li>
+    <li>If the bread looks to be drying out, spray more water on the loaves.</li>
+    <li>Let the bread cool down for at least 10 minutes before enjoying!</li>
+</ol>
+{% endblock %}

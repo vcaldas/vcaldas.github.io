@@ -1,0 +1,53 @@
+{% extends "recipe.html" %}
+
+{% block recipe_title %}
+<h1>Sugar Cookies</h1>
+{% endblock %}
+
+{% block recipe_description %}
+<h2>Description</h2>
+<p>Sugar cookies are a family favorite, especially around the Holidays.</p>
+<p>Sugar cookies may take a back-seat to chocolate chip cookies, but they are still delicious! They taste like chocolate chip cookies, without the chocolate chips, but with a crunchy exterior coated with sugar or sprinkles.</p>
+<p>A slight variation of the standard sugar cookie is to use sprinkles instead of sugar on the exterior of the cookie.</p>
+<p>This recipe is inspired by this recipe from Mel's kitchen: <a href="https://www.melskitchencafe.com/soft-and-chewy-drop-sugar-cookies/">Easy Soft and Chewy Sugar Cookies</a></p>
+{% endblock %}
+
+{% block recipe_image %}
+<img src="{{ url_for('static', filename='img/sugar_cookies.jpg') }}"  alt="Sugar Cookies" />
+{% endblock %}
+
+{% block recipe_tips %}
+<h2>Tips</h2>
+<p>Coat the dough balls in sugar or sprinkles as soon as they are formed to prevent the exterior of the dough from drying out, as then the topping won't stick to the dough.</p>
+<p>A small ice cream scoop is best for forming the dough balls.</p>
+<p>The cookies will get a shade darker once they come out of the oven, so you just want to make sure that the top of each cookie has a bit of cracking before taking them out.</p>
+<p>I've found the biggest factor in a great batch of cookies is making sure to take out the dairy-free butter a few hours before baking to make sure it softens to room temperature.</p>
+{% endblock %}
+
+{% block recipe_ingredients %}
+<h2>List of Ingredients</h2>
+<ul>
+    <li>1 Cup of Dairy-Free Butter softened to room temperature (recommendation: <a href="https://www.earthbalancenatural.com/spreads/soy-free-buttery-spread">Earth Balance - Soy Free Butter Spread</a>)</li>
+    <li>1 1/3 Cups of Granulated Sugar</li>
+    <li>1 Large Egg</li>
+    <li>2 Teaspoons of Vanilla Extract</li>
+    <li>2 1/2 Cups of All-Purpose Flour</li>
+    <li>1/2 Teaspoon of Baking Powder</li>
+    <li>1/2 Teaspoon of Baking Soda</li>
+    <li>1/2 Teaspoon of Salt</li>
+    <li>Additional Granulated Sugar or Sprinkles (topping)</li>
+</ul>
+{% endblock %}
+
+{% block recipe_steps %}
+<h2>Recipe Steps</h2>
+<ol>
+    <li>Preheat the oven to 350 degrees F.</li>
+    <li>In the bowl of a stand mixer fitted with the paddle attachment, cream together the butter and granulated sugar until lightly and fluffy, which takes approximately 3-4 minutes.; scrape down the sides of the bowl as needed.</li>
+    <li>Add the egg and vanilla extract and mix again for 1-2 minutes until the batter lightens in color.</li>
+    <li>Add the dry ingredients (flour, baking powder, baking soda, and salt) to the wet ingredients and mix until combined.</li>
+    <li>Scoop the cookie dough into rounded balls (preferably using a small ice cream scoop), roll in granulated sugar or sprinkles and place on baking sheets (about 12 cookies per baking sheet).</li>
+    <li>Bake for 11 minutes until slightly crackly on top.</li>
+    <li>Let the cookies cool for a few minutes on the baking sheet before removing to a wire rack to cool completely.</li>
+</ol>
+{% endblock %}

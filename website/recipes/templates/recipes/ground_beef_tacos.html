@@ -1,0 +1,67 @@
+{% extends "recipe.html" %}
+
+{% block recipe_title %}
+<h1>Ground Beef Tacos</h1>
+{% endblock %}
+
+{% block recipe_description %}
+<h2>Description</h2>
+<p>Ground beed tacos are a quick weeknight meal that can be customized with any toppings that you like!</p>
+<p>I love all kinds of tacos.  I've found this recipe to be very easy to make on a busy weeknight when time is tight to make dinner.</p>
+<p>What is especially nice about these tacos is that you can top them with your favorite toppings to make customizable tacos.</p>
+{% endblock %}
+
+{% block recipe_image %}
+<img src="{{ url_for('static', filename='img/ground_beef_tacos.jpg') }}"  alt="Ground Beef Tacos" />
+{% endblock %}
+
+{% block recipe_tips %}
+<h2>Tips</h2>
+<p>If may see out of the ordinary, but I really like having sauted bell peppers in my ground beef tacos.</p>
+<p>The taco seasoning can be a bit time consuming to make, so I recommend making a large batch and saving it in a glass container or tupperware.</p>
+<p>This recipe uses taco sauce (I like the <a href="https://www.salsas.com/la-victoria/products/taco-sauces/red-taco-sauce-mild/">La Victoria Mild Taco Sauce</a>) when cooking the ground beef.  If you don't have taco sauce, you can subsitute an equal amount of chicken stock (or even water, in a pinch!).  It's good to add this bit of liquid to the taco mixture to make sure the meat isn't too dry.</p>
+{% endblock %}
+
+{% block recipe_ingredients %}
+<h2>List of Ingredients</h2>
+<p>Tacos:</p>
+<ul>
+    <li>1.25 lbs of Ground Beef</li>
+    <li>3 Tablespoons of Taco Sauce</li>
+    <li>3 Tablespoons of Taco Seasoning</li>
+    <li>Hard-Shelled Tacos</li>
+</ul>
+<p>Toppings:</p>
+<ul>
+    <li>Shredded Iceberg Lettuce</li>
+    <li>Pickled Jalapenos (Taco Style)</li>
+    <li>Salsa</li>
+    <li>Hot Sauce (such as Tapatio)</li>
+</ul>
+<p>Taco Seasoning:</p>
+<ul>
+    <li>6 Teaspoons of Chili Powder</li>
+    <li>4 Teaspoons of Ground Cumin</li>
+    <li>4 Teaspoons of Oregano</li>
+    <li>4 Teaspoons of Cocoa Powder</li>
+    <li>2 Teaspoons of Garlic Powder</li>
+    <li>2 Teaspoons of Onion Powder</li>
+    <li>2 Teaspoons of Ground Black Pepper</li>
+    <li>1/2 Teaspoon of Ground Coriander</li>
+</ul>
+{% endblock %}
+
+{% block recipe_steps %}
+<h2>Recipe Steps</h2>
+<ol>
+    <li>In a small mixing bowl, mix together all of the spices for the taco seasoning</li>
+    <li>In a large frying pan, start cooking the ground beef on medium heat</li>
+    <li>Once the ground beef starts to get some color, add in the taco seasoning and taco sauce</li>
+    <li>Use a wooden spoon to break up the ground beef into small pieces and to mix in the taco seasoning and taco sauce</li>
+    <li>Once the ground beef is fully cooked, reduce the heat to low and simmer the taco mixture to incorporate all the flavors</li>
+    <li>Using a small oven-safe tray, line the tray with aluminum foil and place in the taco shells</li>
+    <li>Cook the taco shells in the oven on broil for 3-4 minutes (make sure to keep an eye on the taco shells as they can burn so quickly on broil)</li>
+    <li>Once the taco shells are heated, place the taco shells on a plate, fill each taco half way with the taco beef mixture and then add your favorite toppings</li>
+    <li>Serve the tacos hot and with lots of napkins... this is a messy dish!</li>
+</ol>
+{% endblock %}

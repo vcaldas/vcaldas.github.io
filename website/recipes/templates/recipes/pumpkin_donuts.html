@@ -1,0 +1,56 @@
+{% extends "recipe.html" %}
+
+{% block recipe_title %}
+<h1>Pumpkin Donuts</h1>
+{% endblock %}
+
+{% block recipe_description %}
+<h2>Description</h2>
+<p>These baked donuts with canned pumpkin are such a treat!  Even if it's not around Thanksgiving, these pumpkins are a great treat.  They taste like a light cake donut with a delicous pumpkin and cinnamon flavor.</p>
+<p>After having a lot of leftover canned pumpkins one Thanksgiving, we decided to try different pumpkin recipes and these pumpkin donuts are such a hit!</p>
+<p>It is surprisingly easy to make baked donuts, but it does require a special donut tray to bake in the oven.</p>
+{% endblock %}
+
+{% block recipe_image %}
+<img src="{{ url_for('static', filename='img/pumpkin_donuts2.jpg') }}"  alt="Pumpkin Donuts" />
+{% endblock %}
+
+{% block recipe_tips %}
+<h2>Tips</h2>
+<p>Use a gallon ziploc bag to hold the donut mixture.  Cut a small hole (1/2 inch) in the bottom edge of the ziploc bag and use that hole to pipe out the mixture into the donut tray.</p>
+<p>If the donuts are slightly dry on the top and the cinnamon sugar mixture isn't sticking to the top, add a splash of water to the top of the donuts to make them grab the cinnamon sugar.</p>
+<p>This recipe is inspired by the <a href="https://www.kingarthurflour.com/recipes/pumpkin-cake-doughnuts-recipe">Pumpkin Cake Doughnuts Recipe</a> from King Arthur Flour website</p>
+{% endblock %}
+
+{% block recipe_ingredients %}
+<h2>List of Ingredients</h2>
+<ul>
+    <li>1/2 Cup of Canola Oil</li>
+    <li>3 Eggs</li>
+    <li>1.5 Cups of Granulated Sugar</li>
+    <li>1 Can (15 oz) of Canned Pumpkin</li>
+    <li>1 Teaspoon of Cinnamon</li>
+    <li>1 Teaspoon of Salt</li>
+    <li>1.5 Teaspoons of Baking Powder</li>
+    <li>1.75 Cups plus 2 Tablespoons of All-Purpose Flour</li>
+    <br>
+    <li>Cinnamon Sugar (3 parts Sugar to 1 part Cinnamon)</li>
+</ul>
+{% endblock %}
+
+{% block recipe_steps %}
+<h2>Recipe Steps</h2>
+<ol>
+    <li>Preheat the over to 350 degrees (F)</li>
+    <li>In a stand mixer, all the wet ingredients in the following order while mixing on low: Canola Oil, Eggs, Sugar, Pumpkin</li>
+    <li>In a separate bowl, combine the dry ingredients (Flour, Cinnamon, Salt, and Baking Powder) and mix to combine</li>
+    <li>Add the dry ingredients to the wet ingredients in the stand mixer and mix until well combined</li>
+    <li>Turn off the stand mixer and using a spatula, pour all of the mixture into a ziploc bag</li>
+    <li>Cut a small hole (1/2 inch) in the bottom edge of the ziploc bag for piping the mixture into the donut tray</li>
+    <li>Fill each donut mold in the donut tray about 3/4 full (they rise in the oven)</li>
+    <li>Bake in the oven for 17 minutes</li>
+    <li>After baking, leave the donuts in the donut tray for about 5 minutes and then remove to a wire rack to cool</li>
+    <li>The donuts are best while still a bit warm, so serve shortly after taking out of the oven</li>
+    <li>Dunk the donuts into a plate with the cinnamon sugar to add the topping (if desired)</li>
+</ol>
+{% endblock %}

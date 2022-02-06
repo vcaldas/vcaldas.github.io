@@ -1,0 +1,29 @@
+{% extends "blogpost.html" %}
+
+{% block title %}
+<h1>Why I Love the Kitchenaid Stand Mixer</h1>
+{% endblock %}
+
+{% block date %}
+<p class="blogpost__date">Published on January 21th, 2021</p>
+{% endblock %}
+
+{% block image %}
+<img
+  src="{{ url_for('static', filename='img/kitchenaid_mixer.jpg') }}"
+  alt="Kitchenaid Mixer"
+  class="blogpost__image" />
+{% endblock %}
+
+{% block article %}
+<p>The Kitchenaid stand mixer is such a versatile kitchen appliance, especially when it comes to baking.  It's just perfect for making cookies, cakes, and cupcakes.</p>
+<p>Now that I've started making bread at home, I use the stand mixer with the hook attachment for kneading dough.  It makes making bread so much easier, as kneading dough for 5-10 minutes by hand is hard work.</p>
+<p>I recently bought some attachments for making fresh pasta: <a href="https://www.kitchenaid.com/countertop-appliances/stand-mixers/attachments/p.3-piece-pasta-roller-and-cutter-set.ksmpra.html?productcategory=stand_mixer_attachment&cmp=kad%253Awp_sda%25257C01%25257C00118%25257Czz%25257Csh%25257Ct02%25257Cp10%25257Czz%25257Cv04_kasa_ppc%253Aga%253Aps%253Atxt%253Atxt%253Acpc%253Ashop_smartshop%253Ana%253Ana%253A10502427779%253A105389855978%253Ac&gclid=EAIaIQobChMIw8OezNOy7gIVwRrnCh1k9AHGEAQYAiABEgJ7HvD_BwE&gclsrc=aw.ds">Pasta Roller & Cutter Set</a>:</p>
+<div class="article__image">
+  <img
+    src="{{ url_for('static', filename='img/kitchenaid_mixer_pasta.jpg') }}"
+    alt="Kitchenaid Mixer"
+    class="blogpost__image" />
+</div>
+<p>Making fresh pasta at home is a good amount of work, but it's really fun to make different types of pasta besides spaghetti.</p>
+{% endblock %}

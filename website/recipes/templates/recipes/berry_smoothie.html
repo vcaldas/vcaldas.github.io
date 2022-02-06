@@ -1,0 +1,46 @@
+{% extends "recipe.html" %}
+
+{% block recipe_title %}
+<h1>Berry Smoothie</h1>
+{% endblock %}
+
+{% block recipe_description %}
+<h2>Description</h2>
+<p>A delicious smoothie made with frozen berries and acai!</p>
+<p>I love fresh berries, especially blueberries, and this smoothie is an explosion of berry flavors.</p>
+<p>This smoothie uses frozen fruit, as well as a fresh banana to make it smooth and creamy.</p>
+{% endblock %}
+
+{% block recipe_image %}
+<img src="{{ url_for('static', filename='img/berry_smoothie.jpg') }}"  alt="Berry Smoothie" />
+{% endblock %}
+
+{% block recipe_tips %}
+<h2>Tips</h2>
+<p>Feel free to subsitute your favorite frozen berries into this recipe.</p>
+<p>It can be tough to get the correct consistency in the blender, but add apple juice if the mixture is too thick and isn't mixing correctly.</p>
+{% endblock %}
+
+{% block recipe_ingredients %}
+<h2>List of Ingredients</h2>
+<ul>
+    <li>1 Packet of Frozen Unsweetened Acai</li>
+    <li>1 Cup of Frozen Blueberries</li>
+    <li>1 Cup of Frozen Strawberries</li>
+    <li>1/3 Cup of Frozen Dark Cherries</li>
+    <li>1 Fresh Banana</li>
+    <li>1 Cup of Water</li>
+    <li>1/2 Cup of Apple Juice</li>
+</ul>
+{% endblock %}
+
+{% block recipe_steps %}
+<h2>Recipe Steps</h2>
+<ol>
+    <li>Using a blender, start by adding the water and then all of the frozen fruit</li>
+    <li>Add the banana to the blender by breaking it up into pieces (3 or 4)</li>
+    <li>Blend on a medium speed until the mixture is smooth and everything is incorporated together</li>
+    <li>Add the apple juice to make the consistency more liquid</li>
+    <li>Pour the mixture into a cup and enjoy!</li>
+</ol>
+{% endblock %}

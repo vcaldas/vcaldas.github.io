@@ -1,0 +1,42 @@
+{% extends "recipe.html" %}
+
+{% block recipe_title %}
+<h1>Jasmine Rice</h1>
+{% endblock %}
+
+{% block recipe_description %}
+<h2>Description</h2>
+<p>Jasmine rice is a staple and I think it has a better flavor than regular rice.</p>
+<p>Once I learned how to make this dish, it comes out perfectly every time!</p>
+{% endblock %}
+
+{% block recipe_image %}
+<img src="{{ url_for('static', filename='img/jasmine_rice.jpg') }}"  alt="Jasmine Rice" />
+{% endblock %}
+
+{% block recipe_tips %}
+<h2>Tips</h2>
+<p>Use a pot with a lid that sits tightly on the pot to prevent excess steam from escaping.</p>
+<p>After the rice is done cooking, fluff the rice a bit with a wooden spoon but then re-cover the rice in the pot to continue the cooking process for 5-10 more minutes.</p>
+{% endblock %}
+
+{% block recipe_ingredients %}
+<h2>List of Ingredients</h2>
+<ul>
+    <li>2 Cups of Jasmine Rice</li>
+    <li>4 Cups of Cold Water</li>
+</ul>
+{% endblock %}
+
+{% block recipe_steps %}
+<h2>Recipe Steps</h2>
+<ol>
+    <li>Pour the rice and the cold water into a medium-sized pot</li>
+    <li>With the pot uncovered, heat on medium heat until the water/rice is slightly boiling</li>
+    <li>Mix with a wooden spoon just a few times</li>
+    <li>Cover the pot and reduce the heat to as low as possible</li>
+    <li>Cook for 17 minutes</li>
+    <li>Once done, fluff the rice a bit with a wooden spoon but then re-cover the rice in the pot to continue the cooking process for 5-10 more minutes</li>
+    <li>Serve directly from the pot or put on a plate to serve family-style (the rice stays hot for a surprisingly long time on a plate!)</li>
+</ol>
+{% endblock %}

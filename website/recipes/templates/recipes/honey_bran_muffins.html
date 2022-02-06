@@ -1,0 +1,56 @@
+{% extends "recipe.html" %}
+
+{% block recipe_title %}
+<h1>Honey Bran Muffins</h1>
+{% endblock %}
+
+{% block recipe_description %}
+<h2>Description</h2>
+<p>Honey Bran Muffins are my favorite muffin!  The raisins in the light muffin are such a great combination.</p>
+<p>This muffins are inspired by the Whole-Wheat Honey Bran Muffins from Peet's Coffee.</p>
+<p>I've been trying to make hearty and somewhat healthy muffins for a long time and I've really found this recipe to be my favorite muffin recipe.</p>
+<p>These muffins are great to make on the weekend and then you have a quick breakfast or snack for during the week.</p>
+{% endblock %}
+
+{% block recipe_image %}
+<img src="{{ url_for('static', filename='img/honey_bran_muffins.jpg') }}"  alt="Honey Bran Muffins" />
+{% endblock %}
+
+{% block recipe_tips %}
+<h2>Tips</h2>
+<p>Add more raisins than you think are needed.  The raisins are key to the recipe.</p>
+<p>I think it's better to cook these muffins longer than you think to make sure the tops get a nice crust on them.</p>
+<p>Add a small amount of flour to the raisins to help the raisins not stick together and to prevent the raisins from sinking in the batter.</p>
+{% endblock %}
+
+{% block recipe_ingredients %}
+<h2>List of Ingredients</h2>
+<ul>
+    <li>1.5 Cups of Wheat Bran</li>
+    <li>1 Cup of White Whole Wheat Flour</li>
+    <li>1 Teaspoon of Baking Soda</li>
+    <li>1 Teaspoon of Baking Powder</li>
+    <li>1/2 Teaspoon of Salt</li>
+    <li>1 Cup of Raisins</li>
+    <li>3/4 Cup of Unsweetened Applesauce</li>
+    <li>1 Cup of Unsweetened Almond Milk</li>
+    <li>2 Eggs</li>
+    <li>1/3 Cup of Honey</li>
+    <li>1/2 Teaspoon of Vanilla Extract</li>
+</ul>
+{% endblock %}
+
+{% block recipe_steps %}
+<h2>Recipe Steps</h2>
+<ol>
+    <li>Preheat the oven to 375 degrees (F)</li>
+    <li>In a stand mixer or large mixing bowl, combine the dry ingredients: Wheat Bran, Flour, Baking Soda, Baking Powder, Salt, Raisins</li>
+    <li>Add in the wet ingredients in this order: Almond Milk, Applesauce, Eggs, Honey, Vanilla Extract</li>
+    <li>Mix all the ingredients together until well combined</li>
+    <li>Put cupcake wrappers into a cupcake pan and fill each cup about 2/3 full</li>
+    <li>The batter should be enough to make 12 muffins</li>
+    <li>Bake the muffins for 18 minutes</li>
+    <li>Check that the muffins are done by sticking a toothpick in the tallest muffin and making sure it comes out clean (no batter)</li>
+    <li>Enjoy!</li>
+</ol>
+{% endblock %}

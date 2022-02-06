@@ -1,0 +1,46 @@
+{% extends "recipe.html" %}
+
+{% block recipe_title %}
+<h1>Acai Bowl</h1>
+{% endblock %}
+
+{% block recipe_description %}
+<h2>Description</h2>
+<p>An Acai Bowl with fresh fruit and granola is my favorite breakfast!  It's delicious, refreshing, and hydrating!</p>
+<p>I've been making smoothies for years, but making a thick smoothie using frozen Acai and turning it into an Acai bowl is something I recently discovered.</p>
+<p>I don't understand why, but I always feel so hydrated after eating an Acai Bowl.</p>
+{% endblock %}
+
+{% block recipe_image %}
+<img src="{{ url_for('static', filename='img/acai_bowl.jpg') }}"  alt="Acai Bowl" />
+{% endblock %}
+
+{% block recipe_tips %}
+<h2>Tips</h2>
+<p>Use your favorite granola as a topping.  I've found that a granola with banana chips goes perfect in an Acai Bowl.</p>
+<p>Fresh fruit is an idea topping during the summer months when strawberries and blueberries are in season.  During off-seasons, using granola as the only topping works well.</p>
+<p>It can be tough to get the correct consistency in the blender, but add water if the mixture is too thick and isn't mixing correctly.</p>
+{% endblock %}
+
+{% block recipe_ingredients %}
+<h2>List of Ingredients</h2>
+<ul>
+    <li>1 Packet of Frozen Unsweetened Acai</li>
+    <li>1 Cup of Frozen Blueberries</li>
+    <li>1 Cup of Frozen Strawberries</li>
+    <li>1/3 Cup of Frozen Dark Cherries</li>
+    <li>1 Fresh Banana</li>
+    <li>1 Cup of Water</li>
+</ul>
+{% endblock %}
+
+{% block recipe_steps %}
+<h2>Recipe Steps</h2>
+<ol>
+    <li>Using a blender, start by adding the Water and then all of the frozen fruit</li>
+    <li>Add the banana to the blender by breaking it up into pieces (3 or 4)</li>
+    <li>Blend on a medium speed until the mixture is smooth and everything is incorporated together</li>
+    <li>Add more water to the blender if the mixture is too thick</li>
+    <li>Pour the thick mixture into a bowl and top with your favorite toppings (fresh fruit, granola)</li>
+</ol>
+{% endblock %}

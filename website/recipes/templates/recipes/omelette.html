@@ -1,0 +1,52 @@
+{% extends "recipe.html" %}
+
+{% block recipe_title %}
+<h1>Omelette</h1>
+{% endblock %}
+
+{% block recipe_description %}
+<h2>Description</h2>
+<p>Omelettes are a delicious meal for breakfast or even for dinner!</p>
+<p>You can add your favorite ingredients into an omelette to personalize it to your taste. I like sauteed bell peppers and spinach in my omelette.</p>
+{% endblock %}
+
+{% block recipe_image %}
+<img src="{{ url_for('static', filename='img/omelette.jpg') }}"  alt="Omelette" />
+{% endblock %}
+
+{% block recipe_tips %}
+<h2>Tips</h2>
+<p>Use a generous amount of oil spray on the frying pan before pouring in the eggs to prevent the eggs from sticking when forming the omelette.</p>
+<p>Add in the ingredients (veggies, meat, etc.) to the eggs when the eggs are still runny to keep the ingredients inside the omelette.</p>
+{% endblock %}
+
+{% block recipe_ingredients %}
+<h2>List of Ingredients</h2>
+<ul>
+    <li>2 or 3 Large Eggs</li>
+    <li>1/2 Teaspoon of Salt</li>
+    <li>1/2 Teaspoon of Black Pepper</li>
+    <li>Canola Oil Spray</li>
+    <li>1/2 of a Bell Pepper (diced into small pieces)</li>
+    <li>1 Cup of Spinach</li>
+</ul>
+{% endblock %}
+
+{% block recipe_steps %}
+<h2>Recipe Steps</h2>
+<ol>
+    <li>In a measuring cup or bowl, add the eggs with the salt and pepper; mix thoroughly</li>
+    <li>Dice the bell pepper into small pieces</li>
+    <li>Heat a non-stick frying pan on medium heat</li>
+    <li>Add the bell peppers to saute them for 3 minutes</li>
+    <li>Add the spinach to wilt it in the frying pan</li>
+    <li>Remove the veggies from the frying pan to a plate or cutting board</li>
+    <li>Reduce the heat on the frying pan to between medium and low</li>
+    <li>Spray the frying pan with the canola oil</li>
+    <li>Add the eggs to the frying pan</li>
+    <li>While the eggs are still runny, add back the bell peppers and spinach</li>
+    <li>Once the eggs are no longer runny, fold the eggs in half to form the omelette shape</li>
+    <li>Cook until the bottom of the omelette has a slight bit of brown color</li>
+    <li>Serve with your favorite toppings (salsa, ketchup)!</li>
+</ol>
+{% endblock %}

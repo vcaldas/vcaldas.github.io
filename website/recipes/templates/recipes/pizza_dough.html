@@ -1,0 +1,49 @@
+{% extends "recipe.html" %}
+
+{% block recipe_title %}
+<h1>Pizza Dough</h1>
+{% endblock %}
+
+{% block recipe_description %}
+<h2>Description</h2>
+<p>This homemade pizza dough is excellent for making pizza, calzones, and breadsticks!</p>
+<p>This pizza dough needs to be made the night before, as the dough rises overnight in the refrigerator.</p>
+<p>This recipe is based on this pizza dough recipe from Cento: <a href="https://www.cento.com/recipes/pizza/pizza_dough_ball.php">Pizza Dough</a>.</p>
+{% endblock %}
+
+{% block recipe_image %}
+<img src="{{ url_for('static', filename='img/pizza_dough.jpg') }}"  alt="Pizza Dough" />
+{% endblock %}
+
+{% block recipe_tips %}
+<h2>Tips</h2>
+<p>Make sure to put the Extra-Virgin Olive Oil on the dough ball before putting it into the refrigerator to prevent the dough from sticking to the sides of the bowl as it rises.</p>
+{% endblock %}
+
+{% block recipe_ingredients %}
+<h2>List of Ingredients</h2>
+<ul>
+    <li>12 grams (or two packets) of Active Dry Yeast</li>
+    <li>1.5 Cups of Warm Water (approximately 100 degrees Fahrenheit)</li>
+    <li>1.5 Tablespoons of Sugar</li>
+    <li>535 grams of All-Purpose Flour</li>
+    <li>1.5 Teaspoons of Salt</li>
+    <li>2 Tablespoons (plus extra for coating the dough ball) of Extra-Virgin Olive Oil</li>
+</ul>
+{% endblock %}
+
+{% block recipe_steps %}
+<h2>Recipe Steps</h2>
+<ol>
+    <li>In the bowl of a stand mixer (such as Kitchenaid), add the yeast, warm water, and sugar.  The yeast needs time to bloom, so wait for 5-8 minutes to check that the yeast starts bubbling (activating).</li>
+    <li>While waiting for the yeast to bloom, measure out the flour in a small bowl and mix in the salt.</li>
+    <li>Add the flour/salt into the bowl containing the yeast.</li>
+    <li>With the dough book attached to the stand mixer, start mixing the dough on the slowest speed.  Add the Olive Oil as the dough starts mixing.</li>
+    <li>Once dough is starting to come together as a single dough bowl, increase the speed of the stand mixer by one setting.</li>
+    <li>Mix the dough in the stand mixer for 5 minutes.</li>
+    <li>Using a spatula, scrape the dough off the dough hook and form it into a ball in the mixing bowl.</li>
+    <li>Once done mixing, pour a very small amount of Extra-Virgin Olive Oil onto the dough ball and move the dough around to coat the dough ball and bowl.  This oil will prevent the dough from sticking to the bowl as it raises.</li>
+    <li>Cover the bowl with cling wrap and place the bowl into the refrigerator overnight (rise time of at least 12 hours).</li>
+    <li>Take the dough out of the refrigerator at least 3 hours before working with the dough to make pizzas, calzones, or breadsticks.</li>
+</ol>
+{% endblock %}

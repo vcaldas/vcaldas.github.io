@@ -1,0 +1,59 @@
+{% extends "recipe.html" %}
+
+{% block recipe_title %}
+<h1>Bagels</h1>
+{% endblock %}
+
+{% block recipe_description %}
+<h2>Description</h2>
+<p>Homemade bagels that are fresh out of the oven are delicious! Once you get the technique down, they are relatively easy to make.</p>
+<p>During quarantine (2020), we stopped going to our grocery store to pick up fresh bagels in the mornings. After a few months, I decided to try making bagels at home. I could not believe how much I missed bagels!</p>
+<p>Bagels are delicious by themselves, but I especially like them with peanut butter and jelly or as a breakfast sandwich (with scrambled eggs and bacon)!</p>
+{% endblock %}
+
+{% block recipe_image %}
+<img src="{{ url_for('static', filename='img/bagels.jpg') }}"  alt="Bagels" />
+{% endblock %}
+
+{% block recipe_tips %}
+<h2>Tips</h2>
+<p>When making the hole in the bagels, use your thumb to press a hole through the center of the dough ball and then use your index fingers to stretch out the dough to make the hole about 1" in diameter.</p>
+<p>It may seem that the dough is to wet when it comes out of the boiling water, but this is good.  The moisture on the dough makes for a crunchy exterior while keeping the interior nice and soft.</p>
+<p>The water needs to be between 100-110 degrees (Fahrenheit) to active the yeast; I use a thermometer to check the water temperature. The sugar also helps the yeast bloom.</p>
+<p>Make sure to thoroughly combine the salt into the flour; salt can kill the yeast if applied directly to the yeast.</p>
+{% endblock %}
+
+{% block recipe_ingredients %}
+<h2>List of Ingredients</h2>
+<ul>
+    <li>500 grams of Bread Flour</li>
+    <li>1.5 Tablespoons of Sugar</li>
+    <li>1 Packet (10g) of Instant Dry Yeast</li>
+    <li>320 mL Water (between 100-100 degrees (Fahrenheit))</li>
+    <li>1.5 Teaspoons of Salt</li>
+    <li>0.5 Tablespoons of Canola Oil</li>
+</ul>
+{% endblock %}
+
+{% block recipe_steps %}
+<h2>Recipe Steps</h2>
+<ol>
+    <li>Pour the yeast into the bowl of a stand mixer; Add the water and sugar to bloom the yeast.</li>
+    <li>Measure out the flour and salt into a separate bowl and combine thoroughly.</li>
+    <li>Knead all the ingredients in a stand mixer for 5-10 minutes. The dough should come together with almost no dough sticking to the sides of the bowl.</li>
+    <li>Transfer the dough (using a spatchula) onto a clean surface and knead into a smooth ball of dough.</li>
+    <li>In a new bowl, spray the Canola oil on the bottom and sides to prevent the dough from sticking during the rise time.</li>
+    <li>Place the dough ball into the new bowl and cover tightly with sticky wrap.</li>
+    <li>Place the bowl in a warm spot in the kitchen to let rise for 1-2 hours. The dough should double in size during this time.</li>
+    <li>Transfer the dough onto a clean surface and divide into 8 pieces.</li>
+    <li>Form each dough piece into a little ball and let rest on baking sheet (no parchment paper is needed).</li>
+    <li>Bring a large pot of water to a gentle boil.</li>
+    <li>Preheat the oven to 425 degrees (F).</li>
+    <li>Use your thumb to make a hole in the center of each dough ball and then use your index fingers to stretch out the dough to have the hole be 1" in diameter.</li>
+    <li>Once the water is boiling, place each bagel into the boiling water. You'll need to do this multiple batches to prevent crowding the pot.</li>
+    <li>Boil for 1 minute on each side and then return the bagels to the baking sheet.</li>
+    <li>When the bagels are wet, place any toppings on the bagels (like sesame seeds).</li>
+    <li>Bake for 20 minutes at 425 degrees (F).</li>
+    <li>Let the bagels cool for 10 minutes before eating!</li>
+</ol>
+{% endblock %}

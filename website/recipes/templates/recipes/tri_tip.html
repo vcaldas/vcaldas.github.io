@@ -1,0 +1,53 @@
+{% extends "recipe.html" %}
+
+{% block recipe_title %}
+<h1>Tri-Tip</h1>
+{% endblock %}
+
+{% block recipe_description %}
+<h2>Description</h2>
+<p>When a tri-tip is BBQ'd on a charcoal grill, I is my favorite steak!</p>
+<p>Tri-tip is a tougher cut of meat, so it needs to be cooked at a lower temperature for a longer period of time.</p>
+<p>The marinade combined with the smokey flavor from the BBQ make this a fantastic dish.</p>
+{% endblock %}
+
+{% block recipe_image %}
+<img src="{{ url_for('static', filename='img/tri_tip.jpg') }}"  alt="Tri-Tip" />
+{% endblock %}
+
+{% block recipe_tips %}
+<h2>Tips</h2>
+<p>While it can be difficult to set the exact temperature on a charcoal grill, the tri-tip shouldn't be cooked at a high heat.</p>
+<p>A common grilling method with tri-tip is to do a revere-sear, where the tri-tip is cooked over indirect heat at first and then finished over the fire to mark the meat.</p>
+<p>I'm never prepared enough to marinade the tri-tip for a long time, so even 1 hour of marinade time works perfect in my experience.</p>
+<p>A steak sandwich with fresh bread, tri-tip, and steak sauce is amazing!</p>
+{% endblock %}
+
+{% block recipe_ingredients %}
+<h2>List of Ingredients</h2>
+<ul>
+    <li>1 Tri-tip (2-3 lbs)</li>
+    <p>Marinade:</p>
+    <li>2 Teaspoons of Salt</li>
+    <li>2 Teaspoons of Fresh Cracked Black Pepper</li>
+    <li>1 Teaspoon of Garlic Powder</li>
+    <li>2 Teaspoons of Smoked Paprika</li>
+    <li>1 Teaspoon of Dried Rosemary</li>
+    <li>1/3 Cup of Canola Oil</li>
+    <li>2 Tablespoons of Lime Juice</li>
+</ul>
+{% endblock %}
+
+{% block recipe_steps %}
+<h2>Recipe Steps</h2>
+<ol>
+    <li>In a pan, add the Canola oil and lime juice to the tri-tip</li>
+    <li>Add all of the dry spices to all sides of the tri-tip</li>
+    <li>If marinading for over 1 hour, place in the refrigerator</li>
+    <li>Prepare the fire in the grill (preferably, a charcoal grill)</li>
+    <li>On the grill is heated, place the marinaded tri-tip over indirect heat</li>
+    <li>Cook for 1.5 - 2 hours depending on how you like your steak cooked</li>
+    <li>Before taking the tri-tip off the grill, sear the top and bottom over the fire to get some nice grill marks</li>
+    <li>Since tri-tip can be a tough cut of meat, make sure to slice against (perpendicular) to the grain of the meat; I find really think slices of tri-tip make for the best taste</li>
+</ol>
+{% endblock %}

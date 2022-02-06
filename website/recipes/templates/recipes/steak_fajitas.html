@@ -1,0 +1,48 @@
+{% extends "recipe.html" %}
+
+{% block recipe_title %}
+<h1>Steak Fajitas</h1>
+{% endblock %}
+
+{% block recipe_description %}
+<h2>Description</h2>
+<p>Steak fajitas with sauted vegetables are a delicious meal! Substitute the steak for chicken, if preferred.</p>
+<p>This dish is a favorite in our house as everyone can make their own combination of fajitas.  Plus, this dish pairs great with Spanish Rice.</p>
+{% endblock %}
+
+{% block recipe_image %}
+<img src="{{ url_for('static', filename='img/steak_fajitas.jpg') }}"  alt="Steak Fajitas" />
+{% endblock %}
+
+{% block recipe_tips %}
+<h2>Tips</h2>
+<p>Fajitas are such a flexible meal, as they can be customized to make everyone happy.</p>
+{% endblock %}
+
+{% block recipe_ingredients %}
+<h2>List of Ingredients</h2>
+<ul>
+    <li>Flank Steak</li>
+    <li>Canola Oil</li>
+    <li>Ground Black Pepper</li>
+    <li>Sea Salt</li>
+    <li>Limes (2 or 3)</li>
+    <li>Tortillas (Corn or Flour)</li>
+    <li>Toppings of your choice (lettuce, salsa, veggies)</li>
+</ul>
+{% endblock %}
+
+{% block recipe_steps %}
+<h2>Recipe Steps</h2>
+<ol>
+    <li>Trim the excess fat off of the flank steak</li>
+    <li>Add the flank steak to a large bowl for marinating</li>
+    <li>Add 3 Tablespoons of Canola Oil, 2 Tablespoons of Black Pepper, 1 Tablespoon of Sea Salt, and the juice of 2-3 limes into the bowl to marinade the flank steak</li>
+    <li>Let the flank steak marinate for about 15 minutes (it's a short marinade time)</li>
+    <li>Slice up the flank steak prior to cooking into thin strips</li>
+    <li>Place all the flank steak strips into a large frying pan and cook on medium heat</li>
+    <li>Stir the flank steak around every few minutes to makes sure it is cooking evenly</li>
+    <li>Once the flank steak starts to get a slight char on it, transfer the steak to a plate</li>
+    <li>Serve in either corn or flour tortillas with your favorite toppings</li>
+</ol>
+{% endblock %}

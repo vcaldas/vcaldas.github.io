@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block styling %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/blogpost_style.css') }}">
+{% endblock %}
+
+{% block content %}
+<div class="blogpost-container card-overlay">
+    <div class="blogpost__heading">
+        {% block title %}
+        {% endblock %}
+
+        <h3>by Patrick Kennedy</h3>
+
+        {% block date %}
+        {% endblock %}
+    </div>
+
+    <div class="blogpost__image">
+        {% block image %}
+        {% endblock %}
+    </div>
+
+    <div class="blogpost__article">
+        {% block article %}
+        {% endblock %}
+    </div>
+</div>
+{% endblock %}

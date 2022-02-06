@@ -1,0 +1,74 @@
+{% extends "recipe.html" %}
+
+{% block recipe_title %}
+<h1>Irish Soda Bread</h1>
+{% endblock %}
+
+{% block recipe_description %}
+<h2>Description</h2>
+<p>Irish soda bread is a perfect combination of savory and sweet!</p>
+<p>This bread is called a "quick" bread, as it does not require yeast that needs to proof for hours.</p>
+<p>The dough rise in this recipe is based on the interaction between the buttermilk and baking soda.</p>
+<p>Honestly, this bread usually tastes better on the second day.  It can be eaten by itself or topped with butter or jam!</p>
+<p>This recipe is inspired by the <a href="https://sallysbakingaddiction.com/grandmas-irish-soda-bread/">Grandma's Irish Soda Bread</a> recipe from <a href="https://sallysbakingaddiction.com">Sally's Baking Addition blog</a>.</p>
+{% endblock %}
+
+{% block recipe_image %}
+<img src="{{ url_for('static', filename='img/irish_soda_bread.jpg') }}"  alt="Irish Soda Bread" />
+{% endblock %}
+
+{% block recipe_tips %}
+<h2>Tips</h2>
+<p>I find that a lot of raisins are too dried out for a bread like this.  Make the simple syrup in advance (30 minutes before starting the dough) and soak the raisins in the cooled simple syrup for at least 15 minutes.  This time allows the raisins time to soak up the simple syrup and plump up.</p>
+<p>Making the buttermilk with almond milk and lemon juice is a perfect substitute for store-bought buttermilk.</p>
+<p>Combine the butter into the dry ingredients before adding the raisins to make process easier.</p>
+<p>To check that the bread is cooked all the way through, push a toothpick through the thickest part and check that the toothpick comes out clean (no dough/batter).</p>
+<p>Another check from "doneness" is picking up the bread and knocking on the bottom... it should sound hollow! (as strange as that sounds)</p>
+{% endblock %}
+
+{% block recipe_ingredients %}
+<h2>List of Ingredients</h2>
+<p>Simple Syrup:</p>
+<ul>
+    <li>1 cup of Granulated Sugar</li>
+    <li>1 cup of Water</li>
+</ul>
+<p>Buttermilk:</p>
+<ul>
+    <li>1.75 cups of Almond Milk (unsweetened)</li>
+    <li>3 Tablespoons of Lemon Juice</li>
+</ul>
+<p>Bread:</p>
+<ul>
+    <li>4.25 cups of All-Purpose Flour (plus extra flour for shaping the bread)</li>
+    <li>4 Tablespoons of Granulated Sugar</li>
+    <li>1 Teaspoon of Baking Soda</li>
+    <li>1 Teaspoon of Salt</li>
+    <li>5 Tablespoons of <b>cold</b> Dairy-Free Butter (recommendation: <a href="https://www.earthbalancenatural.com/spreads/soy-free-buttery-spread">Earth Balance - Soy Free Butter Spread</a>)</li>
+    <li>1 Large Egg</li>
+    <li>1 Cup of Raisins</li>
+</ul>
+
+{% endblock %}
+
+{% block recipe_steps %}
+<h2>Recipe Steps</h2>
+<ol>
+    <li>To make the simple syrup, combine the water and sugar in a small sauce pot and bring to a slow boil.</li>
+    <li>Turn off the heat the simple syrup and transfer to a mixing bowl to cool for 10 minutes.</li>
+    <li>Add the raisins to the simple syrup and mix thoroughly to make sure the raisins are stuck together.</li>
+    <li>Let the raisins soak in the simple syrup for at least 15 minutes.</li>
+    <li>To make the buttermilk, measure the almond milk in a measuring cup and add the lemon juice.</li>
+    <li>Let the almond milk and lemon juice combine for 10-15 minutes.  The almond milk will start to look curdled, which is desired.</li>
+    <li>Pre-heat the oven to 400 degrees (Fahrenheit).</li>
+    <li>In a large mixing bowl, combine the flour, sugar, baking soda, and salt.  Mix thoroughly to make sure that the baking soda is distributed throughout the flour.</li>
+    <li>Cut the cold butter into small pieces with a knife and add the pieces to the flour mixture in the mixing bowl.</li>
+    <li>Using your fingers, squish the butter into the flour mixture to break up the butter into the flour (cut the butter into the flour).</li>
+    <li>Drain the raisins that have been soaking in the simple syrup and add them to the mixing bowl.</li>
+    <li>Add the wet ingredients (buttermilk and egg) to the mixing bowl and mix with a wooden spoon until just combined (don't over mix!).</li>
+    <li>On a clean surface, add flour to the surface and form the dough into a circular shape about 10 inches in diameter.</li>
+    <li>Place the shaped dough onto a baking sheet (preferably with a <a href="https://www.bedbathandbeyond.com/store/product/silpat-reg-silpain-reg-silicone-bread-baking-mat/1044058814">SilPain</a>).</li>
+    <li>Bake for 45 minutes.</li>
+    <li>Let cool on a wire rack for at least an hour before cutting the bread.</li>
+</ol>
+{% endblock %}

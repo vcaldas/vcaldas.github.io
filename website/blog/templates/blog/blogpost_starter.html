@@ -1,0 +1,21 @@
+{% extends "blogpost.html" %}
+
+{% block title %}
+<h1>...</h1>
+{% endblock %}
+
+{% block date %}
+<p class="blogpost__date">Published on January 7th, 2021</p>
+{% endblock %}
+
+{% block image %}
+<img
+  src="{{ url_for('static', filename='img/kitchenaid_mixer.jpg') }}"
+  alt="Kitchenaid Mixer"
+  class="blogpost__image" />
+{% endblock %}
+
+{% block article %}
+<p>...</p>
+<p>...</p>
+{% endblock %}

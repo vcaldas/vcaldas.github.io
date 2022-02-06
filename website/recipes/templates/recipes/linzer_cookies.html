@@ -1,0 +1,63 @@
+{% extends "recipe.html" %}
+
+{% block recipe_title %}
+<h1>Linzer Cookies</h1>
+{% endblock %}
+
+{% block recipe_description %}
+<h2>Description</h2>
+<p>Linzer cookies are synonymous with Christmas for me!  The combination of the almond flavor in the cookies with the sweet jam in the middle is just incredible.</p>
+<p>These cookies are a bit difficult to make at first, but after a few attempts they get to be relatively straight-forward to make.</p>
+<p>This recipe is inspired by this <a href="https://www.youtube.com/watch?v=oCK3sgmu7t0">Linzer Cookie video</a> on YouTube.</p>
+{% endblock %}
+
+{% block recipe_image %}
+<img src="{{ url_for('static', filename='img/linzer_cookies.jpg') }}"  alt="Linzer Cookies" />
+{% endblock %}
+
+{% block recipe_tips %}
+<h2>Tips</h2>
+<p>You need a set of <a href="https://www.williams-sonoma.com/products/valentines-linzer-cookie-cutter-set-of-3/">Linzer cookie cutters</a> for this recipe.</p>
+<p>The cookies can be filled with any jam flavor that you like, but I would recommend strawberry and apricot.</p>
+<p>Some Linzer cookie recipes use almond extract, but I highly recommend NOT using it, as it is overpowering.</p>
+{% endblock %}
+
+{% block recipe_ingredients %}
+<h2>List of Ingredients</h2>
+<ul>
+    <li>1 1/3 Cups of All-Purpose Flour</li>
+    <li>2/3 Cup of Almond Flour</li>
+    <li>1/4 Teaspoons of Cinnamon</li>
+    <li>1/4 Teaspoons of Salt</li>
+    <li>1/8 Teaspoons of Baking Powder</li>
+    <li>1/2 Cup of Dairy-Free Butter softened to room temperature (recommendation: <a href="https://www.earthbalancenatural.com/spreads/soy-free-buttery-spread">Earth Balance - Soy Free Butter Spread</a>)</li>
+    <li>2/3 Cup of Powdered Sugar (plus more for dusting the cookies after baking)</li>
+    <li>1/2 Teaspoon of Vanilla Extract</li>
+    <li>1 Egg</li>
+</ul>
+{% endblock %}
+
+{% block recipe_steps %}
+<h2>Recipe Steps</h2>
+<ol>
+    <li>In a large mixing bowl, mix the dairy-free butter with a hand mixer for 20-30 seconds</li>
+    <li>Add the powdered sugar, egg, and vanilla extract to the bowl and mix for 2-3 minutes to fully incorporate the ingredients</li>
+    <li>Add the dry ingredients (flour, almond flour, cinnamon, salt, and baking powder) and mix until combined</li>
+    <li>Using a spatula, scrape the dough onto a clean surface and divide into two equal parts</li>
+    <li>Wrap each dough piece with saran wrap</li>
+    <li>Place the two dough pieces in the refrigerator for 2 hours</li>
+    <li>Preheat the oven to 350 degrees (Fahrenheit)</li>
+    <li>To make the bottom cookie pieces, use the Linzer cookie cutter without any shapes inserted</li>
+    <li>On a floured surface, roll out the first dough piece using a rolling pin to 1/4" thickness</li>
+    <li>Use the cookie cutters to cut out the round cookie bottoms and place onto a baking sheet</li>
+    <li>Bake for <b>10 minutes</b></li>
+    <li>To make the top cookie pieces, use the Linzer cookie cutter with your favorite shape insert</li>
+    <li>On a floured surface, roll out the second dough piece using a rolling pin to 1/4" thickness</li>
+    <li>Use the cookie cutters to cut out the round cookie bottoms and place onto a baking sheet</li>
+    <li>Bake for <b>9 minutes</b></li>
+    <li>After removing the cookies from the oven, place them on a wire rack to cool</li>
+    <li>After 15-20 minutes of cooling, take a bottom cookie, add jam to the cookie, and squish the top cookie on top of the jam</li>
+    <li>Repeat with all the cookie pieces</li>
+    <li>When serving, sprinkle powdered sugar on top of the cookies using a sift (it will look like snow falling on the cookies!)</li>
+</ol>
+{% endblock %}

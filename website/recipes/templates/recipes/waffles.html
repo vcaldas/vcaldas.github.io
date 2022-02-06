@@ -1,0 +1,51 @@
+{% extends "recipe.html" %}
+
+{% block recipe_title %}
+<h1>Waffles</h1>
+{% endblock %}
+
+{% block recipe_description %}
+<h2>Description</h2>
+<p>I love hot and crispy waffles with maple syrup!  These waffles are light and crispy.  A great option for breakfast or a snack (with peanut butter and jelly!).</p>
+<p>I've always loved making and eating waffles.  These waffles are thin waffles, not the thicker Belgian waffles.</p>
+<p>It can be tough to find a standard waffle maker, as Belgian waffles have become so popular.  I'd recommend checking at Crate and Barrel or Williams Sonoma.</p>
+{% endblock %}
+
+{% block recipe_image %}
+<img src="{{ url_for('static', filename='img/waffles.jpg') }}"  alt="Waffles" />
+{% endblock %}
+
+{% block recipe_tips %}
+<h2>Tips</h2>
+<p>Waffles come out of the waffle maker ver crispy, but they get softer and lose their crispiness after a few minutes.  Eat them right away!</p>
+<p>You'll need to test out the settings on your waffle maker to get the ideal crispiness level for your liking.</p>
+{% endblock %}
+
+{% block recipe_ingredients %}
+<h2>List of Ingredients</h2>
+<ul>
+    <li>2 Cups of All-Purpose Flour</li>
+    <li>1 Tablespoon of Granulated Sugar</li>
+    <li>1 Tablespoon of Baking Powder</li>
+    <li>1/2 Teaspoon of Salt</li>
+    <li>1.75 Cups of Unsweetened Almond Milk</li>
+    <li>2 Eggs</li>
+    <li>1 Teaspoons of Vanilla Extract</li>
+    <li>1/2 Cup of Dairy-Free Butter (melted and cooled)</li>
+</ul>
+{% endblock %}
+
+{% block recipe_steps %}
+<h2>Recipe Steps</h2>
+<ol>
+    <li>In a mixing bowl, combine the dry ingredients: Flour, Sugar, Baking Powder, and Salt</li>
+    <li>Mix the dry ingredients to combine evenly</li>
+    <li>Add the Almond Milk to the mixing bowl</li>
+    <li>Add the Egg and Vanilla Extract to the mixing bowl and mix well</li>
+    <li>Melt the butter in the microwave in a microwave safe bowl or measuring cup and add it to the mixture (incorporate well)</li>
+    <li>Preheat the waffle maker (I use a setting about 3/4 of the way to full for a crispy waffle)</li>
+    <li>Once the waffle maker is heated, add enought mixture to cover the waffle iron (the mixture will puff up so don't overfill!)</li>
+    <li>Once the waffle maker indicates that the waffles are done, use tongs to take the waffles out</li>
+    <li>Serve hot and with syrup!</li>
+</ol>
+{% endblock %}
