@@ -9,5 +9,9 @@ dependencies:
   - python-dotenv
   - frozen-flask
   - flask-flatpages
+  - pre-commit
+  - isort==5.10.1
+  - black==21.10b0
+  - flake8
 prefix: /Users/victorcaldas/opt/miniconda3/envs/website
 
