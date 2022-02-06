@@ -17,7 +17,9 @@ This short document will guide you through the steps to use my template. Note th
 
 ## First use
 
-I add several folders to the .gitignore file to reduce traffic. This means that locally my build always work even if a file is missing. For a fresh install, you would have to download the missing repositories and files.
+Follow the steps:
+1. $ conda env create -f environment.yml
+2. 
 
 ### Getting the website
 On the directory you want to copy, type:
