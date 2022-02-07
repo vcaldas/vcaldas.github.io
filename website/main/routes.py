@@ -1,6 +1,8 @@
-from website.main import bp
-from flask import render_template, abort
+from flask import render_template
 
-@bp.route('/')
+from website.main import bp
+
+
+@bp.route("/")
 def main():
-    return 'Currently not available. Working on something better'
+    return render_template("landing.html")
