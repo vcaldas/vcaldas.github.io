@@ -1,9 +1,13 @@
 from flask import Flask, render_template
 
+from website.config import Config
+
 
 def create_app():
     # Create the Flask application
     app = Flask(__name__)
+    app.config.from_object(__name__)
+    app.config.from_object(Config)
     register_blueprints(app)
     register_error_pages(app)
     return app
