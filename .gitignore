@@ -7,9 +7,7 @@ Gemfile.lock
 gulp_examples
 .bundle
 debug.log
-bower_components
-examples
-otherB
+examples/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

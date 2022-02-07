@@ -1,5 +1,5 @@
 from flask_frozen import Freezer
-from website import create_app
+from projects import create_app
 
 # Call the application factory function to construct a Flask application
 # instance using the development configuration

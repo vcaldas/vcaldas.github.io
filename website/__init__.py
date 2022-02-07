@@ -8,7 +8,6 @@ from flask import Flask, render_template
 def create_app():
     # Create the Flask application
     app = Flask(__name__)
-
     register_blueprints(app)
     register_error_pages(app)
     return app
@@ -20,13 +19,11 @@ def create_app():
 
 def register_blueprints(app):
     # Import the blueprints
-    from website.recipes import recipes_blueprint
-    from website.blog import blog_blueprint
+    from projects.main import bp as main_bp
 
     # Since the application instance is now created, register each Blueprint
     # with the Flask application instance (app)
-    app.register_blueprint(recipes_blueprint)
-    app.register_blueprint(blog_blueprint)
+    app.register_blueprint(main_bp)
 
 
 def register_error_pages(app):
