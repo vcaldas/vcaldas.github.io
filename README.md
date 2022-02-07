@@ -11,7 +11,7 @@ Please report [errors or feedback here](https://github.com/vcaldas/vcaldas.githu
 
 Source of great ideas and codes.
 
-* Excellent Flask tutorial by Miguel Grinber - [https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-i-hello-world](Megaflask Tutorial)
+* Excellent Flask tutorial by Miguel Grinber -[Megaflask Tutorial](https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-i-hello-world)
 
 ## Copyrights & License
 
@@ -23,3 +23,25 @@ to cite or attribute this content where appropriate.
 
 *Any opinions, findings, and conclusions or recommendations expressed
 in this material are those of the author(s).*
+
+## Getting started
+
+``` sh
+$git clone https://github.com/vcaldas/vcaldas.github.io.git
+$conda env create -f environment.yml
+$pre-commit install
+```
+
+### Create a server for development
+
+``` sh
+$flask run
+```
+
+### Build
+
+``` sh
+$python buil.py
+```
+
+This command will create a static website on `./build`.
