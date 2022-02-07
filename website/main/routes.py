@@ -3,4 +3,4 @@ from flask import render_template, abort
 
 @bp.route('/')
 def main():
-    return 'this is the landing page'
+    return 'Currently not available. Working on something better'
