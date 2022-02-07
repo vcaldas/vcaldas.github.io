@@ -18,4 +18,3 @@ class Config(object):
     FLATPAGES_AUTO_RELOAD = DEBUG
     FLATPAGES_EXTENSION = ".md"
     FREEZER_DESTINATION = "../docs"
-    FREEZER_RELATIVE_URLS = "/website/"
