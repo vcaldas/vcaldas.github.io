@@ -1,54 +1,19 @@
----
-permalink: /readme/
-title: "About this site"
-modified: 2016-04-18T16:39:37-04:00
-author_profile: true
-layout: default
----
+# Overview
 
-Overview
-========
+I wanted to find a way to learn python and blog a little bit, sharing the
+joys and hurdles when building something. I am aware of several other frameworks (e.g. [Jekyll](https://github.com/jekyll/jekyll) and Wordpress) however, I wanted to keep in python as much as possible.
 
-
-[This site](http://victorcaldas.com) is built with Jekyll and hosted on GitHub Pages. Site source at
-[vcaldas/vcaldas.github.io](http://github.com/vcaldas/vcaldas.github.io).
-
-Travis-CI Build status: ![alt text](https://travis-ci.org/vcaldas/vcaldas.github.io.svg?branch=master)
+[This site](http://vcaldas.github.io) is built with Flask and hosted on GitHub Pages.
 
 Please report [errors or feedback here](https://github.com/vcaldas/vcaldas.github.io/issues).
 
------------------------------------------------------------------------------------------------------------
+## Websites that inspired me
 
-
-Site Features & Credits
-=======================
-
-* Static site generation with [Jekyll](https://github.com/jekyll/jekyll)
-* Site and source code hosting on [Github](https://github.com/)
-* CSS based on [twitter bootstrap](http://getbootstrap.com)
-* Scalable CSS icons from [FontAwesome](http://fortawesome.github.com/Font-Awesome) and [Academicons](https://github.com/jpswalsh/academicons)
-* Automatic builds using [Travis-CI](https://travis-ci.org)
-* Workflow [GulpJS](http://gulpjs.com/)
-
-
-
------------------------------------------------------------------------------------------------------------
-
-
-Websites that inspired me
-=======================
 Source of great ideas and codes.
 
-* Carl Boettiger [cboettig/cboettig.github.io](http://github.com/cboettig/cboettig.github.io)
-* Grayscale Theme [https://startbootstrap.com/template-overviews/grayscale/](https://startbootstrap.com/template-overviews/grayscale/)
-* Layout ideas:
-  - [PaticleTheme by Nrandecker](https://github.com/nrandecker/particle)
-  - [Particle.JS](https://github.com/VincentGarreau/particles.js/)
+* Excellent Flask tutorial by Miguel Grinber -[Megaflask Tutorial](https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-i-hello-world)
 
-
------------------------------------------------------------------------------------------------------------
-Copyrights & License
-====================
+## Copyrights & License
 
 All original content unless otherwise specified is placed
 in the public domain by Victor Caldas to the extent
@@ -56,7 +21,27 @@ possible under law by the Creative Commons Zero declaration,
 [CC0](http://creativecommons.org/publicdomain/zero/1.0/).  Please remember
 to cite or attribute this content where appropriate.
 
----------------------------------------------------------------------------------------------------------------
-
 *Any opinions, findings, and conclusions or recommendations expressed
 in this material are those of the author(s).*
+
+## Getting started
+
+``` sh
+$git clone https://github.com/vcaldas/vcaldas.github.io.git
+$conda env create -f environment.yml
+$pre-commit install
+```
+
+### Create a server for development
+
+``` sh
+$flask run
+```
+
+### Build
+
+``` sh
+$python buil.py
+```
+
+This command will create a static website on `./build`.
