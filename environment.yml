@@ -14,5 +14,6 @@ dependencies:
   - black==21.10b0
   - flake8
   - pytest
+  - click
 prefix: /Users/victorcaldas/opt/miniconda3/envs/website
 
