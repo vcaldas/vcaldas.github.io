@@ -1,5 +1,5 @@
 from flask import Blueprint
 
-bp = Blueprint("blog", __name__, url_prefix="/blog")
+bp = Blueprint("blog", __name__)
 
 from website.blog import routes

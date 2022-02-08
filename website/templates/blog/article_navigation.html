@@ -1,0 +1,11 @@
+<hr />
+<ul class="nav nav-pills">
+  <li {% if not current_year %}class="active"{% endif %}>
+    <a href="{{ url_for('blog.index') }}">All posts</a>
+  </li>
+  {% for year in years %}
+  <li {% if current_year == year%}class="active"{% endif %}>
+    <a href="{{ url_for('blog.by_year', year=year) }}">{{ year }}</a>
+  </li>
+  {% endfor %}
+</ul>

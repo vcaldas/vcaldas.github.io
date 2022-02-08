@@ -1,22 +1,21 @@
-from flask import render_template, url_for
+from itertools import groupby
 
-from website import freezer, pages
+from flask import g, render_template
+
 from website.blog import bp
 
 
 @bp.route("/")
 def index():
-    return render_template("blog/index.html", pages=pages)
+    """blog index page"""
+    pages = g.pages
+    return render_template("blog/index.html", pages=pages, years=pages.years)
 
 
-@bp.route("/<path:path>.html")
-def page(path):
-    page = pages.get_or_404(path)
-    return render_template("page.html", page=page)
-
-
-@freezer.register_generator
-def pagelist():
-    for page in pages:
-        print(f"making page for {page.path}")
-        yield url_for("blog", path=page.path)
+@bp.route("/<path:path>/")
+def flat_page(path):
+    """flat pages rendering"""
+    page = g.pages.flatpages.get_or_404(path)
+    # Configure the img link plugin
+    g.flat_page = page
+    return render_template("blog/article.html", page=page)

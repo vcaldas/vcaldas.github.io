@@ -1,0 +1,34 @@
+{% set area = 'blog' %}
+{% extends "default.html" %}
+{% block title %}{{ page.title }}{% endblock %}
+{% block head %}
+  {{ super() }}
+  {% if page.keywords %}
+    <meta name="keywords" contents="{{ page.keywords }}" />
+  {% endif %}
+
+  {% if page.summary %}
+    <meta name="description" contents="{{ page.summary }}" />
+  {% endif %}
+
+  {% if page.tags %}
+    <meta name="tags" contents="{{ page.tags }}" />
+  {% endif %}
+
+{% endblock %}
+
+{% block content %}
+<section class="h-entry">
+  <header>
+    <h1 class="p-name entry-title">{{ page.title }}</h1>
+    <time pdatetime="{{ page.date }}">
+      <i class="glyphicon glyphicon-calendar"></i>
+      {{ page.date|l10n_date }}
+    </time>
+  </header>
+  <article class="e-content entry-content">
+    {{ page }}
+  </article>
+  <hr class="big-divider" />
+</section>
+{% endblock %}
