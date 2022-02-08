@@ -10,4 +10,4 @@ def main():
 
 @bp.route("/publications")
 def publications():
-    return render_template("publications.html")
+    return render_template("main/publications.html")

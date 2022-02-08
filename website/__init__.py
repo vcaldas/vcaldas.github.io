@@ -1,7 +1,7 @@
 from flask import Flask, render_template
 from flask_frozen import Freezer
 
-from website.blog.blog_pages import register_pages
+from website.blog import register_pages
 from website.config import Config
 
 freezer = Freezer()
