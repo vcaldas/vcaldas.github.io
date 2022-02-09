@@ -1,0 +1,325 @@
+body {
+  font-family: 'Helvetica Neue', 'Arial', sans-serif;
+  background-color: #0f1218;
+  color: #c8d1d9;
+}
+
+/* Subscribe form input + button styling */
+.signup {
+  padding: 0px 5px;
+}
+
+.signup input {
+  width: 30%;
+  padding: 0px 5px;
+}
+
+.signup input::placeholder {
+  color: #484e58;
+}
+
+.signup button {
+  background-color: #238636;
+  border: 2px solid #2ea043;
+  border-radius: 5px;
+  color: white;
+  display: inline;
+  padding: 5px 15px;
+}
+
+.signup button:hover {
+  background-color: #2ea043;
+}
+
+.signup #loader {
+  border: 2px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 2px solid #2ea043;
+  display: none;
+  width: 20px;
+  height: 20px;
+  -webkit-animation: spin 2s linear infinite; /* Safari */
+  animation: spin 2s linear infinite;
+}
+
+/* Upper Right Links Animations */
+.link-list {
+  color: #c8d1d9;
+  display: inline-block;
+  font-family: 'HelveticaNeue-Light', 'Arial', sans-serif;
+}
+
+/* Text Fade Animation */
+#body-fade {
+  animation: fadein 1s;
+  -moz-animation: fadein 1s;
+  /* Firefox */
+  -webkit-animation: fadein 1s;
+  /* Safari and Chrome */
+  -o-animation: fadein 1s;
+  /* Opera */
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes fadein {
+  /* Firefox */
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadein {
+  /* Safari and Chrome */
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@-o-keyframes fadein {
+  /* Opera */
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Tag Blocks */
+.block {
+  width: auto;
+  padding: 1px 10px 1px 10px;
+  margin: auto;
+  background: #2e507c;
+  display: inline-block;
+  border-radius: 10px;
+}
+
+.block a {
+  color: #58a6ff;
+}
+
+.block:hover {
+  background: #4176b7;
+}
+
+.block-selected {
+  width: auto;
+  padding: 1px 10px 1px 10px;
+  margin: auto;
+  background: #4176b7;
+  display: inline-block;
+  border-radius: 10px;
+}
+
+.block-selected a {
+  color: white;
+}
+
+.share {
+  text-align: center;
+}
+
+/* Fonts */
+.light-text {
+  font-family: 'HelveticaNeue-Light', 'Arial', sans-serif;
+}
+
+.post-title {
+  font-family: 'Raleway', sans-serif;
+  text-align: left;
+}
+
+/* Tag Level Styling */
+.link-fa i {
+  color: #c8d1d9;
+}
+
+.link-fa i:hover {
+  color: #1b9ce2;
+}
+
+hr.fade {
+  border: 0;
+  height: 1px;
+  background-image: -webkit-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+  background-image: -moz-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+  background-image: -ms-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+  background-image: -o-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+}
+
+/* Project Section Boxes */
+.card-row {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+}
+
+/* Project Section Text */
+#card-image {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border-color: black;
+  border-width: 2px;
+}
+
+.project-title {
+  color: #c8d1d9;
+  -webkit-transition: all 0.50s;
+  transition: all 0.50s;
+}
+
+.project-title:hover {
+  color: #039ae4;
+}
+
+/* Courses Section Boxes */
+.card-course {
+  background: #161c22;
+  display: inline-block;
+  height: 25%;
+  margin: 1rem;
+  position: relative;
+  width: 25%;
+  text-align: center;
+  vertical-align: middle;
+  border-radius: 15px;
+  padding: 15px 15px 15px 15px;
+}
+
+.card-course-1 {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  transition: all 0.2s cubic-bezier(.25, .8, .25, 1);
+}
+
+.card-course-1:hover {
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.card-course-1 img {
+  display: block;
+  height: 75px;
+  margin: auto;
+}
+
+/* Navigation Bar */
+.navbar {
+  background: #161c22;
+  top: 0;
+  right: 0;
+  left: 0;
+}
+
+/* Bottom Bar */
+.navfoot {
+  background: #161c22;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  position: fixed;
+}
+
+/* Resources Table */
+.resourceTable {
+  /* table-layout: auto; */
+}
+
+.resourceTable .nonSection {
+  width: 12%;
+}
+
+.resourceTable td, th {
+  border: 2px solid #161c22;
+  padding: 5px;
+}
+
+.resourceTable th {
+  padding: 10px 0px 10px 5px;
+  text-align: left;
+}
+
+.record {}
+
+.record th, td {
+  border: 2px solid #c8d1d9;
+  padding: 5px;
+}
+
+/* CS 161 Demo Cards */
+.cs161-demo-table {
+  display: flex;
+}
+
+.cs161-demo-table .demo-card {
+  margin: 5px;
+  display: flex;
+  border-color: gray;
+  border-style: dotted;
+  width: 25%;
+  border-radius: 5px;
+}
+
+.cs161-demo-table .demo-card .picture {
+  width: 40%;
+  text-align: center;
+  margin: 1em 0;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.cs161-demo-table .demo-card .description {
+  flex-grow: 1;
+  vertical-align: middle;
+  padding: 2px;
+}
+
+/* Blog Post Styling */
+.blog {
+  line-height: 1.75;
+}
+
+.blog a {
+  color: #1b9ce2;
+}
+
+.blog a:hover {
+  opacity: 0.7;
+}
+
+.blog img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px;
+}
+
+.blog pre {
+  line-height: 1.5;
+}
+
+.blog pre.background {
+  background: #c8d1d9;
+  border: none;
+  border-radius: 10px;
+  padding: 15px;
+}
+
+/* Hover Link Styling */
+.dimLink:hover {
+  opacity: 0.7;
+}

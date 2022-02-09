@@ -1,164 +1,61 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
+  
 <head>
-      <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <meta charset="utf-8">
+    <meta name="author" content="Victor Caldas">
+    <meta name="description" content="Exploring at random"">
 
-    <title>VCaldas Personal website</title>
+    <title>Victor Caldas</title>
 
-    <!-- Bootstrap core CSS -->
-    <link rel= "stylesheet" type= "text/css" href= "/static/css/main.css">
-    <!-- Custom fonts for this template -->
-    <link href= "/static/font-awesome/css/all.min.css" rel="stylesheet" type= "text/css"> <!--load all styles -->
-    <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
-    <link href='https://fonts.googleapis.com/css?family=Cabin:700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/3.1.1/css/font-awesome.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
-    <!-- Custom styles for this template -->
-    <!-- <link href="assets/styles/grayscale.css" rel="stylesheet"> -->
+    <link rel="stylesheet" type="text/css" href="/static/css/style.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/button.css">
 
-    <!-- Custom styles for this template -->
-    <link rel= "stylesheet" type= "text/css" href= "/static/css/particles.css">
-
-    <!-- Temporary navbar container fix -->
-    <style>
-    .navbar-toggler {
-        z-index: 1;
-    }
-
-    @media (max-width: 576px) {
-        nav > .container {
-            width: 100%;
-        }
-    }
-    </style>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="/static/js/webfont.js"></script>
+    <script src="/static/js/snap.svg-min.js"></script>
+    <script src="/static/js/underscore-min.js"></script>
+    <script src="/static/js/sequence-diagram-min.js"></script>
 
 </head>
+<body>
+    <nav class="navbar">
+      <div class="container">
+        <a style="color:white;"><b>V/</b>Caldas</a>
+        <div style="float:right;">
+          <ul style="list-style:none;display:flex;">
+            <a href="/" class="left"><li class="link-list">ABOUT</li></a>
 
-<body id="page-top">
-  <div id="particles-js">
-    <!-- Navigation -->
-    <nav id="mainNav" class="navbar fixed-top navbar-toggleable-md navbar-light">
-  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarExample" aria-controls="navbarExample" aria-expanded="false" aria-label="Toggle navigation">
-    Menu <i class="fa fa-bars"></i>
-</button>
-
-<div class="container">
-    <a class="navbar-brand" href="/">V/Caldas</a>
-
-
-    <div class="collapse navbar-collapse" id="navbarExample">
-        <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-                <a class="nav-link" href="/publications">Publications</a>
-            </li>
-           <li class="nav-item">
-                <a class="nav-link" href="/blog/">Blog</a>
-            </li>
-            
-            <li class="nav-item">
-                <a class="nav-link" href="#projects">Projects</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#About">About</a>
-            </li>
-        </ul>
-    </div>
-</div>
-  </nav>
-    <div class="content">
-      <h1>
-        <span class="site-title">V/Caldas</span>
-        <span class="site-description"></span>
-      </h1>
-      <div class="icons-header">
-        <a aria-label="Send email" href="mailto:"><i class="icon fa fa-envelope"></i></a>
-        <a aria-label="My Research" href="/publications"><i class="icon fa fa-flask" aria-hidden="true"></i></a>
-        <a aria-label="My Vimeo" target="_blank" href=""><i class="icon fa fa-vimeo"
-            aria-hidden="true"></i></a>
-        <a aria-label="My Github" target="_blank" href="https://github.com/"><i
-            class="icon fa fa-github-alt" aria-hidden="true"></i></a>
-      </div>
-    </div>
-    <a class="down" href="#contact" data-scroll><i class="icon fa fa-chevron-down" aria-hidden="true"></i></a>
-
-
-  </div>
-
-  <!-- About Section -->
-  <div id="contact" class="container content-section-landing text-center">
-  <!-- <h2>Contact</h2> -->
-
-
-  <div class="row text-left">
-    <div class="col-sm-4">
-      <div class="card-block">
-        <p class="card-text">
-          <strong>Victor E. A. Caldas</strong>
-          <div class="hline-w"></div>
-          Data Scientist <br>
-          <a href="mailto:caldas.victor@gmail.com">caldas.victor@gmail.com</a><br>
-      </div>
-    </div>
-
-    <div class="col-sm-4">
-      <div class="card-block">
-        <p class="card-text">
-        <!--   <i class="fa fa-building"></i> Where to find me
-          <div class="hline-w"></div>
-          <strong>Cargill BV</strong><br> FALW - Dept. Animal Ecology <br> De Boelelaan, 1085 - Office M.152<br> 1081HV Amsterdam, NH<br> The Netherlands -->
-      </div>
-    </div>
-
-
-    <div class="col-sm-4">
-      <div class="card-block">
-        <p class="card-text">
-          <i class="fa fa-building"></i> Social media
-          <div class="hline-w"></div>
-          <ul class="social-media-list" style="list-style: none;">
-
-            
-            <li>
-              <a href="https://500px.com/victorcaldas">
-                <i class="fa fa-500px" style="color:gray"></i> victorcaldas
-              </a>
-            </li>
-            <li>
-              <a href="https://linkedin.com/in/vcaldas">
-                <i class="fa fa-linkedin-square " style="color:gray"></i> VCaldas</a>
-            </li>
           </ul>
+        </div>
       </div>
+    </nav>
+    <div class="container" style="padding-bottom:100px;">
+        <br>
+        <main id="body-fade">
+            
+<h3 class="post-title"><strong>Hello, I'm Victor!</strong></h3>
+<h5 class="post-title">I'm data scientist that spend some time on random projects.</h5>
+<p>
+  I will share them here and see where we get. Thanks for visiting!
+</p>
+
+        </main>
     </div>
-
-  </div>
-</div>
-
+    <nav class="navfoot">
+      <div style="text-align:center;">
+        &copy; 2022 |
+        &thinsp; <a href="https://www.linkedin.com/in/vcaldas" class="link-fa"><i class="fa fa-linkedin fa-lg"></i></a>
+        &thinsp; <a href="http://github.com/vcaldas" class="link-fa"><i class="fa fa-github fa-lg"></i></a>
+        &thinsp; <a href="https://scholar.google.com/citations?user=vdKIs70AAAAJ&hl=en" class="link-fa"><i class="fa fa-graduation-cap fa-lg"></i></a> |
+      </div>
+    </nav>
+    <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
 </body>
-
-<!-- Footer -->
-
-
-<footer class="footer">
-    <div class="text-center">
-      <p>Build with Flask and <span class="love">❤</span>. Get the source<a href="https://github.com/vcaldas/vcaldas.github.io"> here!</a> 
-    </div>
-</footer>
-
-<!-- javascript -->
-<!-- Bootstrap core JavaScript -->
-<script src="/static/js/jquery.js"> </script>
-<script src="/static/js/tether.js"> </script>
-<script src="/static/js/bootstrap.js"> </script>
-<script src="/static/js/jquery.easing.js"> </script>
-
-<script src="/static/js/grayscale.js"> </script>
-<script src="/static/js/particles.js"> </script>
-<script src="/static/js/sweet-scroll.js"> </script>
-<script src="/static/js/bootstrap.js"> </script>
-<script src="/static/js/particle.js"> </script>
 
 </html>
