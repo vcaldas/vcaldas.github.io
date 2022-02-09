@@ -41,7 +41,7 @@ $flask run
 ### Build
 
 ``` sh
-$python buil.py
+$python app.py build
 ```
 
 This command will create a static website on `./build`.
