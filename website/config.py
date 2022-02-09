@@ -15,7 +15,7 @@ class Config(object):
     linkedin = "https://www.linkedin.com/in/vcaldas/"
     github_username = "vcaldas"
     DEBUG = True
-    FLATPAGES_AUTO_RELOAD = True
+    FLATPAGES_AUTO_RELOAD = DEBUG
     FLATPAGES_EXTENSION = ".md"
     FREEZER_DESTINATION = "../docs"
-    FLATPAGES_ROOT = "blog/posts"
+    # FREEZER_RELATIVE_URLS = "/website/"
