@@ -6,3 +6,8 @@ from website.main import bp
 @bp.route("/")
 def main():
     return render_template("about.html")
+
+
+@bp.route("/publications.html")
+def publications():
+    return render_template("publications.html")

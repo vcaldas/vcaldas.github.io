@@ -1,5 +1,6 @@
 from flask import Flask, render_template
 
+from website.blog import register_pages
 from website.config import Config
 
 
@@ -8,7 +9,9 @@ def create_app():
     app = Flask(__name__)
     app.config.from_object(__name__)
     app.config.from_object(Config)
+
     register_blueprints(app)
+    register_pages(app)
     register_error_pages(app)
     return app
 
@@ -20,6 +23,9 @@ def register_blueprints(app):
     # Since the application instance is now created, register each Blueprint
     # with the Flask application instance (app)
     app.register_blueprint(main_bp)
+    from website.blog import bp as blog_bp
+
+    app.register_blueprint(blog_bp)
 
 
 def register_error_pages(app):
