@@ -1,6 +1,6 @@
 
 export site_name="vcaldas.github.io"
-export JEKYLL_VERSION=4.2.0
+export JEKYLL_VERSION=4.2.2
 .PHONY: docker_build start build serve
 
 
