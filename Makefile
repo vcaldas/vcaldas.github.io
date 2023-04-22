@@ -5,7 +5,7 @@ export JEKYLL_VERSION=4.2.2
 
 
 serve:
-	bundle exec jekyll serve
+	bundle exec jekyll serve --livereload
 # create: 
 # 	docker run \
 # 	--rm --volume="${PWD}:/srv/jekyll" \
